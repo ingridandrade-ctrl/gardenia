@@ -40,9 +40,16 @@
 <link rel="stylesheet" href="styles.css">
 
 <!-- Behavior -->
+<script>document.documentElement.classList.add('js');</script>
 <script src="script.js" defer></script>
 </head>
 <body>
+
+<!-- Atmosphere layers -->
+<div class="grain" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+<div class="cursor-ring" id="cur-ring" aria-hidden="true"></div>
+<div class="cursor-dot" id="cur-dot" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -56,8 +63,10 @@
   <div class="hero-left">
     <div class="hero-top">
       <div class="hero-issue">Implantacao Paisagistica · Fachada Principal · 2026</div>
-      <h1 class="hero-h1">
-        A fachada<br>que muda<br><em>tudo.</em>
+      <h1 class="hero-h1" data-reveal-lines>
+        <span class="line"><span class="line-inner">A fachada</span></span>
+        <span class="line"><span class="line-inner">que muda</span></span>
+        <span class="line"><span class="line-inner"><em>tudo.</em></span></span>
       </h1>
       <p class="hero-deck">
         <strong>A primeira impressao de um condominio nao e a portaria.</strong> E o jardim que o morador ve todo dia ao sair — e que o visitante ve antes de qualquer coisa. Esta proposta foi desenvolvida para transformar a fachada do Residencial Florenca em uma identidade paisagistica que nao se esquece.
@@ -71,15 +80,15 @@
       </div>
       <div class="hero-stats">
         <div class="hs-item">
-          <div class="hs-n">+100</div>
+          <div class="hs-n" data-count="100" data-count-prefix="+">+100</div>
           <div class="hs-l">Especies ornamentais</div>
         </div>
         <div class="hs-item">
-          <div class="hs-n">140m</div>
+          <div class="hs-n" data-count="140" data-count-suffix="m">140m</div>
           <div class="hs-l">Irrigacao</div>
         </div>
         <div class="hs-item" style="border-right:none">
-          <div class="hs-n">12d</div>
+          <div class="hs-n" data-count="12" data-count-suffix="d">12d</div>
           <div class="hs-l">Prazo total</div>
         </div>
       </div>
@@ -117,21 +126,21 @@
       </div>
       <div class="stat-list rv d2">
         <div class="stat-row">
-          <div class="st-n">+100</div>
+          <div class="st-n" data-count="100" data-count-prefix="+">+100</div>
           <div>
             <div class="st-label">Especies ornamentais</div>
             <div class="st-sub">Composicao mediterranea — ciprestes, lavandas, oliveiras</div>
           </div>
         </div>
         <div class="stat-row">
-          <div class="st-n">140m</div>
+          <div class="st-n" data-count="140" data-count-suffix="m">140m</div>
           <div>
             <div class="st-label">Irrigacao por microaspersao</div>
             <div class="st-sub">2 setores independentes, 25 microaspersores</div>
           </div>
         </div>
         <div class="stat-row">
-          <div class="st-n">12d</div>
+          <div class="st-n" data-count="12" data-count-suffix="d">12d</div>
           <div>
             <div class="st-label">Do projeto a entrega</div>
             <div class="st-sub">Estudo preliminar, anteprojeto 3D e implantacao completa</div>
@@ -385,13 +394,13 @@
       <div class="pricing rv d2">
         <div class="price-row">
           <div class="p-ey">Investimento total</div>
-          <div class="p-val"><span class="p-cur">R$</span>24.900</div>
+          <div class="p-val"><span class="p-cur">R$</span><span data-count="24900" data-count-format="thousands">24.900</span></div>
           <div class="p-note">Parcelado em 3x · entrada de 50% para aquisicao das especies</div>
         </div>
         <div class="p-div"></div>
         <div class="price-row">
           <div class="p-ey">Pagamento a vista</div>
-          <div class="p-val green"><span class="p-cur">R$</span>22.410</div>
+          <div class="p-val green"><span class="p-cur">R$</span><span data-count="22410" data-count-format="thousands">22.410</span></div>
           <div class="p-badge">10% OFF · Pagamento integral</div>
           <div class="p-note" style="margin-top:8px">Economia de R$ 2.490,00</div>
         </div>
