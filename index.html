@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Paisagistica — Residencial Florenca | Gardenia Jardins</title>
+<meta name="description" content="Proposta paisagistica de linguagem mediterranea desenvolvida pela Gardenia Jardins para o Residencial Florenca, Pirassununga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F4EFE0;
+  --paper-warm: #EDE5D0;
+  --linen: #E4DCC4;
+  --ink: #16170E;
+  --ink-soft: #2A2B1F;
+  --muted: #6E6B5B;
+  --rule: rgba(22,23,14,0.14);
+  --rule-soft: rgba(22,23,14,0.08);
+  --verde: #25613B;
+  --verde-deep: #173E26;
+  --verde-night: #0F2818;
+  --sage: #7B9876;
+  --terracotta: #B65A3C;
+  --ambar: #B58B30;
+  --rosa: #E9B6C4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  overflow-x: hidden;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+::selection { background: var(--verde); color: var(--paper); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--verde-deep); }
+
+img { display: block; max-width: 100%; height: auto; }
+
+/* ---------------- SCROLL PROGRESS ---------------- */
+.progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  width: 0%; background: var(--verde);
+  z-index: 1000; transition: width 0.05s linear;
+}
+
+/* ---------------- MASTHEAD / NAV ---------------- */
+.masthead {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 950;
+  background: rgba(244,239,224,0.86);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--rule-soft);
+  transition: padding 0.5s ease, background 0.5s ease;
+}
+.masthead-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 22px 56px;
+  gap: 24px;
+  transition: padding 0.5s ease;
+}
+.masthead.shrunk .masthead-inner { padding: 14px 56px; }
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  display: flex; align-items: baseline; gap: 8px;
+  text-decoration: none;
+}
+.brand .brand-mark {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  color: var(--verde);
+}
+.brand em {
+  font-style: italic; font-weight: 300;
+  color: var(--ink-soft);
+}
+.mast-center {
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  text-align: center;
+}
+.mast-right {
+  display: flex; align-items: center; justify-content: flex-end; gap: 28px;
+}
+.mast-link {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  background: none; border: none;
+  font-family: inherit;
+}
+.mast-link::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -6px;
+  height: 1px; background: var(--verde);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.mast-link:hover::after { transform: scaleX(1); }
+.mast-cta {
+  border: 1px solid var(--ink);
+  padding: 11px 22px;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+.mast-cta:hover { background: var(--ink); color: var(--paper); }
+
+/* ---------------- HERO ---------------- */
+.hero {
+  min-height: 100dvh;
+  position: relative;
+  background: var(--verde-night);
+  color: var(--paper);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  padding-top: 96px;
+}
+.hero-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 32px 48px 0;
+  overflow: hidden;
+}
+.hero-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.hero-image-wrap::before,
+.hero-image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(244,239,224,0.08);
+  pointer-events: none;
+}
+.hero-image-wrap::after {
+  inset: -28px;
+  border-color: rgba(244,239,224,0.04);
+}
+.hero-image {
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(1.05) contrast(1.02);
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 1.6s ease, transform 2s ease;
+}
+.hero-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+.hero-meta-overlay {
+  position: absolute;
+  top: 32px; left: 56px;
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(244,239,224,0.55);
+}
+.hero-meta-overlay span:first-child { color: var(--rosa); }
+.hero-caption {
+  position: absolute;
+  bottom: 24px; right: 56px;
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(244,239,224,0.35);
+  font-family: 'Jost', sans-serif;
+}
+
+.hero-floor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  padding: 56px 56px 48px;
+  gap: 48px;
+  border-top: 1px solid rgba(244,239,224,0.06);
+  position: relative;
+}
+.hero-eyebrow {
+  font-size: 0.6rem; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--rosa);
+  font-weight: 500;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 22px; height: 1px; background: var(--rosa);
+}
+.hero-title-block {
+  grid-column: 1 / 3;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 6.4rem);
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 0.96;
+  color: var(--paper);
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--rosa);
+  font-weight: 300;
+}
+.hero-sub {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(244,239,224,0.65);
+  max-width: 440px;
+  font-weight: 300;
+}
+.hero-client {
+  display: flex; flex-direction: column; gap: 8px;
+  text-align: right; justify-self: end;
+  border-left: 1px solid rgba(244,239,224,0.14);
+  padding-left: 32px;
+  align-self: flex-end;
+}
+.hero-client-label {
+  font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(244,239,224,0.45);
+}
+.hero-client-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.85rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--paper);
+  line-height: 1.1;
+}
+.hero-client-meta {
+  font-size: 0.74rem; color: rgba(244,239,224,0.5);
+  letter-spacing: 0.06em;
+  margin-top: 6px;
+}
+.scroll-cue {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  font-size: 0.55rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(244,239,224,0.4);
+}
+.scroll-cue-line {
+  width: 1px; height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(244,239,224,0.4) 50%, transparent);
+  animation: cuePulse 2.4s ease-in-out infinite;
+}
+@keyframes cuePulse {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.3; }
+  50% { transform: scaleY(1); opacity: 0.8; }
+}
+
+/* ---------------- INDEX RAIL ---------------- */
+.index-rail {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0;
+  border-top: 1px solid rgba(244,239,224,0.05);
+}
+.index-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+}
+.index-cell {
+  padding: 56px 48px;
+  border-right: 1px solid rgba(244,239,224,0.07);
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative;
+}
+.index-cell:last-child { border-right: none; }
+.index-cell .idx-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  color: var(--ambar);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+.index-cell .idx-figure {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1;
+  font-feature-settings: "lnum";
+}
+.index-cell .idx-figure sup {
+  font-size: 0.4em;
+  vertical-align: super;
+  margin-left: 4px;
+  color: var(--ambar);
+}
+.index-cell .idx-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(244,239,224,0.7);
+}
+.index-cell .idx-desc {
+  font-size: 0.78rem;
+  color: rgba(244,239,224,0.4);
+  font-weight: 300;
+  max-width: 230px;
+  line-height: 1.5;
+}
+.index-cell.intro {
+  background: var(--verde-deep);
+  border-right-color: rgba(244,239,224,0.1);
+}
+.index-cell.intro .idx-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1.35;
+  margin-top: 14px;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section { padding: 120px 0; position: relative; }
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+.chapter-mark {
+  display: flex; align-items: center; gap: 20px;
+  font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ambar);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.chapter-mark .ch-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--muted);
+}
+.chapter-mark::after {
+  content: '';
+  flex: 1; max-width: 80px;
+  height: 1px; background: var(--ambar);
+  opacity: 0.6;
+}
+.chapter-mark.on-dark { color: var(--rosa); }
+.chapter-mark.on-dark .ch-num { color: rgba(244,239,224,0.45); }
+.chapter-mark.on-dark::after { background: var(--rosa); }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  color: var(--ink);
+  max-width: 18ch;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--verde);
+  font-weight: 300;
+}
+.section-title.light { color: var(--paper); }
+.section-title.light em { color: var(--rosa); }
+
+/* ---------------- ABOUT ---------------- */
+.about {
+  background: var(--paper);
+  padding-top: 140px;
+}
+.about-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 96px;
+}
+.about-head-aside {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--muted);
+  font-weight: 400;
+  text-align: right;
+  max-width: 280px;
+  line-height: 1.5;
+  border-top: 1px solid var(--rule);
+  padding-top: 18px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 84px;
+  align-items: start;
+}
+.about-text {
+  display: flex; flex-direction: column; gap: 24px;
+}
+.about-text p {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: var(--ink-soft);
+  font-weight: 300;
+  max-width: 60ch;
+}
+.about-text p.lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  margin-bottom: 8px;
+}
+.about-text p.lead::first-letter {
+  font-size: 3.4rem;
+  font-weight: 500;
+  float: left;
+  line-height: 0.85;
+  margin: 8px 14px 0 -4px;
+  color: var(--verde);
+  font-style: normal;
+}
+.about-aside {
+  display: flex; flex-direction: column; gap: 28px;
+  position: sticky;
+  top: 130px;
+}
+.note-card {
+  border-top: 1px solid var(--rule);
+  padding: 24px 0 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.note-card .note-label {
+  font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted); font-weight: 500;
+}
+.note-card .note-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.note-card .note-value em { font-style: italic; color: var(--verde); }
+.note-card .note-text {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 36ch;
+}
+.note-card.accent .note-value {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--verde-deep);
+  line-height: 1.35;
+}
+.note-card.accent {
+  background: var(--paper-warm);
+  margin: 0 -28px;
+  padding: 28px;
+  border-top: none;
+  border-left: 2px solid var(--verde);
+}
+
+/* ---------------- IMAGE PLATE (full-bleed, contain, never cropped) ---------------- */
+.plate {
+  background: var(--ink);
+  padding: 88px 48px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.plate.paper { background: var(--paper-warm); }
+.plate.verde { background: var(--verde-night); }
+.plate.terra { background: #2A1F1A; }
+.plate-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1480px;
+  display: grid;
+  place-items: center;
+}
+.plate-image {
+  width: 100%;
+  height: auto;
+  max-height: 86vh;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform 1.4s ease;
+}
+.plate-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.plate-meta {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  display: flex; gap: 18px;
+  font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(244,239,224,0.5);
+}
+.plate.paper .plate-meta { color: var(--muted); }
+.plate-meta strong { color: var(--ambar); font-weight: 500; }
+.plate-caption {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(244,239,224,0.6);
+  max-width: 360px;
+  text-align: right;
+}
+.plate.paper .plate-caption { color: var(--ink-soft); }
+.plate-title-overlay {
+  position: absolute;
+  left: 0; bottom: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1.05;
+}
+.plate-title-overlay em { font-style: italic; color: var(--rosa); }
+.plate.paper .plate-title-overlay { color: var(--ink); }
+.plate.paper .plate-title-overlay em { color: var(--verde); }
+
+/* ---------------- CONCEPT (dark editorial) ---------------- */
+.concept {
+  background: var(--verde-night);
+  color: var(--paper);
+  padding: 140px 0;
+}
+.concept-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: end;
+  margin-bottom: 100px;
+}
+.concept-head .section-title { color: var(--paper); }
+.concept-head .section-title em { color: var(--rosa); }
+.concept-pull {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.45;
+  color: rgba(244,239,224,0.75);
+  max-width: 38ch;
+  align-self: end;
+  border-left: 1px solid rgba(244,239,224,0.18);
+  padding-left: 32px;
+}
+.concept-body {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 84px;
+  align-items: start;
+}
+.concept-text {
+  display: flex; flex-direction: column; gap: 22px;
+}
+.concept-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(244,239,224,0.72);
+  font-weight: 300;
+  max-width: 58ch;
+}
+.concept-elements {
+  display: flex; flex-direction: column;
+  border-top: 1px solid rgba(244,239,224,0.18);
+}
+.element-row {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(244,239,224,0.08);
+  align-items: baseline;
+}
+.element-row .el-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--rosa);
+}
+.element-row .el-text {
+  font-size: 0.92rem;
+  color: rgba(244,239,224,0.85);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+/* ---------------- GALLERY SEQUENCE (editorial pacing, no crop) ---------------- */
+.sequence {
+  background: var(--paper);
+  padding: 140px 0;
+}
+.sequence-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+.sequence-head .section-title {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  max-width: none;
+}
+.sequence-head-meta {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.8;
+}
+.figures {
+  display: grid;
+  grid-template-columns: 12fr 5fr;
+  gap: 64px;
+  align-items: start;
+}
+.figure-main {
+  display: flex; flex-direction: column; gap: 96px;
+}
+.fig {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.fig-frame {
+  background: var(--paper-warm);
+  padding: 32px;
+  position: relative;
+}
+.fig-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.fig-caption {
+  display: flex; justify-content: space-between; gap: 32px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.fig-caption .fig-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--verde);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+.fig-caption .fig-desc {
+  text-align: right;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  max-width: 320px;
+}
+.figure-side {
+  display: flex; flex-direction: column; gap: 64px;
+  position: sticky;
+  top: 130px;
+}
+.side-note {
+  display: flex; flex-direction: column; gap: 12px;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+.side-note .side-label {
+  font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted);
+}
+.side-note .side-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.side-note p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ---------------- ANTEPROJETO ---------------- */
+.ante {
+  background: var(--paper-warm);
+  padding: 140px 0;
+}
+.ante-head {
+  margin-bottom: 80px;
+  max-width: 880px;
+}
+.ante-intro {
+  margin-top: 32px;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 62ch;
+}
+.ante-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--rule);
+}
+.ante-item {
+  padding: 40px 32px 40px 0;
+  border-right: 1px solid var(--rule);
+  display: flex; flex-direction: column; gap: 18px;
+}
+.ante-item:nth-child(4n) { border-right: none; padding-right: 0; }
+.ante-item:first-child { padding-left: 0; }
+.ante-item .ante-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--verde);
+  letter-spacing: 0.04em;
+}
+.ante-item .ante-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+}
+.ante-item .ante-desc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* ---------------- IMPLANTAÇÃO ---------------- */
+.implant {
+  background: var(--paper);
+  padding: 140px 0 0;
+}
+.implant-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 88px;
+}
+.implant-marquee {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+.implant-marquee strong {
+  color: var(--verde-deep);
+  font-style: normal;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-right: 12px;
+}
+.implant-body {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: 80px;
+  align-items: start;
+  padding-bottom: 140px;
+}
+.implant-image {
+  background: var(--paper-warm);
+  padding: 40px;
+  position: relative;
+}
+.implant-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.implant-image::before {
+  content: 'Fig. 04';
+  position: absolute;
+  top: 14px; left: 14px;
+  font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+}
+.implant-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.implant-text p {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+.species {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.species-item {
+  padding: 18px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.species-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--verde);
+  width: 22px;
+}
+.species-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  font-style: italic;
+}
+
+/* ---------------- FASES (timeline) ---------------- */
+.phases {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 140px 0;
+}
+.phases-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+.phases-head .section-title { color: var(--paper); }
+.phases-head .section-title em { color: var(--rosa); }
+.phases-head-aside {
+  text-align: right;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: rgba(244,239,224,0.65);
+  max-width: 280px;
+  line-height: 1.5;
+  border-top: 1px solid rgba(244,239,224,0.18);
+  padding-top: 18px;
+}
+.phases-list {
+  border-top: 1px solid rgba(244,239,224,0.18);
+}
+.phase {
+  display: grid;
+  grid-template-columns: 110px 1fr 2fr 1fr;
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(244,239,224,0.08);
+  align-items: start;
+  transition: padding-left 0.5s ease;
+}
+.phase:hover { padding-left: 16px; }
+.phase-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ambar);
+  line-height: 0.9;
+  font-feature-settings: "lnum";
+}
+.phase-meta {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.phase-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--paper);
+  line-height: 1.15;
+}
+.phase-prazo {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--rosa);
+}
+.phase-desc {
+  font-size: 0.95rem;
+  color: rgba(244,239,224,0.65);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 50ch;
+}
+.phase-steps {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.phase-step {
+  font-size: 0.78rem;
+  color: rgba(244,239,224,0.55);
+  font-weight: 300;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+.phase-step::before {
+  content: '';
+  position: absolute; left: 0; top: 9px;
+  width: 6px; height: 1px;
+  background: var(--ambar);
+}
+
+/* ---------------- INVESTIMENTO ---------------- */
+.invest {
+  background: var(--verde-deep);
+  color: var(--paper);
+  padding: 140px 0;
+}
+.invest-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+.invest-head .section-title { color: var(--paper); }
+.invest-head .section-title em { color: var(--rosa); }
+.invest-head-aside {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: rgba(244,239,224,0.72);
+  line-height: 1.5;
+  border-top: 1px solid rgba(244,239,224,0.18);
+  padding-top: 20px;
+  max-width: 48ch;
+}
+.invest-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 64px;
+  align-items: start;
+}
+.scope {
+  border-top: 1px solid rgba(244,239,224,0.18);
+}
+.scope-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(244,239,224,0.08);
+}
+.scope-head h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--paper);
+}
+.scope-head .scope-count {
+  font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(244,239,224,0.5);
+}
+.scope-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.scope-item {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  padding: 18px 24px 18px 0;
+  border-bottom: 1px solid rgba(244,239,224,0.08);
+  align-items: baseline;
+}
+.scope-item:nth-child(2n) { padding-right: 0; padding-left: 24px; border-left: 1px solid rgba(244,239,224,0.08); }
+.scope-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--rosa);
+  font-size: 1rem;
+}
+.scope-text {
+  font-size: 0.88rem;
+  color: rgba(244,239,224,0.85);
+  line-height: 1.55;
+  font-weight: 300;
+}
+.invest-pricing {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.price-card {
+  background: rgba(244,239,224,0.04);
+  border: 1px solid rgba(244,239,224,0.12);
+  padding: 38px 36px;
+  position: relative;
+}
+.price-card + .price-card { border-top: none; }
+.price-card.main {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.price-label {
+  font-size: 0.66rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(244,239,224,0.55);
+  margin-bottom: 14px;
+}
+.price-card.main .price-label { color: var(--muted); }
+.price-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.4rem;
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1;
+  font-feature-settings: "lnum tnum";
+  letter-spacing: -0.01em;
+}
+.price-card.main .price-value { color: var(--ink); }
+.price-value span:first-child {
+  font-size: 1.1rem;
+  vertical-align: middle;
+  color: var(--ambar);
+  margin-right: 8px;
+  font-style: italic;
+}
+.price-value span:last-child {
+  font-size: 1.4rem;
+  vertical-align: super;
+  color: rgba(244,239,224,0.5);
+  margin-left: 4px;
+}
+.price-card.main .price-value span:last-child { color: var(--muted); }
+.price-badge {
+  position: absolute;
+  top: 38px; right: 36px;
+  font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+  background: var(--verde);
+  color: var(--paper);
+  padding: 6px 10px;
+  font-weight: 500;
+}
+.price-note {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  color: rgba(244,239,224,0.55);
+  line-height: 1.55;
+  font-weight: 300;
+}
+.price-card.main .price-note { color: var(--muted); }
+.payment-conditions {
+  margin-top: 28px;
+  padding: 28px 0 0;
+  border-top: 1px solid rgba(244,239,224,0.18);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.pay-title {
+  font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--rosa);
+  margin-bottom: 4px;
+}
+.pay-item {
+  font-size: 0.82rem;
+  color: rgba(244,239,224,0.7);
+  font-weight: 300;
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+.pay-item::before {
+  content: '';
+  position: absolute; left: 0; top: 9px;
+  width: 8px; height: 1px;
+  background: var(--rosa);
+}
+
+/* ---------------- MANUTENÇÃO ---------------- */
+.manut {
+  background: var(--paper);
+  padding: 140px 0;
+}
+.manut-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 96px;
+}
+.manut-aside {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+.manut-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.manut-period {
+  display: flex; flex-direction: column;
+  padding: 36px;
+  border: 1px solid var(--rule);
+  background: var(--paper-warm);
+  position: relative;
+}
+.manut-period.second {
+  background: var(--paper);
+  border-color: var(--rule);
+}
+.manut-period-label {
+  font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ambar);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.manut-period-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.manut-items {
+  display: flex; flex-direction: column; gap: 14px;
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+}
+.manut-item {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  font-weight: 300;
+  padding-left: 18px;
+  position: relative;
+}
+.manut-item::before {
+  content: '';
+  position: absolute; left: 0; top: 11px;
+  width: 8px; height: 1px;
+  background: var(--verde);
+}
+.manut-price-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 64px;
+  margin-top: 84px;
+  padding: 56px 0 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.manut-price {
+  display: flex; align-items: baseline; gap: 12px;
+}
+.manut-price .manut-price-label {
+  font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 18px;
+}
+.manut-price-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.6rem;
+  font-weight: 300;
+  color: var(--verde-deep);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.manut-price-period {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+.manut-note {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 58ch;
+}
+
+/* ---------------- CLOSING ---------------- */
+.closing-plate {
+  background: var(--verde-night);
+  padding: 100px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+}
+.closing-image {
+  width: 100%;
+  max-width: 1400px;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+  opacity: 0;
+  transform: scale(1.01);
+  transition: opacity 1.6s ease, transform 1.6s ease;
+}
+.closing-image.visible { opacity: 0.85; transform: scale(1); }
+.closing-overlay {
+  position: relative;
+  margin-top: 64px;
+  text-align: center;
+  max-width: 880px;
+  z-index: 2;
+}
+.closing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+  font-weight: 300;
+  color: var(--paper);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.closing-title em {
+  font-style: italic; color: var(--rosa);
+}
+.closing-meta {
+  font-size: 0.74rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(244,239,224,0.55);
+}
+.closing-signature {
+  margin-top: 60px;
+  display: flex; justify-content: center; gap: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(244,239,224,0.18);
+  font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(244,239,224,0.55);
+}
+.closing-signature span { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.closing-signature strong {
+  color: var(--paper);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background: var(--ink);
+  color: rgba(244,239,224,0.65);
+  padding: 72px 56px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.foot-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--paper);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.foot-brand em { font-style: italic; color: rgba(244,239,224,0.45); font-weight: 300; }
+.foot-tag {
+  font-size: 0.82rem;
+  color: rgba(244,239,224,0.55);
+  font-weight: 300;
+  max-width: 36ch;
+  line-height: 1.65;
+}
+.foot-msg {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: rgba(244,239,224,0.7);
+  line-height: 1.4;
+  text-align: center;
+}
+.foot-meta {
+  text-align: right;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.foot-city {
+  font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--paper);
+}
+.foot-copy {
+  font-size: 0.72rem;
+  color: rgba(244,239,224,0.4);
+  font-weight: 300;
+}
+.foot-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(244,239,224,0.08);
+  padding-top: 24px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: rgba(244,239,224,0.4);
+}
+
+/* ---------------- REVEAL ---------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1 { transition-delay: 0.12s; }
+.reveal.delay-2 { transition-delay: 0.24s; }
+.reveal.delay-3 { transition-delay: 0.36s; }
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .masthead-inner { grid-template-columns: 1fr 1fr; }
+  .mast-center { display: none; }
+  .hero-floor { grid-template-columns: 1fr; gap: 32px; padding: 36px 32px 32px; }
+  .hero-title-block { grid-column: 1 / -1; }
+  .hero-client { text-align: left; border-left: none; border-top: 1px solid rgba(244,239,224,0.14); padding: 24px 0 0; justify-self: start; }
+  .index-grid { grid-template-columns: 1fr 1fr; }
+  .index-cell { border-bottom: 1px solid rgba(244,239,224,0.07); }
+  .index-cell:nth-child(2n) { border-right: none; }
+  .index-cell.intro { grid-column: 1 / -1; }
+  .about-grid, .concept-body, .figures, .implant-body, .invest-grid, .manut-grid, .closing-signature { grid-template-columns: 1fr; gap: 48px; }
+  .about-head, .concept-head, .implant-head, .invest-head, .manut-head, .sequence-head, .phases-head { grid-template-columns: 1fr; gap: 24px; align-items: start; }
+  .about-head-aside, .phases-head-aside { text-align: left; max-width: none; }
+  .ante-list { grid-template-columns: 1fr 1fr; }
+  .ante-item:nth-child(2n) { border-right: none; padding-right: 0; }
+  .ante-item:nth-child(2n+1) { padding-left: 0; }
+  .phase { grid-template-columns: 64px 1fr; }
+  .phase-meta, .phase-desc, .phase-steps { grid-column: 2; }
+  .phase-num { font-size: 2.4rem; }
+  .scope-list { grid-template-columns: 1fr; }
+  .scope-item:nth-child(2n) { padding-left: 0; border-left: none; }
+  .figure-side { position: static; }
+  .about-aside { position: static; }
+  .manut-price-row { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 720px) {
+  .masthead-inner, .hero-meta-overlay, .hero-caption { padding: 18px 24px; }
+  .hero-meta-overlay { top: 16px; left: 24px; }
+  .hero-caption { bottom: 14px; right: 24px; }
+  .hero-floor { padding: 32px 24px 28px; }
+  .hero-stage { padding: 24px 16px 0; }
+  .container { padding: 0 24px; }
+  section { padding: 84px 0; }
+  .about, .concept, .sequence, .ante, .implant, .phases, .invest, .manut { padding-top: 96px; padding-bottom: 96px; }
+  .ante-list { grid-template-columns: 1fr; }
+  .ante-item { border-right: none; padding-left: 0; padding-right: 0; }
+  .ante-item + .ante-item { border-top: 1px solid var(--rule); padding-top: 32px; }
+  .figure-main { gap: 56px; }
+  .fig-frame { padding: 16px; }
+  .fig-caption { flex-direction: column; gap: 8px; }
+  .fig-caption .fig-desc { text-align: left; }
+  .species { grid-template-columns: 1fr; }
+  .price-badge { position: static; display: inline-block; margin-bottom: 12px; }
+  .price-card { padding: 28px 24px; }
+  .price-value { font-size: 2.6rem; }
+  .closing-signature { flex-direction: column; gap: 32px; }
+  .plate { padding: 56px 24px; }
+  .plate-meta, .plate-caption, .plate-title-overlay { position: static; margin: 16px 0; text-align: left; max-width: none; }
+  footer { grid-template-columns: 1fr; gap: 32px; padding: 56px 24px 32px; }
+  .foot-meta { text-align: left; }
+  .foot-msg { text-align: left; }
+  .foot-bottom { flex-direction: column; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead" id="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">Gardenia</span>
+      <span>jardins<em>—</em></span>
+    </a>
+    <div class="mast-center">Edicao Especial · Residencial Florenca · MMXXVI</div>
+    <div class="mast-right">
+      <a class="mast-link" href="#conceito">Conceito</a>
+      <a class="mast-link" href="#investimento">Investimento</a>
+      <button class="mast-cta" type="button">Agendar visita</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-stage">
+    <div class="hero-image-wrap">
+      <div class="hero-meta-overlay">
+        <span>N.º 01 — Edicao 2026</span>
+        <span>Implantacao paisagistica</span>
+      </div>
+      <img class="hero-image" id="hero-img" src="assets/01-hero-fachada.jpg" alt="Anteprojeto da fachada paisagistica do Residencial Florenca">
+      <div class="hero-caption">Fig. 01 — Anteprojeto da fachada principal</div>
+    </div>
+  </div>
+  <div class="hero-floor">
+    <div class="hero-title-block">
+      <div class="hero-eyebrow">Proposta Paisagistica · 2026</div>
+      <h1 class="hero-title">
+        Implantacao<br>paisagistica<br><em>da fachada.</em>
+      </h1>
+      <p class="hero-sub">
+        Composicao ornamental de linguagem mediterranea, pensada para criar identidade visual elegante, atemporal e integrada a arquitetura do empreendimento.
+      </p>
+    </div>
+    <div class="hero-client">
+      <span class="hero-client-label">Proposta elaborada para</span>
+      <span class="hero-client-name">Residencial<br>Florenca</span>
+      <span class="hero-client-meta">Pirassununga · SP · Maio de 2026</span>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Conteudo abaixo</span>
+    <div class="scroll-cue-line"></div>
+  </div>
+</section>
+
+<!-- ============ INDEX RAIL ============ -->
+<section class="index-rail" style="padding:0">
+  <div class="index-grid">
+    <div class="index-cell intro reveal">
+      <div class="idx-num">Sumario · I</div>
+      <div class="idx-label">Edicao Florenca</div>
+      <p class="idx-quote">"Transformamos espacos esquecidos em jardins vivos."</p>
+    </div>
+    <div class="index-cell reveal delay-1">
+      <div class="idx-num">II</div>
+      <div class="idx-figure">+100</div>
+      <div class="idx-label">Especies ornamentais</div>
+      <div class="idx-desc">Ciprestes italianos, lavandas, oliveiras, lantanas e primaveras compoem o repertorio.</div>
+    </div>
+    <div class="index-cell reveal delay-2">
+      <div class="idx-num">III</div>
+      <div class="idx-figure">12<sup>d</sup></div>
+      <div class="idx-label">Prazo total de execucao</div>
+      <div class="idx-desc">Do estudo preliminar a entrega final, em dias uteis sequenciais.</div>
+    </div>
+    <div class="index-cell reveal delay-3">
+      <div class="idx-num">IV</div>
+      <div class="idx-figure">3<sup>d</sup></div>
+      <div class="idx-label">Anteprojeto tridimensional</div>
+      <div class="idx-desc">Visualizacao previa completa da proposta paisagistica antes da execucao.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="estudio">
+  <div class="container">
+    <div class="about-head">
+      <div>
+        <div class="chapter-mark"><span class="ch-num">Capitulo I</span> Estudio Gardenia</div>
+        <h2 class="section-title reveal">Tecnica, experiencia<br>e <em>sensibilidade.</em></h2>
+      </div>
+      <div class="about-head-aside reveal delay-1">
+        "Cada espaco verde possui um ritmo proprio.<br>O paisagismo nasce da escuta."
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lead reveal">
+          A Gardenia nasce da uniao entre tecnica, experiencia e sensibilidade no cuidado com os jardins. Acreditamos que cada espaco verde possui um ritmo proprio e que o paisagismo vai alem da estetica.
+        </p>
+        <p class="reveal delay-1">
+          Parte dessa experiencia foi construida ao longo de anos de atuacao em Londres, com contato direto com projetos de paisagismo sustentavel e praticas inspiradas na permacultura. Foram desenvolvidas atividades relacionadas ao planejamento de jardins, coordenacao de equipes de manutencao e acompanhamento de projetos paisagisticos.
+        </p>
+        <p class="reveal delay-2">
+          Essa vivencia, somada a um olhar tecnico voltado a arquitetura e aos projetos paisagisticos contemporaneos, contribui para que cada implantacao seja pensada de forma integrada ao ambiente, valorizando o espaco e sua paisagem ao longo do tempo.
+        </p>
+        <p class="reveal delay-3">
+          Nosso objetivo e desenvolver ambientes externos que nao apenas tragam impacto visual imediato, mas que tambem proporcionem valorizacao estetica duradoura, integracao com a arquitetura e uma experiencia visual agradavel para moradores e visitantes.
+        </p>
+      </div>
+      <aside class="about-aside">
+        <div class="note-card reveal delay-1">
+          <span class="note-label">Experiencia · Internacional</span>
+          <span class="note-value">Londres<em>.</em></span>
+          <span class="note-text">Paisagismo sustentavel e permacultura aplicados a projetos contemporaneos de alta complexidade.</span>
+        </div>
+        <div class="note-card accent reveal delay-2">
+          <span class="note-label">Nossa promessa</span>
+          <span class="note-value">"Transformamos espacos em jardins vivos."</span>
+          <span class="note-text">Cada projeto e pensado para crescer, evoluir e valorizar o ambiente ao longo do tempo.</span>
+        </div>
+        <div class="note-card reveal delay-3">
+          <span class="note-label">Foco · deste projeto</span>
+          <span class="note-value">Fachada<br><em>principal.</em></span>
+          <span class="note-text">Identidade visual marcante e atemporal no acesso ao Residencial Florenca.</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATE 01: Vista geral ============ -->
+<div class="plate verde">
+  <div class="plate-frame">
+    <div class="plate-meta"><strong>Prancha · 01</strong><span>Vista geral do conjunto</span></div>
+    <img class="plate-image" src="assets/02-vista-geral.jpg" alt="Vista geral do conjunto paisagistico — anteprojeto 3D">
+    <div class="plate-title-overlay">Vista geral<br>do <em>conjunto.</em></div>
+    <div class="plate-caption">Anteprojeto tridimensional desenvolvido<br>para visualizacao previa da proposta.</div>
+  </div>
+</div>
+
+<!-- ============ CONCEITO ============ -->
+<section class="concept" id="conceito">
+  <div class="container">
+    <div class="concept-head">
+      <div>
+        <div class="chapter-mark on-dark"><span class="ch-num">Capitulo II</span> Conceito do jardim</div>
+        <h2 class="section-title light reveal">Linguagem<br><em>mediterranea.</em></h2>
+      </div>
+      <p class="concept-pull reveal delay-1">
+        Sofisticacao atemporal por meio de volumetrias verticais, contraste de folhagens e a luz exata que so o jardim mediterraneo sabe oferecer.
+      </p>
+    </div>
+
+    <div class="concept-body">
+      <div class="concept-text">
+        <p class="reveal">
+          A proposta paisagistica desenvolvida para o Residencial Florenca foi inspirada em composicoes ornamentais de linguagem mediterranea, buscando criar uma identidade visual elegante, atemporal e integrada a arquitetura do empreendimento.
+        </p>
+        <p class="reveal delay-1">
+          A escolha das especies ornamentais foi pensada para transmitir sofisticacao visual atraves de elementos caracteristicos do paisagismo mediterraneo, utilizando volumetrias verticais marcantes, composicao arbustiva ornamental e contrastes naturais entre folhagens, flores e texturas vegetais.
+        </p>
+        <p class="reveal delay-2">
+          A implantacao busca valorizar visualmente a fachada principal do condominio atraves de uma composicao organizada, equilibrada e harmoniosa, criando sensacao de acolhimento, imponencia e identidade paisagistica ao acesso principal.
+        </p>
+        <p class="reveal delay-3">
+          O projeto contempla reorganizacao completa da area denominada "Ilha 01", promovendo renovacao estetica do espaco atraves da remocao das especies existentes e implantacao de uma nova composicao vegetal planejada de forma integrada ao conceito arquitetonico do empreendimento.
+        </p>
+      </div>
+      <div class="concept-elements reveal delay-1">
+        <div class="element-row"><span class="el-num">i.</span><span class="el-text">Volumetrias verticais marcantes com ciprestes italianos.</span></div>
+        <div class="element-row"><span class="el-num">ii.</span><span class="el-text">Composicao arbustiva ornamental organizada em camadas.</span></div>
+        <div class="element-row"><span class="el-num">iii.</span><span class="el-text">Contraste natural entre folhagens, texturas e floracao.</span></div>
+        <div class="element-row"><span class="el-num">iv.</span><span class="el-text">Integracao estetica com a arquitetura existente.</span></div>
+        <div class="element-row"><span class="el-num">v.</span><span class="el-text">Identidade visual unica para o acesso principal.</span></div>
+        <div class="element-row"><span class="el-num">vi.</span><span class="el-text">Paisagismo de baixa manutencao e alto impacto.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY SEQUENCE ============ -->
+<section class="sequence" id="galeria">
+  <div class="container">
+    <div class="sequence-head">
+      <div>
+        <div class="chapter-mark"><span class="ch-num">Portfolio</span> Galeria 3D</div>
+        <h2 class="section-title">Cinco enquadramentos<br>do <em>anteprojeto</em>.</h2>
+      </div>
+      <div class="sequence-head-meta reveal delay-1">
+        Anteprojeto 3D · 2026<br>
+        Renderizacao tecnica<br>
+        Ilha 01 · Fachada principal
+      </div>
+    </div>
+
+    <div class="figures">
+      <div class="figure-main">
+        <figure class="fig reveal">
+          <div class="fig-frame"><img src="assets/03-galeria-a.jpg" alt="Composicao com ciprestes — vista frontal"></div>
+          <figcaption class="fig-caption">
+            <span class="fig-num">Fig. 02 · Fachada principal</span>
+            <span class="fig-desc">Ciprestes italianos definem a verticalidade marcante do acesso.</span>
+          </figcaption>
+        </figure>
+        <figure class="fig reveal">
+          <div class="fig-frame"><img src="assets/04-galeria-b.jpg" alt="Vista lateral da composicao"></div>
+          <figcaption class="fig-caption">
+            <span class="fig-num">Fig. 03 · Vista lateral</span>
+            <span class="fig-desc">A massa arbustiva ornamental compoe o segundo plano.</span>
+          </figcaption>
+        </figure>
+        <figure class="fig reveal">
+          <div class="fig-frame"><img src="assets/05-galeria-c.jpg" alt="Composicao ornamental"></div>
+          <figcaption class="fig-caption">
+            <span class="fig-num">Fig. 04 · Composicao ornamental</span>
+            <span class="fig-desc">Camadas vegetais selecionadas para contraste e profundidade.</span>
+          </figcaption>
+        </figure>
+        <figure class="fig reveal">
+          <div class="fig-frame"><img src="assets/06-galeria-d.jpg" alt="Vista ampla do conjunto paisagistico"></div>
+          <figcaption class="fig-caption">
+            <span class="fig-num">Fig. 05 · Conjunto paisagistico</span>
+            <span class="fig-desc">A leitura ampla do perimetro mostra equilibrio e ritmo.</span>
+          </figcaption>
+        </figure>
+        <figure class="fig reveal">
+          <div class="fig-frame"><img src="assets/07-galeria-e.jpg" alt="Anteprojeto 3D isometrico"></div>
+          <figcaption class="fig-caption">
+            <span class="fig-num">Fig. 06 · Vista isometrica</span>
+            <span class="fig-desc">Anteprojeto 3D isometrico da composicao final.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <aside class="figure-side">
+        <div class="side-note reveal delay-1">
+          <span class="side-label">Notas do estudio</span>
+          <span class="side-title">Cada plano e estudado de forma autonoma.</span>
+          <p>As perspectivas foram preparadas para que a leitura ocorra em movimento, exatamente como o visitante percorre a entrada do empreendimento.</p>
+        </div>
+        <div class="side-note reveal delay-2">
+          <span class="side-label">Repertorio · vegetal</span>
+          <span class="side-title">Mediterraneo aplicado ao clima local.</span>
+          <p>Especies selecionadas por resistencia, sobriedade visual e baixa manutencao, mantendo a identidade mediterranea proposta.</p>
+        </div>
+        <div class="side-note reveal delay-3">
+          <span class="side-label">Resultado · esperado</span>
+          <span class="side-title">Atemporalidade.</span>
+          <p>Um jardim que envelhece com elegancia, valorizando o investimento e a arquitetura ao longo do tempo.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANTEPROJETO ============ -->
+<section class="ante" id="anteprojeto">
+  <div class="container">
+    <div class="ante-head">
+      <div class="chapter-mark"><span class="ch-num">Capitulo III</span> Anteprojeto paisagistico</div>
+      <h2 class="section-title reveal">Visualizacao previa<br>antes da <em>execucao.</em></h2>
+      <p class="ante-intro reveal delay-1">
+        Com objetivo de proporcionar melhor entendimento visual da proposta, foi desenvolvido anteprojeto tridimensional contemplando estudo ornamental, organizacao volumetrica das especies e integracao estetica entre paisagismo e arquitetura existente.
+      </p>
+    </div>
+
+    <div class="ante-list">
+      <div class="ante-item reveal">
+        <div class="ante-num">01 · I</div>
+        <div class="ante-name">Organizacao<br>espacial</div>
+        <div class="ante-desc">Distribuicao estrategica das especies ornamentais conforme o espaco disponivel.</div>
+      </div>
+      <div class="ante-item reveal delay-1">
+        <div class="ante-num">02 · II</div>
+        <div class="ante-name">Estudo de<br>volumetria</div>
+        <div class="ante-desc">Composicao tridimensional das alturas e massas vegetais para equilibrio visual.</div>
+      </div>
+      <div class="ante-item reveal delay-2">
+        <div class="ante-num">03 · III</div>
+        <div class="ante-name">Composicao<br>dos canteiros</div>
+        <div class="ante-desc">Visualizacao completa da distribuicao ornamental e das areas de destaque.</div>
+      </div>
+      <div class="ante-item reveal delay-3">
+        <div class="ante-num">04 · IV</div>
+        <div class="ante-name">Harmonizacao<br>arquitetonica</div>
+        <div class="ante-desc">Integracao visual entre paisagismo e arquitetura existente do empreendimento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATE 02: Planta baixa ============ -->
+<div class="plate paper">
+  <div class="plate-frame">
+    <div class="plate-meta"><strong>Prancha · 02</strong><span>Planta baixa</span></div>
+    <img class="plate-image" src="assets/08-planta-baixa.jpg" alt="Planta baixa do anteprojeto paisagistico">
+    <div class="plate-title-overlay">Planta baixa<br><em>do anteprojeto.</em></div>
+    <div class="plate-caption">Organizacao espacial das areas de implantacao,<br>circulacao e zonas de destaque paisagistico.</div>
+  </div>
+</div>
+
+<!-- ============ IMPLANTAÇÃO ============ -->
+<section class="implant">
+  <div class="container">
+    <div class="implant-head">
+      <div>
+        <div class="chapter-mark"><span class="ch-num">Capitulo IV</span> Implantacao paisagistica</div>
+        <h2 class="section-title reveal">Mais de 100 especies<br>ornamentais <em>selecionadas.</em></h2>
+      </div>
+      <div class="implant-marquee reveal delay-1">
+        <strong>Repertorio</strong>Cipreste italiano · Lavanda · Oliveira · Lantana · Primavera
+      </div>
+    </div>
+
+    <div class="implant-body">
+      <div class="implant-image reveal">
+        <img src="assets/09-especies.jpg" alt="Composicao paisagistica completa — especies selecionadas">
+      </div>
+      <div class="implant-text reveal delay-1">
+        <h3>Composicao ornamental planejada<br>para o Residencial Florenca</h3>
+        <p>
+          A implantacao sera realizada atraves de composicao ornamental planejada, utilizando especies selecionadas conforme clima, incidencia solar e caracteristicas do ambiente.
+        </p>
+        <p>
+          As especies serao distribuidas de forma estrategica conforme necessidade estetica e funcional de cada area do projeto, priorizando composicao visual, integracao paisagistica e desenvolvimento adequado ao ambiente.
+        </p>
+        <div class="species">
+          <div class="species-item"><span class="species-num">01</span><span class="species-name">Cipreste italiano</span></div>
+          <div class="species-item"><span class="species-num">02</span><span class="species-name">Lavandas</span></div>
+          <div class="species-item"><span class="species-num">03</span><span class="species-name">Oliveiras ornamentais</span></div>
+          <div class="species-item"><span class="species-num">04</span><span class="species-name">Lantanas Arco-Iris</span></div>
+          <div class="species-item"><span class="species-num">05</span><span class="species-name">Primaveras (Bougainvillea)</span></div>
+          <div class="species-item"><span class="species-num">06</span><span class="species-name">+ Repertorio ornamental</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATE 03: Vista conjunto ============ -->
+<div class="plate terra">
+  <div class="plate-frame">
+    <div class="plate-meta"><strong>Prancha · 03</strong><span>Integracao do conjunto</span></div>
+    <img class="plate-image" src="assets/10-vista-conjunto.jpg" alt="Vista do conjunto paisagistico do Residencial Florenca">
+    <div class="plate-title-overlay">Integracao<br><em>total do conjunto.</em></div>
+    <div class="plate-caption">Paisagismo pensado para valorizar todo<br>o perimetro do Residencial Florenca.</div>
+  </div>
+</div>
+
+<!-- ============ FASES ============ -->
+<section class="phases">
+  <div class="container">
+    <div class="phases-head">
+      <div>
+        <div class="chapter-mark on-dark"><span class="ch-num">Capitulo V</span> Fases do projeto</div>
+        <h2 class="section-title light reveal">Prazo total estimado:<br>12 dias <em>uteis.</em></h2>
+      </div>
+      <div class="phases-head-aside reveal delay-1">
+        Tres etapas integradas, do estudo preliminar a entrega final, executadas em sequencia continua.
+      </div>
+    </div>
+
+    <div class="phases-list">
+
+      <div class="phase reveal">
+        <div class="phase-num">01</div>
+        <div class="phase-meta">
+          <div class="phase-name">Estudo preliminar</div>
+          <div class="phase-prazo">Ate 2 dias uteis</div>
+        </div>
+        <div class="phase-desc">
+          Etapa dedicada a analise do espaco e definicao das diretrizes conceituais do projeto paisagistico.
+        </div>
+        <div class="phase-steps">
+          <div class="phase-step">Analise do ambiente e incidencia solar</div>
+          <div class="phase-step">Definicao das preferencias esteticas</div>
+          <div class="phase-step">Diretrizes conceituais do projeto</div>
+        </div>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-num">02</div>
+        <div class="phase-meta">
+          <div class="phase-name">Planejamento executivo<br>e anteprojeto 3D</div>
+          <div class="phase-prazo">Ate 3 dias uteis</div>
+        </div>
+        <div class="phase-desc">
+          Desenvolvimento tecnico do planejamento da implantacao, organizacao das especies ornamentais e elaboracao do anteprojeto paisagistico tridimensional.
+        </div>
+        <div class="phase-steps">
+          <div class="phase-step">Modelagem 3D da proposta paisagistica</div>
+          <div class="phase-step">Definicao das especies e materiais</div>
+          <div class="phase-step">Estudo volumetrico e cromatico final</div>
+        </div>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-num">03</div>
+        <div class="phase-meta">
+          <div class="phase-name">Implantacao do jardim</div>
+          <div class="phase-prazo">Ate 7 dias uteis</div>
+        </div>
+        <div class="phase-desc">
+          Execucao completa da implantacao paisagistica, incluindo remocao das especies existentes, preparacao dos canteiros e plantio das especies ornamentais.
+        </div>
+        <div class="phase-steps">
+          <div class="phase-step">Remocao das especies existentes da Ilha 01</div>
+          <div class="phase-step">Preparacao do solo e dos canteiros</div>
+          <div class="phase-step">Plantio das especies ornamentais selecionadas</div>
+          <div class="phase-step">Composicao final, ajustes e entrega</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVESTIMENTO ============ -->
+<section class="invest" id="investimento">
+  <div class="container">
+    <div class="invest-head">
+      <div>
+        <div class="chapter-mark on-dark"><span class="ch-num">Capitulo VI</span> Investimento</div>
+        <h2 class="section-title light reveal">Implantacao completa<br>com <em>anteprojeto 3D.</em></h2>
+      </div>
+      <p class="invest-head-aside reveal delay-1">
+        Investimento integral, sem custos adicionais ocultos. Tudo o que e necessario para entregar o conjunto pronto, ja esta incluido.
+      </p>
+    </div>
+
+    <div class="invest-grid">
+      <div class="scope reveal">
+        <div class="scope-head">
+          <h4>Escopo completo incluso</h4>
+          <span class="scope-count">08 itens</span>
+        </div>
+        <div class="scope-list">
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Anteprojeto paisagistico tridimensional</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Relatorio tecnico paisagistico completo</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Remocao das especies existentes da Ilha 01</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Mais de 100 especies ornamentais selecionadas</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Implantacao ornamental completa com acabamento final</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Preparacao do solo e dos canteiros</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Fornecimento integral das especies vegetais</span></div>
+          <div class="scope-item"><span class="scope-mark">+</span><span class="scope-text">Execucao tecnica e limpeza final da area</span></div>
+        </div>
+      </div>
+
+      <div class="invest-pricing reveal delay-1">
+        <div class="price-card">
+          <div class="price-label">Investimento total</div>
+          <div class="price-value"><span>R$</span>29.400<span>,00</span></div>
+          <div class="price-note">Parcelamento em 3x durante a execucao. Entrada de 50% para aquisicao de materiais e especies.</div>
+        </div>
+        <div class="price-card main">
+          <span class="price-badge">10% OFF · a vista</span>
+          <div class="price-label">Pagamento a vista</div>
+          <div class="price-value"><span>R$</span>26.460<span>,00</span></div>
+          <div class="price-note">Economia de R$ 2.940,00 no pagamento integral.</div>
+        </div>
+        <div class="payment-conditions">
+          <div class="pay-title">Condicoes de pagamento</div>
+          <div class="pay-item">50% de entrada para inicio da aquisicao das especies e materiais.</div>
+          <div class="pay-item">Saldo dividido em 2 parcelas durante a execucao.</div>
+          <div class="pay-item">Pagamento integral com desconto de 10%.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANUTENÇÃO ============ -->
+<section class="manut">
+  <div class="container">
+    <div class="manut-head">
+      <div>
+        <div class="chapter-mark"><span class="ch-num">Capitulo VII</span> Plano de manutencao</div>
+        <h2 class="section-title reveal">Acompanhamento tecnico<br><em>periodico.</em></h2>
+      </div>
+      <p class="manut-aside reveal delay-1">
+        Cuidamos do jardim implantado como se fosse o nosso, garantindo que a composicao mantenha forma, ritmo e identidade ao longo do tempo.
+      </p>
+    </div>
+
+    <div class="manut-grid">
+      <div class="manut-period reveal">
+        <div class="manut-period-label">Periodo inicial · pos-obra</div>
+        <div class="manut-period-title">1º mes apos a implantacao</div>
+        <div class="manut-items">
+          <div class="manut-item">Tres visitas semanais de monitoramento</div>
+          <div class="manut-item">Acompanhamento do desenvolvimento das especies</div>
+          <div class="manut-item">Limpeza e alinhamento dos canteiros</div>
+          <div class="manut-item">Manejo preventivo das especies ornamentais</div>
+          <div class="manut-item">Ajustes finos de composicao e densidade</div>
+        </div>
+      </div>
+      <div class="manut-period second reveal delay-1">
+        <div class="manut-period-label">Periodo regular · continuo</div>
+        <div class="manut-period-title">Apos o periodo inicial</div>
+        <div class="manut-items">
+          <div class="manut-item">Duas visitas semanais de manutencao</div>
+          <div class="manut-item">Podas ornamentais periodicas</div>
+          <div class="manut-item">Monitoramento fitossanitario preventivo</div>
+          <div class="manut-item">Renovacao pontual das especies sazonais</div>
+          <div class="manut-item">Preservacao estetica do paisagismo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="manut-price-row">
+      <div class="manut-price reveal">
+        <div>
+          <span class="manut-price-label">Valor mensal da manutencao</span>
+          <span class="manut-price-value">R$ 2.490</span>
+        </div>
+        <span class="manut-price-period">/ mes</span>
+      </div>
+      <p class="manut-note reveal delay-1">
+        O plano de manutencao garante a adaptacao adequada das especies ornamentais e a preservacao estetica do paisagismo implantado, protegendo o investimento ao longo do tempo. Reajustes contratuais somente apos 12 meses.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<div class="closing-plate">
+  <img class="closing-image plate-image" src="assets/02-vista-geral.jpg" alt="Vista completa do Residencial Florenca">
+  <div class="closing-overlay">
+    <div class="closing-meta" style="margin-bottom:24px">Encerramento · Edicao Florenca</div>
+    <h2 class="closing-title">
+      Esperamos colaborar com a<br><em>valorizacao paisagistica</em><br>do Residencial Florenca.
+    </h2>
+    <div class="closing-meta">Estamos a disposicao para esclarecimentos e ajustes.</div>
+    <div class="closing-signature">
+      <span><strong>Gardenia Jardins</strong>Estudio paisagistico</span>
+      <span><strong>Maio · 2026</strong>Pirassununga · SP</span>
+      <span><strong>Proposta N.º 01</strong>Residencial Florenca</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div>
+    <div class="foot-brand">Gardenia <em>jardins</em></div>
+    <div class="foot-tag">Paisagismo de alto padrao em Pirassununga e regiao. Estudio especializado em projetos de linguagem contemporanea e mediterranea.</div>
+  </div>
+  <div class="foot-msg">"Transformamos espacos<br>esquecidos em jardins vivos."</div>
+  <div class="foot-meta">
+    <div class="foot-city">Pirassununga · SP · Brasil</div>
+    <div class="foot-copy">Estudio Gardenia · 2026</div>
+    <div class="foot-copy">Proposta Residencial Florenca</div>
+  </div>
+  <div class="foot-bottom">
+    <span>Edicao 01 · MMXXVI</span>
+    <span>Gardenia Jardins &copy; 2026</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ----- Reveal on scroll -----
+  const reveals = document.querySelectorAll('.reveal, .plate-image, .closing-image');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => io.observe(el));
+
+  // ----- Hero image entrance -----
+  const heroImg = document.getElementById('hero-img');
+  if (heroImg) {
+    const markLoaded = () => heroImg.classList.add('loaded');
+    if (heroImg.complete) markLoaded();
+    else heroImg.addEventListener('load', markLoaded, { once: true });
+  }
+
+  // ----- Masthead shrink + scroll progress -----
+  const masthead = document.getElementById('masthead');
+  const progress = document.getElementById('progress');
+  let rafId = null;
+  function onScroll() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      const y = window.scrollY || window.pageYOffset;
+      if (masthead) masthead.classList.toggle('shrunk', y > 80);
+      if (progress) {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = h > 0 ? ((y / h) * 100).toFixed(2) + '%' : '0%';
+      }
+      rafId = null;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ----- Smooth-scroll for anchor links -----
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id && id.length > 1) {
+        const el = document.querySelector(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
