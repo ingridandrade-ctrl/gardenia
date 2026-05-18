@@ -883,6 +883,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 /* ═══════════════════════════════════════════════════════════
    CONCEITO (dark) — 2 colunas: texto + cards stack
    ═══════════════════════════════════════════════════════════ */
+#cap-2 .max { max-width:min(1440px, 100%); }
 .concept {
   display:flex;
   flex-direction:column;
@@ -943,15 +944,19 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   margin-bottom:32px;
   line-height:1.4;
   font-weight:500;
+  text-wrap:balance;
+  max-width:24ch;
 }
 .concept-p {
   font-family:'Inter',sans-serif;
-  font-size:1.05rem;
-  font-weight:300;
-  line-height:1.95;
-  color:rgba(255,255,255,.5);
+  font-size:clamp(1.15rem, .3vw + 1.05rem, 1.35rem);
+  font-weight:400;
+  line-height:1.85;
+  color:var(--f);
   text-align:left;
-  margin-bottom:24px;
+  margin-bottom:28px;
+  text-wrap:pretty;
+  max-width:42ch;
 }
 .concept-p:last-child { margin-bottom:0; }
 .concept-emph {
@@ -965,7 +970,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   display:flex;
   flex-direction:column;
   gap:12px;
-  max-width:420px;
+  max-width:380px;
   margin-inline:initial;
 }
 .concept-card {
