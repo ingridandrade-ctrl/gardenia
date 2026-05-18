@@ -939,24 +939,24 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .concept-lead-italic {
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-size:clamp(1.4rem, 1vw + 1.1rem, 1.85rem);
+  font-size:clamp(1.25rem, .85vw + 1.05rem, 1.65rem);
   color:var(--f);
   margin-bottom:32px;
   line-height:1.4;
   font-weight:500;
   text-wrap:balance;
-  max-width:24ch;
+  max-width:26ch;
 }
 .concept-p {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.15rem, .3vw + 1.05rem, 1.35rem);
+  font-size:clamp(1.05rem, .25vw + 1rem, 1.22rem);
   font-weight:400;
-  line-height:1.85;
+  line-height:1.8;
   color:var(--f);
   text-align:left;
-  margin-bottom:28px;
+  margin-bottom:26px;
   text-wrap:pretty;
-  max-width:42ch;
+  max-width:44ch;
 }
 .concept-p:last-child { margin-bottom:0; }
 .concept-emph {
