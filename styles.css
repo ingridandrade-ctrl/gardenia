@@ -258,7 +258,8 @@ nav.scrolled {
 .hero-h1 {
   font-size:clamp(3rem, 5.4vw + .4rem, 6.4rem);
   font-weight:700; line-height:1.04;
-  letter-spacing:-.02em;
+  letter-spacing:-.035em;
+  word-spacing:-.05em;
   color:var(--ink);
   max-width:none;
 }
@@ -826,6 +827,61 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   height:auto;
   display:block;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   GALERIA — 3 col grid quadrado
+   ═══════════════════════════════════════════════════════════ */
+.gal-wrap {
+  background:var(--g-night);
+  position:relative;
+}
+.gal-rail {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:clamp(40px, 4vw, 64px) clamp(28px, 3vw, 56px);
+}
+.gal-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:2px;
+}
+.gi {
+  position:relative;
+  overflow:hidden;
+  background:var(--g-deep);
+}
+.gi img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform 1.2s cubic-bezier(.22,1,.36,1), filter .6s;
+}
+.gi:hover img {
+  transform:scale(1.04);
+  filter:saturate(1.1);
+}
+.gi-lbl {
+  position:absolute;
+  bottom:18px; left:24px;
+  font-size:.6rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--f);
+  font-weight:500;
+  opacity:.85;
+  z-index:2;
+}
+.gi::after {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(14,40,24,.6) 0%, transparent 50%);
+  pointer-events:none;
+}
+.h420 { aspect-ratio:1/1; }
+.h300 { aspect-ratio:1/1; }
+.h610 { aspect-ratio:1/1; }
 
 /* ═══════════════════════════════════════════════════════════
    CONCEITO (dark) — 2 colunas: texto + cards stack
@@ -2248,4 +2304,28 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-h1 { font-size:clamp(2.6rem, 12vw, 3.6rem) !important; }
   .invest-total .inv-big { font-size:clamp(3.5rem, 14vw, 5rem) !important; }
   .mnt-card-price { font-size:clamp(2.2rem, 10vw, 3rem) !important; }
+}
+
+/* === Mobile pontual extra === */
+@media (max-width: 900px) {
+  .studio > *,
+  .concept > *,
+  .ante > * { margin-bottom:clamp(20px, 4vw, 32px) !important; }
+  .studio-title,
+  .concept-title,
+  .ante-title { margin-bottom:clamp(20px, 4vw, 32px) !important; }
+  .studio-eyebrow,
+  .concept-eyebrow { margin-bottom:clamp(16px, 3vw, 24px) !important; }
+  .h420 { aspect-ratio:auto; height:300px; }
+  /* Hero mobile: imagem maior e fixed-background */
+  .hero-right {
+    flex:none !important;
+    width:100% !important;
+    height:clamp(380px, 60vh, 540px) !important;
+    padding:0 !important;
+    background:var(--f) url('images/fundo-site.png') no-repeat center center !important;
+    background-attachment:fixed !important;
+    background-size:auto 90% !important;
+  }
+  .hero-right img { display:none !important; }
 }
