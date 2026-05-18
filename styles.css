@@ -286,7 +286,7 @@ html.no-js .hero-h1 .line-inner,
 
 .hero-deck {
   font-size:clamp(.9rem, .15vw + .85rem, 1rem);
-  line-height:1.85; color:rgba(20,21,12,.7);
+  line-height:1.65; color:rgba(20,21,12,.7);
   font-weight:300; max-width:46ch;
   margin-top:clamp(28px, 2vw + 12px, 44px);
 }
@@ -456,7 +456,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    SECTIONS — sistema unificado de capitulos
    ═══════════════════════════════════════════════════════════ */
 .s {
-  padding:clamp(96px, 9vw + 16px, 160px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(64px, 6vw + 16px, 112px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
 }
 .s-white { background:var(--linen); }
@@ -468,10 +468,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .head {
   display:flex;
   flex-direction:column;
-  margin-bottom:clamp(64px, 6vw, 96px);
+  margin-bottom:clamp(40px, 4vw, 64px);
 }
-.head > .chap { margin-bottom:clamp(48px, 4vw, 64px); }
-.head > .hxl { margin-bottom:clamp(48px, 4vw, 64px); }
+.head > .chap { margin-bottom:clamp(28px, 2.5vw, 40px); }
+.head > .hxl { margin-bottom:clamp(28px, 2.5vw, 40px); }
 .head > .lede { margin-bottom:0; }
 
 /* ── CHAP: numero romano + nome (cabecalho do capitulo) ── */
@@ -535,7 +535,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-style:normal;
   font-weight:300;
   font-size:.91rem;
-  line-height:1.9;
+  line-height:1.7;
   color:#6b6b6b;
   max-width:680px;
 }
@@ -604,7 +604,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .body-t {
   font-size:clamp(.9rem, .15vw + .85rem, 1rem);
-  line-height:1.85;
+  line-height:1.65;
   color:var(--mid); font-weight:300;
   max-width:64ch;
 }
@@ -622,7 +622,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .studio > * {
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .studio > *:last-child { margin-bottom:0; }
 
@@ -640,7 +640,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   line-height:.97;
   letter-spacing:-.02em;
   max-width:none;
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .studio-title span {
   display:block;
@@ -655,39 +655,77 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:#25613B;
 }
 
-.studio-support {
-  font-family:'Inter',sans-serif;
-  font-size:.96rem;
-  font-weight:400;
-  line-height:1.85;
-  color:#5d5d5d;
-  max-width:680px;
-  margin-left:auto;
-  margin-right:auto;
+/* QUOTE — citacao em Playfair italic com aspa grande */
+.studio-quote {
+  position:relative;
+  max-width:780px;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
 }
-.studio-support strong {
-  font-weight:600;
-  color:#111209;
+.studio-quote::before {
+  content:'"';
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(3rem, 3.5vw + 1rem, 5rem);
+  line-height:.4;
+  color:#25613B;
+  opacity:.6;
+  margin-bottom:clamp(16px, 1.5vw, 28px);
+}
+.studio-quote p {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.2rem, 1.2vw + .7rem, 1.65rem);
+  line-height:1.5;
+  color:#2a2c20;
+  letter-spacing:-.005em;
+}
+.studio-quote strong {
+  font-weight:500;
+  font-style:italic;
+  color:#25613B;
 }
 
-.studio-body {
-  display:flex;
-  flex-direction:column;
-  gap:clamp(20px, 1.5vw, 28px);
-  max-width:680px;
-  margin-left:auto;
-  margin-right:auto;
+/* FEATURE — destaque do Florença em card glass verde-tintado */
+.studio-feature {
+  max-width:820px;
+  margin:0 auto;
+  padding:clamp(36px, 3.5vw, 56px) clamp(28px, 3vw, 64px);
+  background:linear-gradient(155deg, rgba(30,92,50,.07) 0%, rgba(30,92,50,.15) 100%);
+  backdrop-filter:blur(12px) saturate(160%);
+  -webkit-backdrop-filter:blur(12px) saturate(160%);
+  border:1px solid rgba(30,92,50,.20);
+  border-radius:22px;
+  text-align:center;
+  box-shadow:
+    0 18px 56px -22px rgba(30,92,50,.22),
+    0 6px 18px -10px rgba(20,21,12,.08),
+    inset 0 1px 0 rgba(255,255,255,.5);
 }
-.studio-p {
+.studio-feature-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.96rem;
-  font-weight:400;
-  line-height:1.85;
-  color:#5d5d5d;
-}
-.studio-p strong {
+  font-size:.74rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
   font-weight:600;
-  color:#111209;
+  color:#25613B;
+  margin-bottom:clamp(18px, 1.6vw, 28px);
+}
+.studio-feature-text {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(1.05rem, .25vw + 1rem, 1.25rem);
+  font-weight:400;
+  line-height:1.65;
+  color:#2a2c20;
+  margin:0;
+}
+.studio-feature-text strong {
+  color:#25613B;
+  font-weight:700;
 }
 
 /* CARDS — arredondados, fundo creme da paleta, com icones */
@@ -724,34 +762,35 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
     inset 0 1px 0 rgba(255,255,255,.7);
 }
 .studio-card-icon {
-  width:52px;
-  height:52px;
+  width:clamp(56px, 5vw, 68px);
+  height:clamp(56px, 5vw, 68px);
   background:rgba(30,92,50,.10);
-  border-radius:14px;
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
   color:var(--g);
   flex-shrink:0;
+  margin-bottom:4px;
 }
 .studio-card-icon svg {
-  width:55%;
-  height:55%;
+  width:52%;
+  height:52%;
 }
 .studio-card-label {
   font-family:'Inter',sans-serif;
-  font-size:.72rem;
-  text-transform:uppercase;
-  letter-spacing:.18em;
+  font-size:clamp(1rem, .2vw + .92rem, 1.18rem);
+  text-transform:none;
+  letter-spacing:-.01em;
   font-weight:600;
-  color:#25613B;
-  line-height:1.4;
+  color:#111209;
+  line-height:1.3;
 }
 .studio-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.88rem;
+  font-size:clamp(.92rem, .15vw + .88rem, 1rem);
   font-weight:400;
-  line-height:1.65;
+  line-height:1.55;
   color:#5d5d5d;
 }
 
@@ -784,7 +823,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .concept > * {
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .concept > *:last-child { margin-bottom:0; }
 
@@ -800,7 +839,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-size:clamp(3rem, 5vw, 5.5rem);
   line-height:.97;
   letter-spacing:-.02em;
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .concept-title span {
   display:block;
@@ -818,7 +857,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Inter',sans-serif;
   font-size:1.02rem;
   font-weight:400;
-  line-height:1.75;
+  line-height:1.65;
   color:rgba(244,239,224,.7);
   max-width:680px;
   margin-left:auto;
@@ -836,7 +875,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Inter',sans-serif;
   font-size:.96rem;
   font-weight:400;
-  line-height:1.85;
+  line-height:1.65;
   color:rgba(244,239,224,.65);
 }
 .concept-p strong {
@@ -877,35 +916,36 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
     inset 0 1px 0 rgba(255,255,255,.14);
 }
 .concept-card-icon {
-  width:48px;
-  height:48px;
-  border-radius:13px;
-  background:rgba(159,213,140,.12);
+  width:clamp(54px, 4.5vw, 64px);
+  height:clamp(54px, 4.5vw, 64px);
+  border-radius:15px;
+  background:rgba(159,213,140,.14);
   display:flex;
   align-items:center;
   justify-content:center;
   color:#9FD58C;
   flex-shrink:0;
+  margin-bottom:4px;
 }
 .concept-card-icon svg {
-  width:55%;
-  height:55%;
+  width:52%;
+  height:52%;
 }
 .concept-card-label {
   font-family:'Inter',sans-serif;
-  font-size:.72rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
+  font-size:clamp(.98rem, .2vw + .9rem, 1.12rem);
+  text-transform:none;
+  letter-spacing:-.01em;
   font-weight:600;
-  color:#9FD58C;
-  line-height:1.4;
+  color:var(--f);
+  line-height:1.3;
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.84rem;
+  font-size:clamp(.88rem, .15vw + .85rem, .96rem);
   font-weight:400;
-  line-height:1.6;
-  color:rgba(244,239,224,.72);
+  line-height:1.55;
+  color:rgba(244,239,224,.7);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1001,7 +1041,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   text-align:center;
 }
 .ante > * {
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .ante > *:last-child { margin-bottom:0; }
 
@@ -1017,7 +1057,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-size:clamp(3rem, 5vw, 5.5rem);
   line-height:.97;
   letter-spacing:-.02em;
-  margin-bottom:clamp(48px, 5vw, 80px);
+  margin-bottom:clamp(32px, 3vw, 52px);
 }
 .ante-title span {
   display:block;
@@ -1035,7 +1075,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-family:'Inter',sans-serif;
   font-size:1.02rem;
   font-weight:400;
-  line-height:1.75;
+  line-height:1.65;
   color:#5d5d5d;
   max-width:680px;
   margin-left:auto;
@@ -1045,7 +1085,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-family:'Inter',sans-serif;
   font-size:.96rem;
   font-weight:400;
-  line-height:1.85;
+  line-height:1.65;
   color:#5d5d5d;
   max-width:680px;
   margin-left:auto;
@@ -1086,34 +1126,35 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
     inset 0 1px 0 rgba(255,255,255,.7);
 }
 .ante-card-icon {
-  width:48px;
-  height:48px;
-  border-radius:13px;
+  width:clamp(54px, 4.5vw, 64px);
+  height:clamp(54px, 4.5vw, 64px);
+  border-radius:15px;
   background:rgba(30,92,50,.10);
   display:flex;
   align-items:center;
   justify-content:center;
   color:var(--g);
   flex-shrink:0;
+  margin-bottom:4px;
 }
 .ante-card-icon svg {
-  width:55%;
-  height:55%;
+  width:52%;
+  height:52%;
 }
 .ante-card-label {
   font-family:'Inter',sans-serif;
-  font-size:.72rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
+  font-size:clamp(.98rem, .2vw + .9rem, 1.12rem);
+  text-transform:none;
+  letter-spacing:-.01em;
   font-weight:600;
-  color:#25613B;
-  line-height:1.4;
+  color:#111209;
+  line-height:1.3;
 }
 .ante-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.84rem;
+  font-size:clamp(.88rem, .15vw + .85rem, .96rem);
   font-weight:400;
-  line-height:1.6;
+  line-height:1.55;
   color:#5d5d5d;
 }
 
@@ -1554,7 +1595,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .mnt-sub {
   font-family:'Inter',sans-serif;
   font-size:.91rem;
-  line-height:1.9;
+  line-height:1.7;
   color:#6b6b6b;
   font-weight:300;
   max-width:680px;
@@ -1876,25 +1917,20 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-bottom { align-items:center; }
   .hero-client-block { text-align:center; }
   .hxl { max-width:none; }
-  /* MOBILE: imagem renderizada normalmente em container fixo */
+  /* MOBILE: imagem em natural aspect, ocupando largura total */
   .hero-right {
     flex:none;
     width:100%;
-    height:clamp(340px, 56vh, 520px);
-    padding:0 24px;
+    padding:0;
     background:var(--f);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
+    overflow:visible;
   }
   .hero-right img {
     display:block;
     width:100%;
     height:auto;
-    max-height:100%;
+    max-height:none;
     object-fit:contain;
-    object-position:center;
     animation:none;
     filter:none;
     transform:none;
@@ -1938,12 +1974,11 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   nav.scrolled { padding:12px 20px; }
   .n-logo { font-size:.96rem; }
   .n-ref { font-size:.54rem; letter-spacing:.16em; }
-  .hero-left { padding:40px 22px 44px; }
-  .hero-issue { font-size:.56rem; padding-bottom:16px; margin-bottom:36px; }
-  .hero-h1 { font-size:clamp(2.4rem, 11vw, 3.6rem); line-height:1.02; max-width:none; }
-  .hero-deck { font-size:.9rem; margin-top:28px; max-width:none; }
-  .hero-bottom { margin-top:48px; gap:28px; }
-  .hero-client-name { font-size:1.3rem; }
+  .hero-left { padding:32px 24px 24px; }
+  .hero-h1 { font-size:clamp(3rem, 13vw, 4.4rem); line-height:1; max-width:none; }
+  .hero-deck { font-size:.95rem; margin-top:24px; max-width:none; line-height:1.55; }
+  .hero-bottom { margin-top:32px; gap:24px; }
+  .hero-client-name { font-size:1.4rem; }
 
   /* HERO MOBILE — PNG transparente em natural aspect, cream natural */
   .hero-right {
