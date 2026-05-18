@@ -37,7 +37,7 @@ body {
   background:var(--f);
   color:var(--ink);
   overflow-x:hidden;
-  font-weight:300;
+  font-weight:400;
   line-height:1.55;
   position:relative;
 }
@@ -679,7 +679,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Inter',sans-serif;
   font-style:normal;
   font-weight:400;
-  font-size:clamp(1.05rem, .4vw + .92rem, 1.32rem);
+  font-size:clamp(1.15rem, .55vw + 1rem, 1.5rem);
   line-height:1.55;
   color:#2a2c20;
   letter-spacing:-.005em;
@@ -782,7 +782,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1rem, .2vw + .92rem, 1.18rem);
+  font-size:clamp(1.05rem, .2vw + .98rem, 1.25rem);
   text-transform:none;
   letter-spacing:-.01em;
   font-weight:600;
@@ -791,7 +791,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card-text {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.92rem, .15vw + .88rem, 1rem);
+  font-size:clamp(.95rem, .15vw + .92rem, 1.05rem);
   font-weight:400;
   line-height:1.55;
   color:#5d5d5d;
@@ -955,7 +955,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.02rem, .2vw + .95rem, 1.18rem);
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.22rem);
   text-transform:none;
   letter-spacing:-.01em;
   font-weight:600;
@@ -964,7 +964,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.9rem, .15vw + .88rem, 1rem);
+  font-size:clamp(.94rem, .15vw + .9rem, 1.05rem);
   font-weight:400;
   line-height:1.6;
   color:rgba(244,239,224,.85);
@@ -1196,7 +1196,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .pm-phase-desc {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.95rem, .15vw + .9rem, 1.05rem);
+  font-size:clamp(1rem, .15vw + .95rem, 1.12rem);
   font-weight:400;
   line-height:1.65;
   color:#5d5d5d;
@@ -1250,7 +1250,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .pm-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.85rem;
+  font-size:clamp(.92rem, .15vw + .88rem, 1rem);
   font-weight:400;
   line-height:1.55;
   color:#5d5d5d;
