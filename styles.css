@@ -1387,21 +1387,211 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 
 
 /* ═══════════════════════════════════════════════════════════
-   INVESTIMENTO — 2 colunas (escopo + preco)
+   INVESTIMENTO — header padronizado + card com preço dramático
    ═══════════════════════════════════════════════════════════ */
-.invest-grid {
-  display:grid;
-  grid-template-columns:55% 45%;
-  gap:80px;
-  align-items:start;
-  max-width:1200px;
-  margin:0 auto;
+
+/* HEAD — sistema da Secao 2 (eyebrow + spans + sub) */
+.invest-head {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin-bottom:clamp(48px, 5vw, 88px);
+}
+.invest-head > * { margin-bottom:clamp(28px, 2.5vw, 40px); }
+.invest-head > *:last-child { margin-bottom:0; }
+.invest-head-eyebrow {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#CFAA40;
+  font-weight:300;
+}
+.invest-head-title {
+  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  line-height:.98;
+  letter-spacing:-.02em;
+  max-width:none;
+  text-align:center;
+}
+.invest-head-title span {
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  color:var(--ink);
+}
+.invest-head-title .invest-head-em {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  color:#25613B;
+}
+.invest-head-sub {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
+  font-weight:400;
+  line-height:1.7;
+  color:#5d5d5d;
+  max-width:680px;
 }
 
-/* COLUNA ESQUERDA — Escopo / lista */
+/* CARD — wrap em torno do preço + entregas */
+.invest-card {
+  background:#FFFFFF;
+  border:1px solid rgba(30,92,50,.12);
+  border-radius:24px;
+  padding:clamp(40px, 4vw + 16px, 72px);
+  max-width:1200px;
+  margin:0 auto;
+  box-shadow:
+    0 32px 80px -32px rgba(30,92,50,.22),
+    0 8px 24px -12px rgba(20,21,12,.08),
+    inset 0 1px 0 rgba(255,255,255,.8);
+  position:relative;
+  overflow:hidden;
+}
+.invest-card::before {
+  content:'';
+  position:absolute;
+  top:-120px; right:-120px;
+  width:340px; height:340px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(30,92,50,.06), transparent 70%);
+  pointer-events:none;
+}
+
+.invest-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(48px, 5vw, 88px);
+  align-items:start;
+  position:relative;
+  z-index:1;
+}
+
+/* COLUNA ESQUERDA — Preço */
+.invest-eyebrow {
+  font-family:'Inter',sans-serif;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#6b6b6b;
+  font-weight:500;
+  line-height:1.6;
+  margin-bottom:28px;
+}
+.invest-total {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:14px;
+}
+.invest-total .inv-cur {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(1.1rem, .2vw + 1rem, 1.4rem);
+  color:#25613B;
+  opacity:.7;
+  font-weight:500;
+  margin-top:.7em;
+}
+.invest-total .inv-big {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(5rem, 9vw, 10rem);
+  font-weight:400;
+  color:#25613B;
+  line-height:.9;
+  letter-spacing:-.03em;
+  font-feature-settings:"lnum tnum";
+}
+.invest-meta {
+  font-family:'Inter',sans-serif;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:#6b6b6b;
+  font-weight:500;
+  margin-bottom:clamp(32px, 3vw, 48px);
+}
+
+/* DESCONTO — bloco impactante */
+.invest-discount {
+  display:flex;
+  align-items:center;
+  gap:clamp(20px, 2.5vw, 32px);
+  padding:clamp(20px, 2vw, 28px) clamp(20px, 2.2vw, 32px);
+  background:linear-gradient(135deg, #25613B 0%, #1A4A2C 100%);
+  border-radius:18px;
+  margin-bottom:28px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+    0 18px 40px -16px rgba(30,92,50,.45),
+    inset 0 1px 0 rgba(255,255,255,.10);
+}
+.invest-discount::after {
+  content:'';
+  position:absolute;
+  top:0; left:-50%;
+  width:50%; height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+  animation:discount-shine 5s ease-in-out infinite;
+}
+@keyframes discount-shine {
+  0%, 100% { transform:translateX(0); }
+  50% { transform:translateX(400%); }
+}
+.discount-tag {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:clamp(2.2rem, 3vw + .4rem, 3.4rem);
+  font-weight:500;
+  color:#FFAAC9;
+  line-height:.95;
+  letter-spacing:-.02em;
+  flex-shrink:0;
+  white-space:nowrap;
+}
+.discount-info { flex:1; min-width:0; }
+.discount-label {
+  font-family:'Inter',sans-serif;
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:rgba(244,239,224,.65);
+  font-weight:400;
+  margin-bottom:4px;
+}
+.discount-price {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem, 2.4vw + .4rem, 2.6rem);
+  color:var(--f);
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.018em;
+  margin-bottom:4px;
+}
+.discount-savings {
+  font-family:'Inter',sans-serif;
+  font-size:.78rem;
+  color:#FFAAC9;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.invest-conds {
+  font-family:'Inter',sans-serif;
+  font-size:.78rem;
+  font-weight:300;
+  color:#aaaaaa;
+  font-style:italic;
+  line-height:1.7;
+}
+
+/* COLUNA DIREITA — Entregas */
 .invest-scope-title {
   font-family:'Inter',sans-serif;
-  font-size:.6rem;
+  font-size:.7rem;
   text-transform:uppercase;
   letter-spacing:.2em;
   color:#6b6b6b;
@@ -1417,119 +1607,33 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   display:flex;
   gap:14px;
   align-items:baseline;
-  padding:12px 0;
+  padding:14px 0;
   border-bottom:1px solid rgba(0,0,0,.06);
   font-family:'Inter',sans-serif;
-  font-size:.83rem;
+  font-size:.88rem;
   font-weight:300;
-  color:#6b6b6b;
-  line-height:1.7;
+  color:#5d5d5d;
+  line-height:1.65;
 }
 .invest-list li:first-child { padding-top:0; }
+.invest-list li:last-child { border-bottom:none; }
 .invest-list .inv-ck {
   color:#5CA357;
-  font-weight:600;
-  font-size:.9rem;
+  font-weight:700;
+  font-size:.95rem;
   flex-shrink:0;
   line-height:1.5;
 }
 
-/* COLUNA DIREITA — Preco */
-.invest-price { }
-.invest-eyebrow {
-  font-family:'Inter',sans-serif;
-  font-size:.6rem;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  color:#6b6b6b;
-  font-weight:500;
-  margin-bottom:24px;
-}
-.invest-total {
-  display:flex;
-  align-items:flex-start;
-  gap:8px;
-  margin-bottom:14px;
-}
-.invest-total .inv-cur {
-  font-family:'Inter',sans-serif;
-  font-size:1rem;
-  color:#25613B;
-  opacity:.6;
-  font-weight:400;
-  margin-top:.6em;
-}
-.invest-total .inv-big {
-  font-family:'Playfair Display',serif;
-  font-size:clamp(4rem, 7vw, 7rem);
-  font-weight:400;
-  color:#25613B;
-  line-height:1;
-  letter-spacing:-.02em;
-  font-feature-settings:"lnum tnum";
-}
-.invest-meta {
-  font-family:'Inter',sans-serif;
-  font-size:.65rem;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#6b6b6b;
-  font-weight:500;
-}
-.invest-divider {
-  height:1px;
-  background:rgba(0,0,0,.08);
-  margin:28px 0;
-}
-.invest-alt .alt-label {
-  font-family:'Inter',sans-serif;
-  font-size:.6rem;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  color:#6b6b6b;
-  font-weight:500;
-  margin-bottom:10px;
-}
-.invest-alt .alt-row {
-  display:flex;
-  align-items:center;
-  gap:18px;
-  flex-wrap:wrap;
-}
-.invest-alt .alt-price {
-  font-family:'Playfair Display',serif;
-  font-size:2.4rem;
-  color:#111209;
-  font-weight:400;
-  line-height:1;
-  letter-spacing:-.018em;
-}
-.invest-alt .alt-badge {
-  background:#25613B;
-  color:#ffffff;
-  font-family:'Inter',sans-serif;
-  font-size:.6rem;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:500;
-  padding:5px 12px;
-}
-.invest-conds {
-  font-family:'Inter',sans-serif;
-  font-size:.75rem;
-  font-weight:300;
-  color:#aaaaaa;
-  font-style:italic;
-  line-height:1.7;
-}
-
 @media (max-width: 900px) {
+  .invest-card { padding:clamp(28px, 4vw, 40px); }
   .invest-grid {
     grid-template-columns:1fr;
-    gap:56px;
+    gap:48px;
   }
   .invest-price { order:1; }
   .invest-scope { order:2; }
+  .invest-discount { flex-direction:column; align-items:flex-start; gap:14px; }
 }
 
 
