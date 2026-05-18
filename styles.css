@@ -224,9 +224,9 @@ nav.scrolled {
   flex-direction:column;
   justify-content:space-between;
   padding-block:clamp(48px, 5vw + 16px, 96px);
-  padding-left:clamp(48px, 9vw, 180px);
+  padding-left:clamp(56px, 13vw, 260px);
   padding-right:clamp(28px, 3.5vw, 56px);
-  width:clamp(440px, 52%, 760px);
+  width:clamp(500px, 58%, 880px);
   min-height:calc(100vh - 73px);
   position:relative;
   z-index:2;
