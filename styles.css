@@ -1296,8 +1296,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 /* SPECIES (Implantacao - 5 cards de plantas) */
 .tl-species-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:clamp(12px, 1.2vw, 16px);
+  grid-template-columns:repeat(3, 1fr);
+  gap:clamp(14px, 1.4vw, 20px);
   position:relative; z-index:1;
 }
 .tl-species {
@@ -1331,8 +1331,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 /* PHASES (Fases - 3 fases com 3 steps cada) */
 .tl-phases {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:clamp(14px, 1.4vw, 20px);
+  grid-template-columns:1fr;
+  gap:clamp(16px, 1.6vw, 24px);
   position:relative; z-index:1;
 }
 .tl-phase {
@@ -1353,9 +1353,9 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   border-bottom:1px solid rgba(37,97,59,.12);
 }
 .tl-phase-steps {
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:clamp(16px, 1.6vw, 28px);
 }
 .tl-phase-step {
   font-family:'Inter',sans-serif;
@@ -1382,7 +1382,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   .tl-card-wm { font-size:4rem; top:18px; right:18px; }
   .tl-subcards,
   .tl-species-grid,
-  .tl-phases { grid-template-columns:1fr; }
+  .tl-phases,
+  .tl-phase-steps { grid-template-columns:1fr; }
 }
 
 
