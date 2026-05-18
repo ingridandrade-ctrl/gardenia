@@ -807,6 +807,9 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   .concept-cards,
   .mnt-cards,
   .scope-grid { grid-template-columns:1fr; gap:14px; }
+  .concept-card,
+  .concept-card:nth-child(4),
+  .concept-card:nth-child(5) { grid-column:auto; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -895,10 +898,15 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .concept-cards {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:clamp(14px, 1.4vw, 20px);
+  grid-template-columns:repeat(6, 1fr);
+  gap:clamp(16px, 1.6vw, 24px);
   width:100%;
+  max-width:1100px;
+  margin-inline:auto;
 }
+.concept-card { grid-column:span 2; }
+.concept-card:nth-child(4) { grid-column:2 / span 2; }
+.concept-card:nth-child(5) { grid-column:4 / span 2; }
 .concept-card {
   position:relative;
   background:linear-gradient(155deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.03) 100%);
