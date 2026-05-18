@@ -1658,12 +1658,22 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .mnt-title {
   font-size:clamp(2.8rem, 5.2vw, 5.6rem);
-  font-weight:600;
   line-height:.98;
   letter-spacing:-.02em;
-  color:var(--f);
   max-width:none;
   text-align:center;
+}
+.mnt-title span {
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  color:var(--f);
+}
+.mnt-title .mnt-em {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  color:#9FD58C;
 }
 .mnt-sub {
   font-family:'Inter',sans-serif;
@@ -1729,6 +1739,12 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   color:var(--f);
   margin-bottom:20px;
   letter-spacing:-.018em;
+}
+.mnt-card-title em {
+  color:#9FD58C !important;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
 }
 .mnt-card-freq {
   font-family:'Inter',sans-serif;
