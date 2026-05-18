@@ -30,6 +30,8 @@
 }
 
 html { font-size:16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+@media (min-width: 1280px) { html { font-size:17px; } }
+@media (min-width: 1600px) { html { font-size:18px; } }
 html.js { scroll-behavior:smooth; }
 
 body {
@@ -38,7 +40,7 @@ body {
   color:var(--ink);
   overflow-x:hidden;
   font-weight:400;
-  line-height:1.55;
+  line-height:1.6;
   position:relative;
 }
 
@@ -254,8 +256,8 @@ nav.scrolled {
 }
 
 .hero-h1 {
-  font-size:clamp(2.8rem, 5.8vw + .4rem, 7rem);
-  font-weight:500; line-height:1.04;
+  font-size:clamp(3.2rem, 6.4vw + .4rem, 7.5rem);
+  font-weight:600; line-height:1.04;
   letter-spacing:-.02em;
   color:var(--ink);
   max-width:13ch;
@@ -456,7 +458,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    SECTIONS — sistema unificado de capitulos
    ═══════════════════════════════════════════════════════════ */
 .s {
-  padding:clamp(72px, 7vw + 16px, 136px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(96px, 9vw + 16px, 176px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
 }
 .s-white { background:var(--linen); }
@@ -470,7 +472,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   flex-direction:column;
   align-items:center;
   text-align:center;
-  margin-bottom:clamp(48px, 5vw, 88px);
+  margin-bottom:clamp(56px, 6vw, 104px);
 }
 .head > .chap { margin-bottom:clamp(28px, 2.5vw, 40px); }
 .head > .hxl { margin-bottom:clamp(28px, 2.5vw, 40px); }
@@ -624,7 +626,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .studio > * {
-  margin-bottom:clamp(40px, 4.5vw, 76px);
+  margin-bottom:clamp(48px, 5vw, 88px);
 }
 .studio > *:last-child { margin-bottom:0; }
 
@@ -638,7 +640,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 .studio-title {
-  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
@@ -648,7 +650,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .studio-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:500;
+  font-weight:600;
   color:#111209;
 }
 .studio-title .studio-em {
@@ -785,7 +787,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.05rem, .2vw + .98rem, 1.25rem);
+  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.35rem);
   text-transform:none;
   letter-spacing:-.01em;
   font-weight:600;
@@ -794,7 +796,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card-text {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.95rem, .15vw + .92rem, 1.05rem);
+  font-size:clamp(1rem, .2vw + .95rem, 1.15rem);
   font-weight:400;
   line-height:1.55;
   color:#5d5d5d;
@@ -832,7 +834,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .concept > * {
-  margin-bottom:clamp(40px, 4.5vw, 76px);
+  margin-bottom:clamp(48px, 5vw, 88px);
 }
 .concept > *:last-child { margin-bottom:0; }
 
@@ -845,7 +847,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:600;
 }
 .concept-title {
-  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   margin-bottom:clamp(40px, 4.5vw, 76px);
@@ -854,7 +856,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .concept-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:500;
+  font-weight:600;
   color:var(--f);
 }
 .concept-title .concept-em {
@@ -962,7 +964,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.05rem, .2vw + 1rem, 1.22rem);
+  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.3rem);
   text-transform:none;
   letter-spacing:-.01em;
   font-weight:600;
@@ -971,7 +973,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.94rem, .15vw + .9rem, 1.05rem);
+  font-size:clamp(1rem, .2vw + .95rem, 1.15rem);
   font-weight:400;
   line-height:1.6;
   color:rgba(244,239,224,.85);
@@ -1114,7 +1116,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-weight:600;
 }
 .tl-title {
-  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   text-align:center;
@@ -1122,7 +1124,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .tl-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:500;
+  font-weight:600;
   color:#111209;
 }
 .tl-title .tl-em {
@@ -1199,7 +1201,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .tl-card-title {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.7rem, 2.2vw + .5rem, 2.6rem);
+  font-size:clamp(1.9rem, 2.5vw + .5rem, 3.2rem);
   font-weight:300;
   line-height:1.05;
   letter-spacing:-.018em;
@@ -1605,8 +1607,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-weight:500;
 }
 .mnt-title {
-  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
-  font-weight:500;
+  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
+  font-weight:600;
   line-height:.98;
   letter-spacing:-.02em;
   color:#111209;
