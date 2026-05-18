@@ -53,7 +53,9 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <div class="n-logo">Gardenia <em>jardins</em></div>
+  <a class="n-logo" href="#top" aria-label="Gardenia Jardins">
+    <img src="images/logo.png" alt="Gardenia Jardins" width="160" height="80">
+  </a>
   <div class="n-ref">Proposta Paisagística · 2026</div>
 </nav>
 
@@ -80,7 +82,12 @@
       </div>
     </div>
   </div>
-  <div class="hero-right"><img loading="eager" decoding="async" fetchpriority="high" src="images/hero-bg.jpg" alt="Anteprojeto Residencial Florença"></div>
+  <div class="hero-right">
+    <picture>
+      <source media="(max-width: 720px)" srcset="images/hero-mobile.png">
+      <img loading="eager" decoding="async" fetchpriority="high" src="images/hero-bg.jpg" alt="Anteprojeto Residencial Florença">
+    </picture>
+  </div>
 </div>
 
 <!-- ══ MARQUEE ══════════════════════════════════════════ -->

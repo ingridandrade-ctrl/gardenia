@@ -169,18 +169,16 @@ nav.scrolled {
   border-color:var(--rule);
 }
 .n-logo {
-  font-family:'DM Sans',sans-serif;
-  font-size:1.15rem; font-weight:600;
-  letter-spacing:-.01em;
-  color:var(--g);
-  display:flex; align-items:baseline; gap:6px;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  transition:opacity .35s ease;
 }
-.n-logo em {
-  /* Caveat handwritten — espelha o "jardins" da logo oficial */
-  color:var(--s);
-}
+.n-logo:hover { opacity:.7; }
 .n-logo img {
-  max-height:38px; width:auto; display:block;
+  height:clamp(36px, 4vw, 56px);
+  width:auto;
+  display:block;
 }
 .n-ref {
   font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
@@ -350,6 +348,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   background:linear-gradient(to right, var(--f) 0%, rgba(244,239,224,.4) 40%, transparent 56%);
   z-index:1; pointer-events:none;
 }
+.hero-right picture { display:block; width:100%; height:100%; }
 .hero-right img {
   width:100%; height:110%;
   object-fit:cover;
@@ -1291,7 +1290,28 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-deck { font-size:.9rem; margin-top:28px; max-width:none; }
   .hero-bottom { margin-top:48px; gap:28px; }
   .hero-client-name { font-size:1.3rem; }
-  .hero-right { height:54vh; min-height:280px; }
+
+  /* HERO MOBILE — imagem nova vertical (864x1821) com cream natural */
+  .hero-right {
+    height:auto;
+    min-height:0;
+    aspect-ratio: 864 / 1821;
+    max-height:78vh;
+    background:var(--f);
+  }
+  .hero-right::after { display:none; }
+  .hero-right picture,
+  .hero-right picture img {
+    width:100%;
+    height:100%;
+  }
+  .hero-right img {
+    object-fit:cover;
+    object-position:center bottom;
+    transform:none;
+    animation:none;
+    filter:none;
+  }
   .hero-stats { grid-template-columns:1fr; }
   .hs-item {
     border-right:none !important;
