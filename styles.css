@@ -6,34 +6,34 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
 :root {
-  /* ── PALETA — sem branco puro em lugar nenhum ── */
+  /* ── PALETA — modern warm, derivada da logo Gardenia ── */
   --f:        #F4EFE0;   /* paper · base do site */
   --linen:    #F0E9D2;   /* s-white (Quem somos) */
-  --paper:    #E8DFC4;   /* Anteprojeto */
+  --paper:    #EBE2C7;   /* Anteprojeto */
   --bone:     #DFD3B2;   /* Investimento */
-  --cream:    #ECE3C8;   /* secundario, fases/manutencao */
-  --ink:      #14150C;   /* deep dark, sections + footer */
-  --ink-soft: #1D1E14;
-  --g:        #25613B;   /* verde principal */
-  --g-deep:   #1A4A2C;   /* verde profundo */
-  --g-night:  #0C2417;   /* verde quase preto */
-  --s:        #5CA357;
+  --cream:    #ECE3C8;   /* fases/manutencao */
+  --ink:      #1A1B14;   /* texto principal */
+  --ink-soft: #2A2C20;
+  --g:        #1E5C32;   /* verde Gardenia (deep, do logo) */
+  --g-deep:   #144526;
+  --g-night:  #0E2818;   /* secoes dark */
+  --s:        #5CA357;   /* verde claro 'jardins' (do logo) */
   --p:        #0F7989;
-  --a:        #CFAA40;   /* gold */
+  --a:        #CFAA40;   /* gold (uso minimo) */
   --a-soft:   #B58B30;
-  --r:        #FFAAC9;   /* rosa */
-  --terra:    #B8643A;   /* terracotta */
+  --r:        #FFAAC9;
+  --terra:    #B8643A;   /* mantido p/ underlines opcionais */
   --mid:      #6E6755;
   --mid-2:    #8E876F;
-  --rule:     rgba(20,21,12,.10);
-  --rule-soft:rgba(20,21,12,.06);
+  --rule:     rgba(26,27,20,.12);
+  --rule-soft:rgba(26,27,20,.06);
 }
 
 html { font-size:16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 html.js { scroll-behavior:smooth; }
 
 body {
-  font-family:'Inter',sans-serif;
+  font-family:'DM Sans',sans-serif;
   background:var(--f);
   color:var(--ink);
   overflow-x:hidden;
@@ -49,7 +49,38 @@ body {
 
 img { display:block; max-width:100%; height:auto; }
 
-.serif { font-family:'Playfair Display',serif; }
+.serif { font-family:'DM Sans',sans-serif; font-weight:500; }
+
+/* ── BRAND EM — italicas com Caveat (ecoa o 'jardins' do logo) ── */
+em.script,
+.hero-h1 em,
+.hxl em,
+.hlg em,
+.hmd em,
+.foot-brand em,
+.n-logo em,
+.head__title em,
+.closing-text h2 em,
+h1 em, h2 em, h3 em {
+  font-family:'Caveat', 'DM Sans', cursive;
+  font-style:normal;
+  font-weight:600;
+  font-size:1.18em;
+  letter-spacing:-.01em;
+  color:var(--s);
+  line-height:.85;
+  vertical-align:baseline;
+  padding:0 .04em;
+}
+.s-dark .hero-h1 em,
+.s-dark .hxl em,
+.s-dark .hlg em,
+.s-dark .hmd em,
+.head--dark .hxl em,
+.closing-text h2 em,
+.split-text em {
+  color:#9FD58C; /* verde claro luminoso em fundos escuros */
+}
 
 /* ═══════════════════════════════════════════════════════════
    ATMOSFERA — grain + cursor + scroll progress
@@ -138,11 +169,19 @@ nav.scrolled {
   border-color:var(--rule);
 }
 .n-logo {
-  font-family:'Playfair Display',serif;
-  font-size:1.05rem; font-weight:500; letter-spacing:.04em;
-  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  font-size:1.15rem; font-weight:600;
+  letter-spacing:-.01em;
+  color:var(--g);
+  display:flex; align-items:baseline; gap:6px;
 }
-.n-logo em { font-style:italic; color:var(--g); font-weight:400; }
+.n-logo em {
+  /* Caveat handwritten — espelha o "jardins" da logo oficial */
+  color:var(--s);
+}
+.n-logo img {
+  max-height:38px; width:auto; display:block;
+}
 .n-ref {
   font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
   color:var(--mid); font-weight:400;
@@ -192,35 +231,26 @@ nav.scrolled {
 }
 
 .hero-h1 {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(2.8rem, 5.8vw + .4rem, 7rem);
-  font-weight:400; line-height:.98;
-  letter-spacing:-.022em;
+  font-weight:500; line-height:1.02;
+  letter-spacing:-.028em;
   color:var(--ink);
-  max-width:12ch;
+  max-width:13ch;
 }
 .hero-h1 em {
-  font-style:italic;
-  color:var(--g);
   position:relative;
   display:inline-block;
 }
-.hero-h1 em::after {
-  content:'';
-  position:absolute; left:0; right:0; bottom:.06em;
-  height:2px;
-  background:var(--terra);
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .8s cubic-bezier(.22,1,.36,1) .9s;
-}
-.hero-h1.on em::after { transform:scaleX(1); }
 
-/* Line-by-line clip reveal */
+/* Line-by-line clip reveal — espaco extra p/ descenders da Caveat */
 .hero-h1 .line {
   display:block;
   overflow:hidden;
-  padding:.08em 0 .02em;
+  padding:.1em 0 .14em;
+  line-height:1.05;
 }
+.hero-h1 .line:has(em) { padding-bottom:.22em; }
 .hero-h1 .line-inner {
   display:block;
   transform:translateY(110%);
@@ -262,7 +292,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:var(--g); margin-bottom:8px;
 }
 .hero-client-name {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1.5rem; font-weight:400; color:var(--ink);
   line-height:1.1;
 }
@@ -297,7 +327,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .hs-item:hover::after { width:100%; }
 .hs-item:last-child { border-right:none; }
 .hs-n {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1.75rem; font-weight:400; color:var(--g);
   line-height:1; margin-bottom:6px;
   font-feature-settings:"lnum";
@@ -390,7 +420,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .mq-item:hover { color:rgba(255,255,255,.85); }
 .mq-item b {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1.05rem; font-weight:400;
   color:rgba(255,255,255,.78); letter-spacing:0; font-style:italic;
   transition:color .35s ease, transform .35s cubic-bezier(.22,1,.36,1);
@@ -439,19 +469,21 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   border-bottom:1px solid var(--rule);
 }
 .chap-num {
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-weight:400;
-  font-size:clamp(2rem, 2.6vw + .6rem, 3.6rem);
-  color:var(--a-soft);
-  line-height:.85;
-  letter-spacing:-.02em;
+  font-family:'DM Sans',sans-serif;
+  font-style:normal;
+  font-weight:500;
+  font-size:clamp(1.05rem, .8vw + .6rem, 1.35rem);
+  color:var(--g);
+  line-height:1;
+  letter-spacing:.04em;
   flex-shrink:0;
   display:inline-block;
-  transition:transform .7s cubic-bezier(.22,1,.36,1), color .35s ease;
+  font-feature-settings:"tnum" 1, "lnum" 1;
+  font-variant-numeric:tabular-nums lining-nums;
+  transition:color .35s ease, transform .5s cubic-bezier(.22,1,.36,1);
 }
 .head:hover .chap-num,
-.split:hover .chap-num { transform:translateY(-3px) rotate(-2deg); }
+.split:hover .chap-num { color:var(--s); transform:translateX(2px); }
 .chap-name {
   font-size:clamp(.62rem, .12vw + .58rem, .72rem);
   letter-spacing:.32em;
@@ -483,20 +515,20 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .chap--gold .chap-name { color:var(--a-soft); }
 .chap--gold .chap-name::before { background:var(--a); opacity:.7; }
 
-/* ── LEDE: italica de apoio, alinhada a direita do titulo ── */
+/* ── LEDE: apoio do titulo, alinhada a direita ── */
 .lede {
-  font-family:'Playfair Display',serif;
-  font-style:italic;
+  font-family:'DM Sans',sans-serif;
+  font-style:normal;
   font-weight:400;
-  font-size:clamp(1.05rem, .8vw + .7rem, 1.4rem);
-  line-height:1.5;
+  font-size:clamp(1rem, .6vw + .8rem, 1.2rem);
+  line-height:1.55;
   color:var(--mid);
   max-width:38ch;
   border-top:1px solid var(--rule);
   padding-top:clamp(18px, 1.4vw, 28px);
 }
 .head--dark .lede {
-  color:rgba(255,255,255,.7);
+  color:rgba(244,239,224,.72);
   border-top-color:rgba(255,255,255,.18);
 }
 
@@ -533,48 +565,31 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .ey.gold::before { background:var(--a); }
 
 .hxl {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(2.2rem, 4.4vw + .35rem, 5.2rem);
-  font-weight:400; line-height:1;
-  letter-spacing:-.018em; color:var(--ink);
+  font-weight:500; line-height:1.04;
+  letter-spacing:-.022em; color:var(--ink);
   max-width:16ch;
 }
-.hxl em {
-  font-style:italic;
-  color:var(--terra);
-  position:relative;
-  display:inline-block;
-}
-.hxl em::after {
-  content:'';
-  position:absolute; left:0; right:0; bottom:.06em;
-  height:1px;
-  background:currentColor;
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .7s cubic-bezier(.22,1,.36,1);
-  opacity:.55;
-}
-section:hover .hxl em::after { transform:scaleX(1); }
+.hxl em { position:relative; display:inline-block; }
 .hxl.inv { color:var(--f); }
-.hxl.inv em { color:var(--r); }
-.s-dark .hxl em { color:var(--r); }
 
 .hlg {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(1.7rem, 2.4vw + .4rem, 3rem);
-  font-weight:400; line-height:1.06;
-  letter-spacing:-.01em; color:var(--ink);
+  font-weight:500; line-height:1.08;
+  letter-spacing:-.018em; color:var(--ink);
 }
-.hlg em { font-style:italic; color:var(--g); }
 .hlg.inv { color:var(--f); }
 
 .hmd {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(1.3rem, 1.3vw + .65rem, 1.9rem);
-  font-weight:400; line-height:1.2; color:var(--g);
+  font-weight:500; line-height:1.22;
+  letter-spacing:-.012em;
+  color:var(--g);
 }
 .hmd.inv { color:var(--f); }
-.hmd.inv em { font-style:italic; color:var(--r); }
 
 .body-t {
   font-size:clamp(.9rem, .15vw + .85rem, 1rem);
@@ -617,7 +632,7 @@ section:hover .hxl em::after { transform:scaleX(1); }
 .stat-row:hover { padding-left:14px; }
 .stat-row:hover::before { width:8px; }
 .st-n {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:2.1rem; font-weight:400; color:var(--g);
   line-height:1; font-style:italic;
   font-feature-settings:"lnum";
@@ -689,7 +704,7 @@ html.js .img-full.on img { clip-path:inset(0 0); transform:scale(1); }
 .c-item:hover { padding-left:14px; }
 .c-item:hover::after { width:100%; }
 .c-num {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1rem; font-style:italic;
   color:rgba(255,255,255,.25); line-height:1.4;
   transition:color .35s, transform .5s cubic-bezier(.22,1,.36,1);
@@ -821,7 +836,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .al-item:hover { padding-left:10px; }
 .al-item:hover::after { width:100%; }
 .al-n {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1rem; font-style:italic;
   color:rgba(20,21,12,.2); line-height:1.3;
   transition:color .35s ease;
@@ -897,7 +912,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .sp-name {
   font-size:.9rem; color:rgba(255,255,255,.78);
   font-weight:400;
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-style:italic;
 }
 .sp-role {
@@ -954,7 +969,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   transform:scale(1.4);
 }
 .f-n {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1.15rem; font-style:italic;
   color:rgba(20,21,12,.18); line-height:1; margin-top:4px;
   transition:color .4s ease;
@@ -1012,7 +1027,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   color:var(--mid); font-weight:500;
 }
 .p-val {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(2.8rem, 4.4vw + .4rem, 5.4rem);
   font-weight:400; color:var(--ink);
   line-height:.9; letter-spacing:-.025em;
@@ -1094,7 +1109,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   color:var(--mid); margin-bottom:12px; font-weight:500;
 }
 .mc-title {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1.4rem; font-weight:400; color:var(--ink);
   margin-bottom:8px; font-style:italic;
 }
@@ -1104,7 +1119,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   margin-bottom:24px;
 }
 .mc-price {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:clamp(2.2rem, 2vw + 1rem, 3.2rem);
   font-weight:400; color:var(--ink);
   line-height:1; margin-bottom:28px; letter-spacing:-.025em;
@@ -1181,7 +1196,7 @@ footer {
   gap:48px;
 }
 .ft-brand {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:2rem; font-weight:400; color:var(--f);
   letter-spacing:.02em;
 }
@@ -1189,10 +1204,10 @@ footer {
 .ft-sub {
   font-size:.7rem; color:rgba(255,255,255,.28);
   margin-top:8px; font-style:italic;
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
 }
 .ft-quote {
-  font-family:'Playfair Display',serif;
+  font-family:'DM Sans',sans-serif;
   font-size:1rem; font-style:italic; font-weight:400;
   color:rgba(255,255,255,.32); text-align:right; max-width:340px;
   line-height:1.5;
