@@ -468,6 +468,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .head {
   display:flex;
   flex-direction:column;
+  align-items:center;
+  text-align:center;
   margin-bottom:clamp(48px, 5vw, 88px);
 }
 .head > .chap { margin-bottom:clamp(28px, 2.5vw, 40px); }
@@ -636,16 +638,17 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 .studio-title {
-  font-size:clamp(3rem, 5vw, 5.5rem);
-  line-height:.97;
+  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
   margin-bottom:clamp(40px, 4.5vw, 76px);
+  text-align:center;
 }
 .studio-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:400;
+  font-weight:500;
   color:#111209;
 }
 .studio-title .studio-em {
@@ -842,15 +845,16 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:600;
 }
 .concept-title {
-  font-size:clamp(3rem, 5vw, 5.5rem);
-  line-height:.97;
+  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  line-height:.98;
   letter-spacing:-.02em;
   margin-bottom:clamp(40px, 4.5vw, 76px);
+  text-align:center;
 }
 .concept-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:400;
+  font-weight:500;
   color:var(--f);
 }
 .concept-title .concept-em {
@@ -1067,7 +1071,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
    ═══════════════════════════════════════════════════════════ */
 .tl-section {
   background:#E8F0E8;
-  padding:clamp(72px, 7vw + 16px, 136px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(96px, 9vw + 16px, 176px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
   overflow:hidden;
 }
@@ -1110,14 +1114,15 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-weight:600;
 }
 .tl-title {
-  font-size:clamp(2.8rem, 4.6vw, 5rem);
+  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
   line-height:.98;
   letter-spacing:-.02em;
+  text-align:center;
 }
 .tl-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:300;
+  font-weight:500;
   color:#111209;
 }
 .tl-title .tl-em {
@@ -1140,8 +1145,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   position:relative;
   background:#F5F7F2;
   border:1px solid rgba(92,163,87,.22);
-  border-radius:20px;
-  padding:clamp(36px, 4vw, 64px) clamp(28px, 3vw, 56px);
+  border-radius:24px;
+  padding:clamp(48px, 5vw, 80px) clamp(32px, 3.5vw, 64px);
   overflow:hidden;
   box-shadow:
     0 24px 64px -28px rgba(30,92,50,.22),
@@ -1171,8 +1176,9 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   position:relative; z-index:1;
 }
 .tl-card-icon {
-  width:54px; height:54px;
-  border-radius:14px;
+  width:clamp(64px, 5.5vw, 88px);
+  height:clamp(64px, 5.5vw, 88px);
+  border-radius:18px;
   background:rgba(30,92,50,.10);
   color:#25613B;
   display:flex;
@@ -1180,7 +1186,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   justify-content:center;
   flex-shrink:0;
 }
-.tl-card-icon svg { width:52%; height:52%; }
+.tl-card-icon svg { width:56%; height:56%; }
 .tl-card-meta { flex:1; min-width:0; }
 .tl-card-label {
   font-family:'Inter',sans-serif;
@@ -1220,12 +1226,31 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   color:#111209;
 }
 
-/* CONNECTOR — linha pontilhada vertical entre cards */
+/* CONNECTOR — caminho pontilhado vertical premium entre cards */
 .tl-connector {
-  width:0;
-  height:48px;
-  border-left:2px dashed rgba(37,97,59,.25);
+  position:relative;
+  width:14px;
+  height:clamp(80px, 8vw, 120px);
   margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.tl-connector::before {
+  content:'';
+  width:0;
+  height:100%;
+  border-left:2px dashed rgba(37,97,59,.30);
+}
+.tl-connector::after {
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:10px; height:10px;
+  border-radius:50%;
+  background:rgba(37,97,59,.18);
+  box-shadow:0 0 0 4px rgba(37,97,59,.06);
 }
 
 /* SUBCARDS (Anteprojeto - 4 em grid) */
@@ -1580,12 +1605,13 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-weight:500;
 }
 .mnt-title {
-  font-size:clamp(2.4rem, 4.4vw + .2rem, 5rem);
-  font-weight:300;
-  line-height:.97;
+  font-size:clamp(2.6rem, 4.4vw + .2rem, 4.8rem);
+  font-weight:500;
+  line-height:.98;
   letter-spacing:-.02em;
   color:#111209;
-  max-width:65%;
+  max-width:none;
+  text-align:center;
 }
 .mnt-sub {
   font-family:'Inter',sans-serif;
