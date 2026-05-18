@@ -1796,12 +1796,12 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .mnt-closing {
   text-align:center;
   font-family:'Playfair Display',serif;
+  font-style:italic;
   font-size:clamp(1.6rem, 1.6vw + .6rem, 2.2rem);
-  color:#6b6b6b;
+  color:#FFAAC9;
   font-weight:500;
   line-height:1.4;
   padding:clamp(80px, 8vw, 120px) 0;
-  font-style:normal;
 }
 
 /* ═══════════════════════════════════════════════════════════
