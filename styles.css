@@ -1800,8 +1800,8 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   }
   .s { padding:18mm 18mm; }
   .concept-cols, .ante-cols { grid-template-columns:1fr; gap:24px; }
-  .studio-grid { grid-template-columns:1fr; gap:20px; }
-  .mnt-top { grid-template-columns:1fr; gap:16px; padding-bottom:16mm; }
+  .studio-cards { grid-template-columns:1fr 1fr 1fr; gap:2mm; }
+  .mnt-top { padding-bottom:16mm; }
   .mnt-cards { grid-template-columns:1fr 1fr; gap:4mm; }
   .mnt-card { padding:14mm 12mm; }
   .gal-grid { grid-template-columns:1fr 1fr; gap:4px; }
@@ -1812,7 +1812,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .split-img { position:relative; min-height:80mm; height:80mm; }
   .split-text { padding:16mm 14mm; }
   img, .img-full, .split-img, .gi,
-  .mnt-card, .price-row, .fase-card, .studio-pillar, .al-item, .c-item {
+  .mnt-card, .price-row, .fase-card, .studio-card, .al-item, .c-item {
     page-break-inside:avoid; break-inside:avoid;
   }
   section, footer { page-break-inside:avoid; }
