@@ -2317,15 +2317,26 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .studio-eyebrow,
   .concept-eyebrow { margin-bottom:clamp(16px, 3vw, 24px) !important; }
   .h420 { aspect-ratio:auto; height:300px; }
-  /* Hero mobile: imagem fixa no fundo, maior */
+  /* Hero mobile: imagem grande visivel (bg-attachment fixed nao
+     funciona em iOS Safari, entao usamos <img> regular) */
   .hero-right {
     flex:none !important;
     width:100% !important;
-    height:clamp(460px, 70vh, 640px) !important;
-    padding:0 !important;
-    background:var(--f) url('images/fundo-site.png') no-repeat center center !important;
-    background-attachment:fixed !important;
-    background-size:contain !important;
+    height:auto !important;
+    padding:0 24px clamp(40px, 8vw, 64px) !important;
+    background:var(--f) !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
   }
-  .hero-right img { display:none !important; }
+  .hero-right img {
+    display:block !important;
+    width:100% !important;
+    max-width:520px !important;
+    height:auto !important;
+    object-fit:contain !important;
+    animation:none !important;
+    transform:none !important;
+    filter:none !important;
+  }
 }
