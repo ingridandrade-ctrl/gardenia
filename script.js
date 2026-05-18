@@ -190,4 +190,41 @@
     window.addEventListener('resize', onFasesScroll);
     updateFases();
   }
+
+  // ─────────────────────────────────────────────
+  // LIGHTBOX — galeria + img-full
+  // ─────────────────────────────────────────────
+  (function lightbox(){
+    var targets = document.querySelectorAll('.gi, .img-full, .img-transicao');
+    if (!targets.length) return;
+    // Build overlay
+    var lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML = '<button class="lightbox-close" aria-label="Fechar">&times;</button><img class="lightbox-img" alt="">';
+    document.body.appendChild(lb);
+    var lbImg = lb.querySelector('.lightbox-img');
+    var lbClose = lb.querySelector('.lightbox-close');
+    function open(src, alt){
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lb.classList.add('on');
+      document.body.style.overflow = 'hidden';
+    }
+    function close(){
+      lb.classList.remove('on');
+      document.body.style.overflow = '';
+    }
+    targets.forEach(function(el){
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', function(){
+        var img = el.querySelector('img');
+        if (img) open(img.src, img.alt);
+      });
+    });
+    lbClose.addEventListener('click', close);
+    lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && lb.classList.contains('on')) close();
+    });
+  })();
 })();
