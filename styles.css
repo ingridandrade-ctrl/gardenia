@@ -57,7 +57,6 @@ em.script,
 .hxl em,
 .hlg em,
 .hmd em,
-.foot-brand em,
 .n-logo em,
 .fase-title em,
 .closing-title em,
@@ -1380,14 +1379,14 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   max-width:54ch;
 }
 
-/* PILL BUTTON */
+/* PILL BUTTON — creme Gardenia com texto verde */
 .cta-pill {
   display:inline-flex;
   align-items:center;
   gap:14px;
   padding:18px 28px 18px 22px;
-  background:var(--s);
-  color:var(--g-night);
+  background:var(--f);
+  color:var(--g);
   text-decoration:none;
   border-radius:999px;
   font-family:'DM Sans',sans-serif;
@@ -1397,18 +1396,22 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   margin-top:clamp(8px, 1vw, 16px);
   position:relative;
   overflow:hidden;
-  transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease;
-  box-shadow:0 12px 36px -16px rgba(92,163,87,.6);
+  transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease, background .35s ease;
+  box-shadow:0 14px 40px -16px rgba(244,239,224,.35);
   cursor:pointer;
 }
 .cta-pill::before {
   content:'';
   position:absolute; inset:0;
-  background:radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.25), transparent 40%);
+  background:radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(30,92,50,.10), transparent 50%);
   opacity:0;
   transition:opacity .3s ease;
 }
-.cta-pill:hover { transform:translateY(-3px); box-shadow:0 18px 48px -16px rgba(92,163,87,.7); }
+.cta-pill:hover {
+  background:#FAF6E8;
+  transform:translateY(-3px);
+  box-shadow:0 20px 52px -16px rgba(244,239,224,.5);
+}
 .cta-pill:hover::before { opacity:1; }
 .cta-pill:active { transform:translateY(-1px); }
 .cta-icon {
@@ -1427,59 +1430,67 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .cta-pill:hover .cta-arrow { transform:translate(2px, -2px); }
 
-.closing-meta {
-  display:flex; gap:14px;
-  font-size:.7rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:rgba(244,239,224,.4);
-  font-weight:500;
-  margin-top:clamp(20px, 2vw, 32px);
-  padding-top:clamp(24px, 2.5vw, 36px);
-  border-top:1px solid rgba(244,239,224,.1);
-  flex-wrap:wrap;
-  justify-content:center;
-}
-
 /* ═══════════════════════════════════════════════════════════
-   FOOTER
+   FOOTER — centralizado com logo + frase
    ═══════════════════════════════════════════════════════════ */
 footer {
   background:var(--g-night);
-  padding:72px 52px 48px;
+  padding:clamp(72px, 7vw, 112px) clamp(24px, 4vw, 64px) clamp(40px, 4vw, 64px);
   border-top:1px solid rgba(255,255,255,.06);
   position:relative;
+  text-align:center;
 }
-.ft-row {
-  display:flex; align-items:flex-end; justify-content:space-between;
-  padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.05);
-  margin-bottom:28px;
-  gap:48px;
+.ft-inner {
+  display:flex; flex-direction:column;
+  align-items:center;
+  gap:clamp(24px, 2vw, 36px);
+  max-width:720px; margin:0 auto;
+  padding-bottom:clamp(40px, 4vw, 64px);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
-.ft-brand {
-  font-family:'DM Sans',sans-serif;
-  font-size:2rem; font-weight:400; color:var(--f);
-  letter-spacing:.02em;
-}
-.ft-brand em { font-style:italic; color:var(--a); }
-.ft-sub {
-  font-size:.7rem; color:rgba(255,255,255,.28);
-  margin-top:8px; font-style:italic;
-  font-family:'DM Sans',sans-serif;
+.ft-logo {
+  height:clamp(48px, 5vw, 72px);
+  width:auto;
+  display:block;
+  /* Logo da Gardenia é verde escuro — sobre fundo verde-noite vira meio invisivel.
+     Filter clareia e mantém o brand sem perder identidade. */
+  filter:brightness(0) invert(.85) sepia(.2) hue-rotate(60deg) saturate(1.6);
+  opacity:.92;
 }
 .ft-quote {
   font-family:'DM Sans',sans-serif;
-  font-size:1rem; font-style:italic; font-weight:400;
-  color:rgba(255,255,255,.32); text-align:right; max-width:340px;
-  line-height:1.5;
+  font-style:italic;
+  font-size:clamp(.92rem, .2vw + .8rem, 1.1rem);
+  color:rgba(244,239,224,.55);
+  line-height:1.6;
+  max-width:42ch;
+  font-weight:300;
 }
-.ft-bot { display:flex; justify-content:space-between; align-items:center; }
+.ft-bot {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:clamp(20px, 2vw, 36px);
+  margin-top:clamp(24px, 2.5vw, 36px);
+  flex-wrap:wrap;
+}
 .ft-loc {
-  font-size:.6rem; letter-spacing:.18em; text-transform:uppercase;
-  color:rgba(255,255,255,.32);
+  font-size:.6rem; letter-spacing:.22em; text-transform:uppercase;
+  color:rgba(244,239,224,.4);
+  font-weight:500;
 }
 .ft-copy {
-  font-size:.66rem; color:rgba(255,255,255,.2); font-weight:300;
+  font-size:.66rem; color:rgba(244,239,224,.28);
+  font-weight:300; letter-spacing:.04em;
+}
+.ft-loc::after {
+  content:'';
+  display:inline-block;
+  width:4px; height:4px;
+  border-radius:50%;
+  background:rgba(244,239,224,.3);
+  vertical-align:middle;
+  margin-left:clamp(20px, 2vw, 36px);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1615,11 +1626,10 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mc-price { font-size:2.3rem; }
   .mc-it { font-size:.84rem; }
   footer { padding:52px 22px 28px; }
-  .ft-row { flex-direction:column; align-items:flex-start; gap:24px; padding-bottom:28px; }
-  .ft-quote { text-align:left; max-width:100%; font-size:.92rem; }
-  .ft-brand { font-size:1.6rem; }
-  .ft-bot { flex-direction:column; align-items:flex-start; gap:10px; }
-  .ft-loc, .ft-copy { font-size:.6rem; letter-spacing:.14em; }
+  .ft-inner { gap:20px; padding-bottom:32px; }
+  .ft-bot { flex-direction:column; gap:10px; margin-top:24px; }
+  .ft-loc, .ft-copy { font-size:.6rem; letter-spacing:.18em; }
+  .ft-loc::after { display:none; }
 }
 
 @media (max-width: 380px) {
