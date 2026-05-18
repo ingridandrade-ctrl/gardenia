@@ -828,18 +828,12 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 /* ═══════════════════════════════════════════════════════════
-   CONCEITO (dark) — bloco centralizado + cards arredondados
+   CONCEITO (dark) — 2 colunas: texto + cards stack
    ═══════════════════════════════════════════════════════════ */
 .concept {
   display:flex;
   flex-direction:column;
-  align-items:center;
-  text-align:center;
 }
-.concept > * {
-  margin-bottom:clamp(48px, 5vw, 88px);
-}
-.concept > *:last-child { margin-bottom:0; }
 
 .concept-eyebrow {
   font-family:'Inter',sans-serif;
@@ -848,248 +842,141 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-transform:uppercase;
   color:#9FD58C;
   font-weight:300;
+  margin-bottom:clamp(20px, 2vw, 32px);
 }
+
 .concept-title {
-  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
-  line-height:.98;
+  font-size:clamp(3rem, 5.5vw, 6rem);
+  line-height:1;
   letter-spacing:-.02em;
-  margin-bottom:clamp(40px, 4.5vw, 76px);
-  text-align:center;
+  max-width:65%;
+  text-align:left;
 }
 .concept-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:600;
-  color:var(--f);
+  font-weight:300;
+  color:#ffffff;
 }
 .concept-title .concept-em {
   font-family:'Playfair Display',serif;
   font-style:italic;
   font-weight:500;
-  color:#9FD58C;
+  color:#5CA357;
 }
-.concept-lead {
-  font-family:'Inter',sans-serif;
-  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
+
+.concept-divider {
+  height:1px;
+  background:rgba(255,255,255,.12);
+  margin:48px 0;
+  width:100%;
+}
+
+.concept-grid {
+  display:grid;
+  grid-template-columns:55% 45%;
+  gap:80px;
+  align-items:start;
+}
+
+/* COLUNA ESQUERDA — texto */
+.concept-text { }
+.concept-lead-italic {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.1rem;
+  color:rgba(255,255,255,.7);
+  margin-bottom:32px;
+  line-height:1.45;
   font-weight:400;
-  line-height:1.7;
-  color:rgba(244,239,224,.82);
-  max-width:680px;
-  margin-inline:auto;
-}
-.concept-body {
-  display:flex;
-  flex-direction:column;
-  gap:clamp(20px, 1.5vw, 28px);
-  max-width:680px;
-  margin-inline:auto;
 }
 .concept-p {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.1rem, .25vw + 1.05rem, 1.3rem);
-  font-weight:400;
-  line-height:1.75;
-  color:rgba(244,239,224,.92);
+  font-size:.91rem;
+  font-weight:300;
+  line-height:1.9;
+  color:rgba(255,255,255,.5);
+  text-align:left;
+  margin-bottom:24px;
 }
-.concept-p strong {
-  display:block;
+.concept-p:last-child { margin-bottom:0; }
+.concept-emph {
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
-  font-size:1.18em;
-  line-height:1.35;
-  color:#B5DD9C;
-  margin:.1em 0 .55em;
-  letter-spacing:-.01em;
+  color:rgba(255,255,255,.8);
 }
-.concept-body { gap:clamp(28px, 2.5vw, 40px); }
 
+/* COLUNA DIREITA — 5 cards stacked vertical */
 .concept-cards {
-  display:grid;
-  grid-template-columns:repeat(6, 1fr);
-  gap:clamp(16px, 1.6vw, 24px);
-  width:100%;
-  max-width:1100px;
-  margin-inline:auto;
-}
-.concept-card { grid-column:span 2; }
-.concept-card:nth-child(4) { grid-column:2 / span 2; }
-.concept-card:nth-child(5) { grid-column:4 / span 2; }
-
-@media (max-width: 900px) {
-  .concept-cards { grid-template-columns:1fr; }
-  .concept-card,
-  .concept-card:nth-child(4),
-  .concept-card:nth-child(5) { grid-column:1; }
-}
-.concept-card {
-  position:relative;
-  background:linear-gradient(155deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.03) 100%);
-  backdrop-filter:blur(14px) saturate(160%);
-  -webkit-backdrop-filter:blur(14px) saturate(160%);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:18px;
-  padding:clamp(28px, 2.2vw, 36px) clamp(22px, 2vw, 30px);
   display:flex;
   flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:16px;
+  gap:12px;
+  max-width:none;
+  margin-inline:initial;
+}
+.concept-card {
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  gap:18px;
+  padding:20px 24px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:16px;
+  text-align:left;
   overflow:hidden;
-  box-shadow:
-    0 24px 60px -20px rgba(0,0,0,.45),
-    0 6px 18px -10px rgba(0,0,0,.25),
-    inset 0 1px 0 rgba(255,255,255,.10);
-  transition:transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease, border-color .35s ease;
+  position:relative;
 }
-/* IDENTIDADE POR CARD — barra de accent verde distinto no topo */
-.concept-card::before {
-  content:'';
-  position:absolute;
-  top:0; left:50%; transform:translateX(-50%);
-  width:60%; height:2px;
-  border-radius:0 0 2px 2px;
-  opacity:.75;
-}
-.concept-card:nth-child(1)::before { background:linear-gradient(90deg, transparent, #9FD58C, transparent); }
-.concept-card:nth-child(2)::before { background:linear-gradient(90deg, transparent, #6BB05E, transparent); }
-.concept-card:nth-child(3)::before { background:linear-gradient(90deg, transparent, #C2E5A0, transparent); }
-.concept-card:nth-child(4)::before { background:linear-gradient(90deg, transparent, #4F9046, transparent); }
-.concept-card:nth-child(5)::before { background:linear-gradient(90deg, transparent, #85C570, transparent); }
-.concept-card:nth-child(1) .concept-card-icon { background:rgba(159,213,140,.18); color:#9FD58C; }
-.concept-card:nth-child(2) .concept-card-icon { background:rgba(107,176,94,.20); color:#8FCD7C; }
-.concept-card:nth-child(3) .concept-card-icon { background:rgba(194,229,160,.18); color:#B5DD9C; }
-.concept-card:nth-child(4) .concept-card-icon { background:rgba(79,144,70,.22); color:#7DBE74; }
-.concept-card:nth-child(5) .concept-card-icon { background:rgba(133,197,112,.22); color:#A5D693; }
-.concept-card:hover {
-  transform:translateY(-5px);
-  border-color:rgba(159,213,140,.5);
-  box-shadow:
-    0 36px 80px -22px rgba(0,0,0,.6),
-    0 10px 28px -12px rgba(159,213,140,.25),
-    inset 0 1px 0 rgba(255,255,255,.16);
-}
+.concept-card::before { display:none; }
 .concept-card-icon {
-  width:clamp(54px, 4.5vw, 64px);
-  height:clamp(54px, 4.5vw, 64px);
-  border-radius:15px;
+  width:44px; height:44px;
+  border-radius:12px;
   background:rgba(159,213,140,.14);
+  color:#9FD58C;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:#9FD58C;
   flex-shrink:0;
-  margin-bottom:4px;
 }
-.concept-card-icon svg {
-  width:52%;
-  height:52%;
+.concept-card-icon svg { width:55%; height:55%; }
+.concept-card-body {
+  flex:1;
+  min-width:0;
 }
 .concept-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.35rem);
+  font-size:1rem;
+  font-weight:600;
+  color:#ffffff;
+  line-height:1.3;
+  margin-bottom:6px;
   text-transform:none;
   letter-spacing:-.01em;
-  font-weight:600;
-  color:#FFFFFF;
-  line-height:1.3;
+  text-align:left;
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1rem, .2vw + .95rem, 1.15rem);
-  font-weight:400;
+  font-size:.86rem;
+  font-weight:300;
   line-height:1.6;
-  color:rgba(244,239,224,.82);
+  color:rgba(255,255,255,.5);
+  text-align:left;
 }
 .concept-card-text em {
   font-family:'Playfair Display',serif;
   font-style:italic;
   font-weight:500;
-  color:#9FD58C;
+  color:#5CA357;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   GALERIA — clip-path reveal + hover
-   ═══════════════════════════════════════════════════════════ */
-.gal-wrap {
-  background:var(--g-night);
-  position:relative;
-  border-top:1px solid rgba(255,255,255,.05);
+/* MOBILE — 1 coluna, texto primeiro, cards abaixo */
+@media (max-width: 900px) {
+  .concept-title { max-width:none; font-size:clamp(2.4rem, 9vw, 3.4rem); }
+  .concept-divider { margin:32px 0; }
+  .concept-grid { grid-template-columns:1fr; gap:40px; }
+  .concept-cards { gap:10px; }
 }
-.gal-rail {
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  padding:clamp(56px, 6vw, 96px) clamp(20px, 3.5vw + 10px, 64px) clamp(36px, 4vw, 56px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.gal-meta {
-  font-size:clamp(.62rem, .12vw + .58rem, .72rem);
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:rgba(255,255,255,.45);
-  font-weight:500;
-}
-@media (max-width: 720px) {
-  .gal-rail { flex-direction:column; align-items:flex-start; gap:18px; }
-}
-.gal-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:2px;
-}
-.gi {
-  overflow:hidden;
-  position:relative;
-  background:var(--g-night);
-}
-.gi img {
-  width:100%; height:100%; display:block; object-fit:cover;
-  filter:saturate(.78) brightness(.94);
-}
-html.js .gi img {
-  clip-path:inset(8% 8%);
-  transform:scale(1.04);
-  transition:transform 1.1s cubic-bezier(.22,1,.36,1),
-             filter .55s ease,
-             clip-path 1.2s cubic-bezier(.22,1,.36,1);
-}
-html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
-.gi:hover img { transform:scale(1.06); filter:saturate(1.08) brightness(1); }
-.gi-lbl {
-  position:absolute; bottom:18px; left:24px;
-  font-size:.58rem; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--f); font-weight:500;
-  opacity:0;
-  transform:translateY(8px);
-  transition:opacity .4s ease, transform .55s cubic-bezier(.22,1,.36,1);
-  z-index:2;
-  display:flex; align-items:center; gap:10px;
-}
-.gi-lbl::before {
-  content:'';
-  width:18px; height:1px; background:var(--a);
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .5s cubic-bezier(.22,1,.36,1) .15s;
-  display:block;
-}
-.gi:hover .gi-lbl { opacity:1; transform:translateY(0); }
-.gi:hover .gi-lbl::before { transform:scaleX(1); }
-.gi::after {
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(20,21,12,.6) 0%, transparent 50%);
-  opacity:0;
-  transition:opacity .45s ease;
-  z-index:1;
-  pointer-events:none;
-}
-.gi:hover::after { opacity:1; }
-.gi.tall { grid-row:span 2; }
-.gi.wide { grid-column:span 2; }
-.h300 { height:300px; }
-.h420 { height:420px; }
-.h610 { height:610px; }
+
 
 /* ═══════════════════════════════════════════════════════════
    TIMELINE (Anteprojeto + Implantacao + Fases) — verde claro
