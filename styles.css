@@ -7,7 +7,7 @@
 
 :root {
   /* ── PALETA — modern warm, derivada da logo Gardenia ── */
-  --f:        #F4EFE0;   /* paper · base do site */
+  --f:        #FAF7E9;   /* paper · base do site (creme) */
   --linen:    #F0E9D2;   /* s-white (Quem somos) */
   --paper:    #EBE2C7;   /* Anteprojeto */
   --bone:     #DFD3B2;   /* Investimento */
@@ -349,32 +349,29 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:var(--mid); font-weight:400; line-height:1.4;
 }
 
-/* Imagem hero com parallax + ambient sway */
+/* Imagem hero — PNG transparente sobre creme, sem overlay */
 .hero-right {
-  position:absolute;
-  inset:0;
-  z-index:0;
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(40px, 4vw, 80px) clamp(20px, 3vw, 56px);
+  background:var(--f);
   overflow:hidden;
 }
-.hero-right::after {
-  content:'';
-  position:absolute; inset:0;
-  background:linear-gradient(to right, var(--f) 0%, rgba(244,239,224,.4) 40%, transparent 56%);
-  z-index:1; pointer-events:none;
-}
-.hero-right picture { display:block; width:100%; height:100%; }
 .hero-right img {
-  width:100%; height:110%;
-  object-fit:cover;
-  object-position:center right;
+  width:100%;
+  height:auto;
+  max-height:calc(100vh - 180px);
+  object-fit:contain;
+  display:block;
+  transform:translate3d(0, var(--parallax-y, 0), 0);
   will-change:transform;
-  transform:translate3d(0, var(--parallax-y, 0), 0) scale(1.02);
-  filter:saturate(1.04);
   animation:heroSway 18s ease-in-out infinite alternate;
 }
 @keyframes heroSway {
-  from { filter:saturate(1) brightness(1); }
-  to   { filter:saturate(1.08) brightness(1.02); }
+  from { filter:none; transform:translate3d(0, var(--parallax-y, 0), 0) scale(1); }
+  to   { filter:none; transform:translate3d(0, var(--parallax-y, 0), 0) scale(1.012); }
 }
 
 .hero-cue {
@@ -1633,8 +1630,8 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-left { width:100%; min-height:auto; padding:56px 40px 48px; max-width:none; }
   .hero-h1 { max-width:none; }
   .hxl { max-width:none; }
-  .hero-right { position:relative; inset:auto; width:100%; height:58vh; min-height:340px; }
-  .hero-right img { object-position:center; }
+  .hero-right { flex:none; width:100%; padding:24px 24px 48px; }
+  .hero-right img { width:100%; height:auto; max-height:none; }
   .hero-cue { display:none; }
   .s { padding:96px 40px; }
   .concept-cols, .ante-cols {
@@ -1675,23 +1672,17 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-bottom { margin-top:48px; gap:28px; }
   .hero-client-name { font-size:1.3rem; }
 
-  /* HERO MOBILE — imagem nova vertical (864x1821) com cream natural */
+  /* HERO MOBILE — PNG transparente em natural aspect, cream natural */
   .hero-right {
-    height:auto;
-    min-height:0;
-    aspect-ratio: 864 / 1821;
-    max-height:78vh;
+    width:100%;
+    padding:8px 24px 40px;
     background:var(--f);
   }
-  .hero-right::after { display:none; }
-  .hero-right picture,
-  .hero-right picture img {
-    width:100%;
-    height:100%;
-  }
   .hero-right img {
-    object-fit:cover;
-    object-position:center bottom;
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
     transform:none;
     animation:none;
     filter:none;
