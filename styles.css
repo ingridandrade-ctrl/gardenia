@@ -1445,17 +1445,11 @@ footer {
   align-items:center;
   gap:clamp(24px, 2vw, 36px);
   max-width:720px; margin:0 auto;
-  padding-bottom:clamp(40px, 4vw, 64px);
-  border-bottom:1px solid rgba(255,255,255,.06);
 }
 .ft-logo {
-  height:clamp(48px, 5vw, 72px);
+  height:clamp(72px, 11vw, 168px);
   width:auto;
   display:block;
-  /* Logo da Gardenia é verde escuro — sobre fundo verde-noite vira meio invisivel.
-     Filter clareia e mantém o brand sem perder identidade. */
-  filter:brightness(0) invert(.85) sepia(.2) hue-rotate(60deg) saturate(1.6);
-  opacity:.92;
 }
 .ft-quote {
   font-family:'DM Sans',sans-serif;
@@ -1466,33 +1460,6 @@ footer {
   max-width:42ch;
   font-weight:300;
 }
-.ft-bot {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:clamp(20px, 2vw, 36px);
-  margin-top:clamp(24px, 2.5vw, 36px);
-  flex-wrap:wrap;
-}
-.ft-loc {
-  font-size:.6rem; letter-spacing:.22em; text-transform:uppercase;
-  color:rgba(244,239,224,.4);
-  font-weight:500;
-}
-.ft-copy {
-  font-size:.66rem; color:rgba(244,239,224,.28);
-  font-weight:300; letter-spacing:.04em;
-}
-.ft-loc::after {
-  content:'';
-  display:inline-block;
-  width:4px; height:4px;
-  border-radius:50%;
-  background:rgba(244,239,224,.3);
-  vertical-align:middle;
-  margin-left:clamp(20px, 2vw, 36px);
-}
-
 /* ═══════════════════════════════════════════════════════════
    REVEAL — JS-conditional. Sem JS, tudo visivel.
    ═══════════════════════════════════════════════════════════ */
@@ -1626,10 +1593,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mc-price { font-size:2.3rem; }
   .mc-it { font-size:.84rem; }
   footer { padding:52px 22px 28px; }
-  .ft-inner { gap:20px; padding-bottom:32px; }
-  .ft-bot { flex-direction:column; gap:10px; margin-top:24px; }
-  .ft-loc, .ft-copy { font-size:.6rem; letter-spacing:.18em; }
-  .ft-loc::after { display:none; }
+  .ft-inner { gap:20px; padding-bottom:0; border-bottom:none; }
 }
 
 @media (max-width: 380px) {
