@@ -1763,7 +1763,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   letter-spacing:-.028em;
   font-feature-settings:"lnum tnum";
 }
-.mnt-card--adapt .mnt-card-price { color:var(--f); }
+.mnt-card--adapt .mnt-card-price,
 .mnt-card--regular .mnt-card-price { color:#9FD58C; }
 .mnt-price-suffix {
   font-size:.32em;
