@@ -2340,3 +2340,25 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
     filter:none !important;
   }
 }
+
+/* === MOBILE: justificar subtitulos + corpos, soltar max-widths === */
+@media (max-width: 720px) {
+  .hero-deck,
+  .studio-quote p,
+  .studio-feature-text,
+  .studio-p,
+  .concept-lead-italic,
+  .concept-p,
+  .tl-lead,
+  .tl-card-desc,
+  .invest-head-sub,
+  .mnt-sub,
+  .closing-sub,
+  .lede {
+    text-align:justify !important;
+    text-wrap:auto !important;
+    max-width:none !important;
+    hyphens:auto;
+    -webkit-hyphens:auto;
+  }
+}
