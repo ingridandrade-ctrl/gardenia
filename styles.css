@@ -915,6 +915,13 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .concept-card { grid-column:span 2; }
 .concept-card:nth-child(4) { grid-column:2 / span 2; }
 .concept-card:nth-child(5) { grid-column:4 / span 2; }
+
+@media (max-width: 900px) {
+  .concept-cards { grid-template-columns:1fr; }
+  .concept-card,
+  .concept-card:nth-child(4),
+  .concept-card:nth-child(5) { grid-column:1; }
+}
 .concept-card {
   position:relative;
   background:linear-gradient(155deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.03) 100%);
@@ -2300,4 +2307,58 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   background:rgba(244,239,224,.1);
   border-color:var(--f);
   transform:rotate(90deg);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE FORCE OVERRIDES — fim do arquivo pra ganhar cascade
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .studio-cards,
+  .concept-cards,
+  .mnt-cards,
+  .ante-cards,
+  .pm-cards,
+  .pm-species,
+  .tl-subcards,
+  .tl-species-grid,
+  .tl-phases,
+  .tl-phase-steps,
+  .scope-grid,
+  .invest-grid { grid-template-columns:1fr !important; gap:clamp(14px, 2vw, 20px) !important; }
+
+  .concept-card,
+  .concept-card:nth-child(4),
+  .concept-card:nth-child(5) { grid-column:1 !important; }
+
+  .mnt-cards { padding:0 !important; }
+
+  /* Hero mobile: garantir empilhado */
+  .hero { flex-direction:column !important; min-height:auto !important; }
+  .hero-left { width:100% !important; min-height:auto !important; }
+  .hero-right { flex:none !important; width:100% !important; }
+
+  /* Section padding compactado */
+  .s, .pm-section, .tl-section { padding:clamp(56px, 8vw, 80px) clamp(20px, 5vw, 32px) !important; }
+  .mnt-section { padding:clamp(56px, 8vw, 80px) clamp(20px, 5vw, 32px) 0 !important; }
+}
+
+@media (max-width: 720px) {
+  .tl-card { padding:clamp(28px, 4vw, 36px) clamp(20px, 4vw, 28px) !important; }
+  .invest-card { padding:clamp(24px, 4vw, 32px) !important; }
+  .invest-discount { flex-direction:column !important; align-items:flex-start !important; gap:12px !important; }
+  .studio-card,
+  .concept-card,
+  .ante-card,
+  .mnt-card { padding:clamp(24px, 5vw, 32px) clamp(20px, 4vw, 28px) !important; }
+  /* Titulos um pouco menores mobile */
+  .studio-title,
+  .concept-title,
+  .tl-title,
+  .mnt-title,
+  .closing-title,
+  .invest-head-title,
+  .hxl { font-size:clamp(2.2rem, 9vw, 3rem) !important; }
+  .hero-h1 { font-size:clamp(2.6rem, 12vw, 3.6rem) !important; }
+  .invest-total .inv-big { font-size:clamp(3.5rem, 14vw, 5rem) !important; }
+  .mnt-card-price { font-size:clamp(2.2rem, 10vw, 3rem) !important; }
 }
