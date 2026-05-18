@@ -228,7 +228,7 @@ nav.scrolled {
   padding-block:clamp(48px, 5vw + 16px, 96px);
   padding-left:clamp(48px, 9vw, 180px);
   padding-right:clamp(28px, 3vw, 48px);
-  width:clamp(540px, 58%, 880px);
+  width:clamp(560px, 62%, 920px);
   min-height:calc(100vh - 73px);
   position:relative;
   z-index:2;
@@ -256,7 +256,7 @@ nav.scrolled {
 }
 
 .hero-h1 {
-  font-size:clamp(3rem, 5.4vw + .4rem, 6.4rem);
+  font-size:clamp(3.4rem, 6.4vw + .4rem, 7.4rem);
   font-weight:700; line-height:1.04;
   letter-spacing:-.035em;
   word-spacing:-.05em;
@@ -288,9 +288,9 @@ html.no-js .hero-h1 .line-inner,
 .hero-h1.on .line:nth-child(3) .line-inner { transition-delay:.32s; }
 
 .hero-deck {
-  font-size:clamp(.9rem, .15vw + .85rem, 1rem);
-  line-height:1.65; color:rgba(20,21,12,.7);
-  font-weight:300; max-width:46ch;
+  font-size:clamp(1rem, .2vw + .95rem, 1.18rem);
+  line-height:1.7; color:rgba(20,21,12,.72);
+  font-weight:400; max-width:50ch;
   margin-top:clamp(28px, 2vw + 12px, 44px);
 }
 html.js .hero-deck {
@@ -2312,15 +2312,15 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .studio-eyebrow,
   .concept-eyebrow { margin-bottom:clamp(16px, 3vw, 24px) !important; }
   .h420 { aspect-ratio:auto; height:300px; }
-  /* Hero mobile: imagem maior e fixed-background */
+  /* Hero mobile: imagem fixa no fundo, maior */
   .hero-right {
     flex:none !important;
     width:100% !important;
-    height:clamp(380px, 60vh, 540px) !important;
+    height:clamp(460px, 70vh, 640px) !important;
     padding:0 !important;
     background:var(--f) url('images/fundo-site.png') no-repeat center center !important;
     background-attachment:fixed !important;
-    background-size:auto 90% !important;
+    background-size:contain !important;
   }
   .hero-right img { display:none !important; }
 }
