@@ -216,7 +216,9 @@ nav.scrolled {
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  padding:clamp(48px, 5vw + 16px, 96px) clamp(28px, 3.5vw + 12px, 72px);
+  padding-block:clamp(48px, 5vw + 16px, 96px);
+  padding-left:clamp(48px, 9vw, 180px);
+  padding-right:clamp(28px, 3.5vw, 56px);
   width:clamp(440px, 52%, 760px);
   min-height:calc(100vh - 73px);
   position:relative;
@@ -349,21 +351,22 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:var(--mid); font-weight:400; line-height:1.4;
 }
 
-/* Imagem hero — PNG transparente sobre creme, sem overlay */
+/* Imagem hero — PNG transparente flush direita, sem padding lateral */
 .hero-right {
   flex:1;
   display:flex;
   align-items:center;
-  justify-content:center;
-  padding:clamp(40px, 4vw, 80px) clamp(20px, 3vw, 56px);
+  justify-content:flex-end;
+  padding:0;
   background:var(--f);
   overflow:hidden;
 }
 .hero-right img {
   width:100%;
   height:auto;
-  max-height:calc(100vh - 180px);
+  max-height:calc(100vh - 100px);
   object-fit:contain;
+  object-position:right center;
   display:block;
   transform:translate3d(0, var(--parallax-y, 0), 0);
   will-change:transform;
