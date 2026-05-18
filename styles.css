@@ -537,10 +537,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .lede {
   font-family:'Inter',sans-serif;
   font-style:normal;
-  font-weight:300;
-  font-size:.91rem;
+  font-weight:400;
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
   line-height:1.7;
-  color:#6b6b6b;
+  color:#5d5d5d;
   max-width:680px;
 }
 .head--dark .lede {
@@ -840,14 +840,14 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .concept-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.66rem;
-  letter-spacing:.24em;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
   text-transform:uppercase;
-  color:rgba(244,239,224,.55);
-  font-weight:600;
+  color:#9FD58C;
+  font-weight:300;
 }
 .concept-title {
-  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
+  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
   line-height:.98;
   letter-spacing:-.02em;
   margin-bottom:clamp(40px, 4.5vw, 76px);
@@ -856,7 +856,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .concept-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:700;
+  font-weight:600;
   color:var(--f);
 }
 .concept-title .concept-em {
@@ -867,10 +867,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-lead {
   font-family:'Inter',sans-serif;
-  font-size:1.02rem;
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
   font-weight:400;
-  line-height:1.65;
-  color:rgba(244,239,224,.7);
+  line-height:1.7;
+  color:rgba(244,239,224,.72);
   max-width:680px;
   margin-inline:auto;
 }
@@ -964,7 +964,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.3rem);
+  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.35rem);
   text-transform:none;
   letter-spacing:-.01em;
   font-weight:600;
@@ -976,7 +976,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-size:clamp(1rem, .2vw + .95rem, 1.15rem);
   font-weight:400;
   line-height:1.6;
-  color:rgba(244,239,224,.85);
+  color:rgba(244,239,224,.82);
 }
 .concept-card-text em {
   font-family:'Playfair Display',serif;
@@ -1109,14 +1109,14 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 
 .tl-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.66rem;
-  letter-spacing:.24em;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
   text-transform:uppercase;
   color:#25613B;
-  font-weight:600;
+  font-weight:300;
 }
 .tl-title {
-  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
+  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
   line-height:.98;
   letter-spacing:-.02em;
   text-align:center;
@@ -1124,7 +1124,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .tl-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:700;
+  font-weight:600;
   color:#111209;
 }
 .tl-title .tl-em {
@@ -1135,11 +1135,11 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .tl-lead {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1rem, .15vw + .95rem, 1.15rem);
-  font-weight:300;
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
+  font-weight:400;
   line-height:1.7;
   color:#5d5d5d;
-  max-width:600px;
+  max-width:680px;
 }
 
 /* CARDS — mesmo estilo visual da parte verde existente */
@@ -1606,15 +1606,15 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .mnt-top > *:last-child { margin-bottom:0; }
 .mnt-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.66rem;
-  letter-spacing:.24em;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
   text-transform:uppercase;
   color:#9FD58C;
-  font-weight:600;
+  font-weight:300;
 }
 .mnt-title {
-  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
-  font-weight:700;
+  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  font-weight:600;
   line-height:.98;
   letter-spacing:-.02em;
   color:var(--f);
@@ -1623,10 +1623,10 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .mnt-sub {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.08rem, .2vw + 1rem, 1.3rem);
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
+  font-weight:400;
   line-height:1.7;
   color:rgba(244,239,224,.72);
-  font-weight:400;
   max-width:680px;
 }
 
@@ -1806,11 +1806,12 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   gap:clamp(20px, 2vw, 32px);
 }
 .closing-eyebrow {
-  font-size:clamp(.62rem, .1vw + .58rem, .7rem);
-  letter-spacing:.32em;
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
   text-transform:uppercase;
-  color:var(--a);
-  font-weight:600;
+  color:#CFAA40;
+  font-weight:300;
 }
 .closing-title {
   font-family:'Inter',sans-serif;
@@ -1822,11 +1823,12 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   max-width:16ch;
 }
 .closing-sub {
-  font-size:clamp(.95rem, .15vw + .9rem, 1.1rem);
+  font-family:'Inter',sans-serif;
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
+  font-weight:400;
   line-height:1.7;
-  color:rgba(244,239,224,.7);
-  font-weight:300;
-  max-width:54ch;
+  color:rgba(244,239,224,.72);
+  max-width:680px;
 }
 
 /* PILL BUTTON — creme Gardenia com texto verde */
