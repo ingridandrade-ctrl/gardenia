@@ -1864,25 +1864,52 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   nav { padding:22px 32px; }
   nav.scrolled { padding:16px 32px; }
   .hero { flex-direction:column; min-height:auto; padding-top:73px; }
-  .hero-left { width:100%; min-height:auto; padding:56px 40px 48px; max-width:none; }
-  .hero-h1 { max-width:none; }
+  .hero-left {
+    width:100%; min-height:auto;
+    padding:56px 24px 48px;
+    max-width:none;
+    align-items:center;
+    text-align:center;
+  }
+  .hero-h1 { max-width:none; text-align:center; }
+  .hero-deck { text-align:center; }
+  .hero-bottom { align-items:center; }
+  .hero-client-block { text-align:center; }
   .hxl { max-width:none; }
-  /* MOBILE: imagem como background fixo — container com altura
-     definida, imagem ancorada no viewport (nao se mexe ao rolar) */
+  /* MOBILE: imagem renderizada normalmente em container fixo */
   .hero-right {
     flex:none;
     width:100%;
-    height:clamp(320px, 52vh, 480px);
-    padding:0;
-    background:var(--f) url('images/fundo-site.png') no-repeat center center;
-    background-attachment:fixed;
-    background-size:auto 90%;
+    height:clamp(340px, 56vh, 520px);
+    padding:0 24px;
+    background:var(--f);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
   }
-  .hero-right img { display:none; }
+  .hero-right img {
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:100%;
+    object-fit:contain;
+    object-position:center;
+    animation:none;
+    filter:none;
+    transform:none;
+  }
   .hero-cue { display:none; }
-  .s { padding:96px 40px; }
+  .s { padding:72px 40px; }
+  .head { margin-bottom:56px; }
+  .head > .chap { margin-bottom:36px; }
+  .head > .hxl { margin-bottom:36px; }
+  .studio > *,
+  .concept > *,
+  .ante > *,
+  .mnt-top > * { margin-bottom:44px; }
   .concept-cols, .ante-cols {
-    grid-template-columns:1fr; gap:56px;
+    grid-template-columns:1fr; gap:40px;
   }
   .studio-cards { grid-template-columns:1fr; }
   .scope-grid { grid-template-columns:1fr; gap:48px; }
@@ -1947,18 +1974,34 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mq-item { font-size:.58rem; padding:0 24px; gap:12px; }
   .mq-item b { font-size:.9rem; }
   .mq::before, .mq::after { width:40px; }
-  .s { padding:84px 24px; }
-  .concept-cols, .ante-cols { margin-top:52px; gap:48px; }
-  .studio { gap:40px; }
-  .studio-title { font-size:clamp(2.2rem, 9vw, 3rem); margin-bottom:36px; }
-  .studio-card { padding:28px 22px; }
-  .mnt-section { padding-top:64px; }
-  .mnt-top { padding-bottom:48px; }
-  .mnt-card { padding:36px 22px; }
-  .mnt-card-title { font-size:1.45rem; }
-  .mnt-card-price { font-size:2.2rem; margin-bottom:28px; }
+  /* MOBILE — compactacao geral: menos respiro entre secoes/blocos */
+  .s { padding:56px 24px; }
+  .head { margin-bottom:36px; }
+  .head > .chap { margin-bottom:24px; }
+  .head > .hxl { margin-bottom:24px; }
+  .concept-cols, .ante-cols { margin-top:32px; gap:32px; }
+  .studio { gap:32px; }
+  .studio > *,
+  .concept > *,
+  .ante > *,
+  .mnt-top > * { margin-bottom:32px !important; }
+  .studio-title,
+  .concept-title,
+  .ante-title { font-size:clamp(2rem, 9vw, 2.8rem); margin-bottom:28px !important; line-height:1.02; }
+  .studio-card { padding:24px 20px; }
+  .concept-card, .ante-card { padding:22px 18px; }
+  .studio-cards, .concept-cards, .ante-cards { gap:12px; }
+  .mnt-section { padding-top:40px; }
+  .mnt-top { padding-bottom:28px; }
+  .mnt-card { padding:28px 20px; }
+  .mnt-card-title { font-size:1.4rem; }
+  .mnt-card-price { font-size:2rem; margin-bottom:20px; }
   .mnt-list li { font-size:.88rem; }
-  .mnt-closing { padding:64px 0; font-size:1.5rem; }
+  .mnt-closing { padding:40px 0; font-size:1.4rem; }
+  .fase-card { padding:28px 22px; }
+  .fases-stack { gap:14px; }
+  .scope-grid { gap:32px; }
+  .price-panel { padding:32px 24px; margin-bottom:32px; }
   .hxl { font-size:clamp(2rem, 8vw, 3rem); max-width:none; }
   .hlg { font-size:clamp(1.7rem, 6.5vw, 2.4rem); }
   .hmd { font-size:clamp(1.25rem, 5vw, 1.7rem); }
