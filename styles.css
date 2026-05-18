@@ -1645,7 +1645,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   letter-spacing:-.018em;
 }
 .mnt-card-title em {
-  color:#9FD58C !important;
+  color:var(--f) !important;
   font-family:'Playfair Display',serif;
   font-style:italic;
   font-weight:500;
@@ -1695,9 +1695,9 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 }
 .mnt-list li {
   font-family:'Inter',sans-serif;
-  font-size:.94rem;
-  font-weight:300;
-  color:#6b6b6b;
+  font-size:clamp(.95rem, .15vw + .9rem, 1.05rem);
+  font-weight:400;
+  color:var(--f);
   line-height:1.6;
   display:flex;
   gap:12px;
