@@ -886,15 +886,23 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-p {
   font-family:'Inter',sans-serif;
-  font-size:.96rem;
+  font-size:clamp(1.1rem, .25vw + 1.05rem, 1.3rem);
   font-weight:400;
-  line-height:1.65;
-  color:rgba(244,239,224,.65);
+  line-height:1.75;
+  color:rgba(244,239,224,.92);
 }
 .concept-p strong {
-  color:var(--f);
-  font-weight:600;
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:1.18em;
+  line-height:1.35;
+  color:#B5DD9C;
+  margin:.1em 0 .55em;
+  letter-spacing:-.01em;
 }
+.concept-body { gap:clamp(28px, 2.5vw, 40px); }
 
 .concept-cards {
   display:grid;
