@@ -1258,15 +1258,15 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 /* SUBCARDS (Anteprojeto - 4 em grid) */
 .tl-subcards {
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
-  gap:clamp(12px, 1.2vw, 16px);
+  grid-template-columns:repeat(2, 1fr);
+  gap:clamp(16px, 1.6vw, 24px);
   position:relative; z-index:1;
 }
 .tl-subcard {
   background:rgba(255,255,255,.6);
   border:1px solid rgba(92,163,87,.16);
-  border-radius:12px;
-  padding:clamp(18px, 1.6vw, 24px);
+  border-radius:14px;
+  padding:clamp(28px, 2.6vw, 40px) clamp(24px, 2.2vw, 32px);
 }
 .tl-subcard-n {
   font-family:'Inter',sans-serif;
