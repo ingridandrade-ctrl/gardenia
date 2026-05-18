@@ -2020,9 +2020,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mnt-title { max-width:100%; }
   .mnt-top { padding-bottom:64px; }
   .mnt-card { padding:44px 32px; }
-  .gal-grid { grid-template-columns:1fr 1fr; }
   .gi.tall, .gi.wide { grid-row:auto; grid-column:auto; }
-  .h300, .h420, .h610 { height:280px; }
   .split { grid-template-columns:1fr; }
   .split.rev { direction:ltr; }
   .split-img { min-height:400px; height:400px; }
