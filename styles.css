@@ -634,15 +634,15 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .studio-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.66rem;
-  letter-spacing:.24em;
+  font-size:clamp(.85rem, .2vw + .78rem, 1.1rem);
+  letter-spacing:.22em;
   text-transform:uppercase;
-  color:#6b6b6b;
-  font-weight:600;
+  color:#CFAA40;
+  font-weight:700;
 }
 
 .studio-title {
-  font-size:clamp(3.2rem, 5.8vw, 6.4rem);
+  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
   line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
@@ -652,7 +652,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .studio-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:700;
+  font-weight:600;
   color:#111209;
 }
 .studio-title .studio-em {
