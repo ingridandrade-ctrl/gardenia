@@ -456,7 +456,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    SECTIONS — sistema unificado de capitulos
    ═══════════════════════════════════════════════════════════ */
 .s {
-  padding:clamp(64px, 6vw + 16px, 112px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(72px, 7vw + 16px, 136px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
 }
 .s-white { background:var(--linen); }
@@ -468,7 +468,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .head {
   display:flex;
   flex-direction:column;
-  margin-bottom:clamp(40px, 4vw, 64px);
+  margin-bottom:clamp(48px, 5vw, 88px);
 }
 .head > .chap { margin-bottom:clamp(28px, 2.5vw, 40px); }
 .head > .hxl { margin-bottom:clamp(28px, 2.5vw, 40px); }
@@ -622,7 +622,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .studio > * {
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .studio > *:last-child { margin-bottom:0; }
 
@@ -640,7 +640,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   line-height:.97;
   letter-spacing:-.02em;
   max-width:none;
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .studio-title span {
   display:block;
@@ -655,10 +655,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:#25613B;
 }
 
-/* QUOTE — citacao em Playfair italic com aspa grande */
+/* QUOTE — citacao em Inter com trechos italicos Playfair */
 .studio-quote {
   position:relative;
-  max-width:780px;
+  max-width:760px;
   margin:0 auto;
   padding:0;
   text-align:center;
@@ -672,21 +672,24 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-size:clamp(3rem, 3.5vw + 1rem, 5rem);
   line-height:.4;
   color:#25613B;
-  opacity:.6;
-  margin-bottom:clamp(16px, 1.5vw, 28px);
+  opacity:.55;
+  margin-bottom:clamp(14px, 1.4vw, 24px);
 }
 .studio-quote p {
-  font-family:'Playfair Display',serif;
-  font-style:italic;
+  font-family:'Inter',sans-serif;
+  font-style:normal;
   font-weight:400;
-  font-size:clamp(1.2rem, 1.2vw + .7rem, 1.65rem);
-  line-height:1.5;
+  font-size:clamp(1.05rem, .4vw + .92rem, 1.32rem);
+  line-height:1.55;
   color:#2a2c20;
   letter-spacing:-.005em;
 }
-.studio-quote strong {
-  font-weight:500;
+.studio-quote em {
+  font-family:'Playfair Display',serif;
   font-style:italic;
+  font-weight:500;
+  color:#25613B;
+  letter-spacing:0;
   color:#25613B;
 }
 
@@ -823,7 +826,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .concept > * {
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .concept > *:last-child { margin-bottom:0; }
 
@@ -839,7 +842,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-size:clamp(3rem, 5vw, 5.5rem);
   line-height:.97;
   letter-spacing:-.02em;
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .concept-title span {
   display:block;
@@ -1041,7 +1044,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   text-align:center;
 }
 .ante > * {
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .ante > *:last-child { margin-bottom:0; }
 
@@ -1057,7 +1060,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-size:clamp(3rem, 5vw, 5.5rem);
   line-height:.97;
   letter-spacing:-.02em;
-  margin-bottom:clamp(32px, 3vw, 52px);
+  margin-bottom:clamp(40px, 4.5vw, 76px);
 }
 .ante-title span {
   display:block;
