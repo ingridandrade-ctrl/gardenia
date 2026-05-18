@@ -1438,7 +1438,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 
 /* CARD — wrap em torno do preço + entregas */
 .invest-card {
-  background:#EEF3EA;
+  background:#F3F7EF;
   border:1px solid rgba(30,92,50,.18);
   border-radius:24px;
   padding:clamp(40px, 4vw + 16px, 72px);
@@ -1476,7 +1476,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-size:.7rem;
   text-transform:uppercase;
   letter-spacing:.2em;
-  color:#6b6b6b;
+  color:#4a4a4a;
   font-weight:500;
   line-height:1.6;
   margin-bottom:28px;
@@ -1509,7 +1509,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-size:.72rem;
   text-transform:uppercase;
   letter-spacing:.18em;
-  color:#6b6b6b;
+  color:#4a4a4a;
   font-weight:500;
   margin-bottom:clamp(32px, 3vw, 48px);
 }
@@ -1582,8 +1582,8 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
 .invest-conds {
   font-family:'Inter',sans-serif;
   font-size:.78rem;
-  font-weight:300;
-  color:#aaaaaa;
+  font-weight:400;
+  color:#7a7a7a;
   font-style:italic;
   line-height:1.7;
 }
@@ -1594,7 +1594,7 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   font-size:.7rem;
   text-transform:uppercase;
   letter-spacing:.2em;
-  color:#6b6b6b;
+  color:#4a4a4a;
   font-weight:500;
   margin-bottom:28px;
 }
@@ -1608,11 +1608,11 @@ html.js .gi.on img { clip-path:inset(0 0); transform:scale(1); }
   gap:14px;
   align-items:baseline;
   padding:14px 0;
-  border-bottom:1px solid rgba(0,0,0,.06);
+  border-bottom:1px solid rgba(0,0,0,.08);
   font-family:'Inter',sans-serif;
-  font-size:.88rem;
-  font-weight:300;
-  color:#5d5d5d;
+  font-size:.92rem;
+  font-weight:400;
+  color:#3d3d3d;
   line-height:1.65;
 }
 .invest-list li:first-child { padding-top:0; }
