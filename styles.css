@@ -896,19 +896,20 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:#9FD58C;
   font-weight:300;
   margin-bottom:clamp(20px, 2vw, 32px);
+  text-align:center;
 }
 
 .concept-title {
   font-size:clamp(3rem, 5.5vw, 6rem);
   line-height:1;
   letter-spacing:-.02em;
-  max-width:65%;
-  text-align:left;
+  max-width:none;
+  text-align:center;
 }
 .concept-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:300;
+  font-weight:700;
   color:#ffffff;
 }
 .concept-title .concept-em {
@@ -945,9 +946,9 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-p {
   font-family:'Inter',sans-serif;
-  font-size:.91rem;
+  font-size:1.05rem;
   font-weight:300;
-  line-height:1.9;
+  line-height:1.95;
   color:rgba(255,255,255,.5);
   text-align:left;
   margin-bottom:24px;
@@ -964,7 +965,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   display:flex;
   flex-direction:column;
   gap:12px;
-  max-width:none;
+  max-width:420px;
   margin-inline:initial;
 }
 .concept-card {
@@ -1009,7 +1010,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.86rem;
+  font-size:.88rem;
   font-weight:300;
   line-height:1.6;
   color:rgba(255,255,255,.5);
