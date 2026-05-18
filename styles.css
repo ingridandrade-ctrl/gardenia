@@ -226,9 +226,9 @@ nav.scrolled {
   flex-direction:column;
   justify-content:center;
   padding-block:clamp(48px, 5vw + 16px, 96px);
-  padding-left:clamp(48px, 10vw, 200px);
+  padding-left:clamp(48px, 9vw, 180px);
   padding-right:clamp(28px, 3vw, 48px);
-  width:clamp(580px, 68%, 1040px);
+  width:clamp(540px, 58%, 880px);
   min-height:calc(100vh - 73px);
   position:relative;
   z-index:2;
@@ -371,14 +371,12 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   overflow:hidden;
 }
 .hero-right img {
-  width:auto;
-  max-width:100%;
+  width:100%;
   height:auto;
-  max-height:min(74vh, 620px);
+  max-height:88vh;
   object-fit:contain;
   object-position:right center;
   display:block;
-  margin-left:auto;
   transform:translate3d(0, var(--parallax-y, 0), 0);
   will-change:transform;
   animation:heroSway 18s ease-in-out infinite alternate;
