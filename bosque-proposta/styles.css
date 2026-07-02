@@ -2095,7 +2095,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   /* HERO MOBILE — PNG transparente em natural aspect, cream natural */
   .hero-right {
     width:100%;
-    padding:8px 24px 40px;
+    padding:8px 24px 0;
     background:var(--f);
   }
   .hero-right img {
@@ -2369,7 +2369,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
     flex:none !important;
     width:100% !important;
     height:auto !important;
-    padding:0 24px clamp(40px, 8vw, 64px) !important;
+    padding:0 24px 0 !important;
     background:var(--f) !important;
     display:flex !important;
     align-items:center !important;
