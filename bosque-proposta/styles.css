@@ -1444,7 +1444,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   background:#F3F7EF;
   border:1px solid rgba(30,92,50,.18);
   border-radius:24px;
-  padding:clamp(32px, 3vw + 12px, 52px);
+  padding:0;
   max-width:1200px;
   margin:0 auto;
   box-shadow:
@@ -1466,23 +1466,37 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .invest-grid {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(48px, 5vw, 88px);
-  align-items:start;
+  grid-template-columns:minmax(300px, 42%) 1fr;
+  gap:0;
+  align-items:stretch;
   position:relative;
   z-index:1;
+}
+
+/* Coluna esquerda = painel verde inteiro */
+.invest-price {
+  background:linear-gradient(150deg, #2A6B42 0%, #1A4A2C 100%);
+  padding:clamp(36px, 3.4vw, 56px) clamp(28px, 2.8vw, 48px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.invest-scope {
+  padding:clamp(32px, 3vw, 52px) clamp(28px, 2.8vw, 48px);
 }
 
 /* COLUNA ESQUERDA — Preço */
 .invest-eyebrow {
   font-family:'Inter',sans-serif;
-  font-size:.7rem;
+  font-size:.72rem;
   text-transform:uppercase;
   letter-spacing:.2em;
-  color:#4a4a4a;
-  font-weight:500;
+  color:rgba(255,255,255,.75);
+  font-weight:700;
   line-height:1.6;
-  margin-bottom:28px;
+  margin-bottom:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(255,255,255,.18);
 }
 .invest-total {
   display:flex;
@@ -1519,23 +1533,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 /* PRICEBOX — valor completo dentro do card verde */
 .pricebox {
-  background:linear-gradient(135deg, #25613B 0%, #1A4A2C 100%);
-  border-radius:20px;
-  padding:clamp(28px, 2.6vw, 40px) clamp(24px, 2.4vw, 36px);
+  background:transparent;
+  border-radius:0;
+  padding:0;
   position:relative;
-  overflow:hidden;
-  box-shadow:
-    0 18px 40px -16px rgba(30,92,50,.45),
-    inset 0 1px 0 rgba(255,255,255,.10);
-}
-.pricebox::after {
-  content:'';
-  position:absolute;
-  top:0; left:-50%;
-  width:50%; height:100%;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,.07), transparent);
-  animation:discount-shine 5s ease-in-out infinite;
-  pointer-events:none;
 }
 .pricebox-label {
   font-family:'Inter',sans-serif;
@@ -1581,7 +1582,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .pricebox-total .pb-big {
   font-family:'Playfair Display',serif;
-  font-size:clamp(2.8rem, 2.5vw + 1rem, 4rem);
+  font-size:clamp(3.2rem, 3vw + 1.2rem, 4.8rem);
   font-weight:400;
   color:#ffffff;
   line-height:.95;
@@ -1745,11 +1746,13 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 @media (max-width: 900px) {
-  .invest-card { padding:clamp(28px, 4vw, 40px); }
+  .invest-card { padding:0; }
   .invest-grid {
     grid-template-columns:1fr;
-    gap:48px;
+    gap:0;
   }
+  .invest-price { padding:clamp(32px, 6vw, 44px) clamp(24px, 5vw, 32px); }
+  .invest-scope { padding:clamp(28px, 5vw, 40px) clamp(24px, 5vw, 32px); }
   .invest-price { order:1; }
   .invest-scope { order:2; }
   .invest-discount { flex-direction:column; align-items:flex-start; gap:14px; }
@@ -2439,7 +2442,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 
 @media (max-width: 720px) {
   .tl-card { padding:clamp(28px, 4vw, 36px) clamp(20px, 4vw, 28px) !important; }
-  .invest-card { padding:clamp(24px, 4vw, 32px) !important; }
+  .invest-card { padding:0 !important; }
   .invest-discount { flex-direction:column !important; align-items:flex-start !important; gap:12px !important; }
   .studio-card,
   .concept-card,
