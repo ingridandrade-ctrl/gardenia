@@ -30,8 +30,7 @@
 }
 
 html { font-size:16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-@media (min-width: 1280px) { html { font-size:17px; } }
-@media (min-width: 1600px) { html { font-size:18px; } }
+@media (min-width: 1280px) { html { font-size:16.5px; } }
 html.js { scroll-behavior:smooth; }
 
 body {
@@ -201,7 +200,7 @@ nav.scrolled {
 }
 .n-logo:hover { opacity:.7; }
 .n-logo img {
-  height:clamp(48px, 5.5vw, 80px);
+  height:clamp(44px, 4vw, 60px);
   width:auto;
   display:block;
 }
@@ -215,7 +214,7 @@ nav.scrolled {
    ═══════════════════════════════════════════════════════════ */
 .hero {
   position:relative;
-  min-height:100vh;
+  min-height:min(88vh, 860px);
   padding-top:73px;
   display:flex;
   align-items:stretch;
@@ -229,7 +228,7 @@ nav.scrolled {
   padding-left:clamp(48px, 9vw, 180px);
   padding-right:clamp(28px, 3vw, 48px);
   width:clamp(560px, 62%, 920px);
-  min-height:calc(100vh - 73px);
+  min-height:calc(min(88vh, 860px) - 73px);
   position:relative;
   z-index:2;
 }
@@ -256,7 +255,7 @@ nav.scrolled {
 }
 
 .hero-h1 {
-  font-size:clamp(3.4rem, 6.4vw + .4rem, 7.4rem);
+  font-size:clamp(2.8rem, 4.2vw + .4rem, 4.8rem);
   font-weight:700; line-height:1.04;
   letter-spacing:-.035em;
   word-spacing:-.05em;
@@ -374,7 +373,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .hero-right img {
   width:100%;
   height:auto;
-  max-height:88vh;
+  max-height:78vh;
   object-fit:contain;
   object-position:right center;
   display:block;
@@ -456,7 +455,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    SECTIONS — sistema unificado de capitulos
    ═══════════════════════════════════════════════════════════ */
 .s {
-  padding:clamp(96px, 9vw + 16px, 176px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(72px, 5vw + 16px, 112px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
 }
 .s-white { background:var(--linen); }
@@ -470,7 +469,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   flex-direction:column;
   align-items:center;
   text-align:center;
-  margin-bottom:clamp(56px, 6vw, 104px);
+  margin-bottom:clamp(48px, 4vw, 72px);
 }
 .head > .chap { margin-bottom:clamp(28px, 2.5vw, 40px); }
 .head > .hxl { margin-bottom:clamp(28px, 2.5vw, 40px); }
@@ -579,7 +578,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .hxl {
   font-family:'Inter',sans-serif;
-  font-size:clamp(2.2rem, 4.4vw + .35rem, 5.2rem);
+  font-size:clamp(2rem, 2.8vw + .4rem, 3.2rem);
   font-weight:500; line-height:1.04;
   letter-spacing:-.022em; color:var(--ink);
   max-width:16ch;
@@ -624,7 +623,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .studio > * {
-  margin-bottom:clamp(48px, 5vw, 88px);
+  margin-bottom:clamp(40px, 3.5vw, 60px);
 }
 .studio > *:last-child { margin-bottom:0; }
 
@@ -638,7 +637,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 .studio-title {
-  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
@@ -822,6 +821,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .img-transicao img {
   width:100%;
   height:auto;
+  max-height:70vh;
+  object-fit:cover;
   display:block;
 }
 
@@ -842,6 +843,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:2px;
+  max-width:1440px;
+  margin:0 auto;
 }
 .gi {
   position:relative;
@@ -876,14 +879,14 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   background:linear-gradient(to top, rgba(14,40,24,.6) 0%, transparent 50%);
   pointer-events:none;
 }
-.h420 { aspect-ratio:1/1; }
-.h300 { aspect-ratio:1/1; }
-.h610 { aspect-ratio:1/1; }
+.h420 { aspect-ratio:4/3; }
+.h300 { aspect-ratio:4/3; }
+.h610 { aspect-ratio:4/3; }
 
 /* ═══════════════════════════════════════════════════════════
    CONCEITO (dark) — 2 colunas: texto + cards stack
    ═══════════════════════════════════════════════════════════ */
-#cap-2 .max { max-width:min(1440px, 100%); }
+#cap-2 .max { max-width:1280px; }
 .concept {
   display:flex;
   flex-direction:column;
@@ -901,7 +904,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 .concept-title {
-  font-size:clamp(3rem, 5.5vw, 6rem);
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
   line-height:1;
   letter-spacing:-.02em;
   max-width:none;
@@ -1042,7 +1045,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    ═══════════════════════════════════════════════════════════ */
 .tl-section {
   background:#E8F0E8;
-  padding:clamp(96px, 9vw + 16px, 176px) clamp(20px, 3.5vw + 10px, 64px);
+  padding:clamp(72px, 5vw + 16px, 112px) clamp(20px, 3.5vw + 10px, 64px);
   position:relative;
   overflow:hidden;
 }
@@ -1085,7 +1088,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:300;
 }
 .tl-title {
-  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   text-align:center;
@@ -1117,7 +1120,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   background:#F5F7F2;
   border:1px solid rgba(92,163,87,.22);
   border-radius:24px;
-  padding:clamp(48px, 5vw, 80px) clamp(32px, 3.5vw, 64px);
+  padding:clamp(36px, 3vw, 56px) clamp(28px, 2.5vw, 44px);
   overflow:hidden;
   box-shadow:
     0 24px 64px -28px rgba(30,92,50,.22),
@@ -1131,7 +1134,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Playfair Display',serif;
   font-style:italic;
   font-weight:500;
-  font-size:clamp(5rem, 12vw, 10rem);
+  font-size:clamp(4rem, 7vw, 7rem);
   line-height:.85;
   color:rgba(37,97,59,.07);
   letter-spacing:-.04em;
@@ -1147,8 +1150,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   position:relative; z-index:1;
 }
 .tl-card-icon {
-  width:clamp(64px, 5.5vw, 88px);
-  height:clamp(64px, 5.5vw, 88px);
+  width:clamp(52px, 4vw, 64px);
+  height:clamp(52px, 4vw, 64px);
   border-radius:18px;
   background:rgba(30,92,50,.10);
   color:#25613B;
@@ -1170,7 +1173,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .tl-card-title {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.9rem, 2.5vw + .5rem, 3.2rem);
+  font-size:clamp(1.6rem, 1.6vw + .5rem, 2.2rem);
   font-weight:300;
   line-height:1.05;
   letter-spacing:-.018em;
@@ -1367,7 +1370,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   flex-direction:column;
   align-items:center;
   text-align:center;
-  margin-bottom:clamp(48px, 5vw, 88px);
+  margin-bottom:clamp(40px, 3.5vw, 60px);
 }
 .invest-head > * { margin-bottom:clamp(28px, 2.5vw, 40px); }
 .invest-head > *:last-child { margin-bottom:0; }
@@ -1380,7 +1383,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:300;
 }
 .invest-head-title {
-  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
@@ -1412,7 +1415,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   background:#F3F7EF;
   border:1px solid rgba(30,92,50,.18);
   border-radius:24px;
-  padding:clamp(40px, 4vw + 16px, 72px);
+  padding:clamp(32px, 3vw + 12px, 52px);
   max-width:1200px;
   margin:0 auto;
   box-shadow:
@@ -1468,7 +1471,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .invest-total .inv-big {
   font-family:'Playfair Display',serif;
-  font-size:clamp(5rem, 9vw, 10rem);
+  font-size:clamp(3.2rem, 4vw + 1rem, 5rem);
   font-weight:400;
   color:#25613B;
   line-height:.9;
@@ -1515,7 +1518,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .discount-tag {
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-size:clamp(2.2rem, 3vw + .4rem, 3.4rem);
+  font-size:clamp(1.6rem, 1.6vw + .4rem, 2.2rem);
   font-weight:500;
   color:#FFAAC9;
   line-height:.95;
@@ -1535,7 +1538,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .discount-price {
   font-family:'Playfair Display',serif;
-  font-size:clamp(1.8rem, 2.4vw + .4rem, 2.6rem);
+  font-size:clamp(1.5rem, 1.6vw + .4rem, 2rem);
   color:var(--f);
   font-weight:400;
   line-height:1;
@@ -1612,7 +1615,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    MANUTENCAO — header 2-col + cards full-width minimalistas
    ═══════════════════════════════════════════════════════════ */
 .mnt-section {
-  padding-top:clamp(96px, 9vw + 16px, 176px);
+  padding-top:clamp(72px, 5vw + 16px, 112px);
   padding-bottom:clamp(40px, 4vw, 64px);
   background:var(--g-night);
   color:var(--f);
@@ -1636,7 +1639,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:300;
 }
 .mnt-title {
-  font-size:clamp(2.8rem, 5.2vw, 5.6rem);
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
   line-height:.98;
   letter-spacing:-.02em;
   max-width:none;
@@ -1804,7 +1807,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
    ═══════════════════════════════════════════════════════════ */
 .closing-cta {
   background:var(--g-night);
-  padding:clamp(96px, 10vw, 160px) clamp(24px, 4vw, 64px);
+  padding:clamp(72px, 7vw, 112px) clamp(24px, 4vw, 64px);
   position:relative;
   overflow:hidden;
   isolation:isolate;
@@ -1856,7 +1859,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .closing-title {
   font-family:'Inter',sans-serif;
-  font-size:clamp(2.4rem, 4.6vw + .4rem, 5rem);
+  font-size:clamp(2rem, 3vw + .4rem, 3.2rem);
   font-weight:600;
   line-height:1.04;
   letter-spacing:-.026em;
@@ -1940,7 +1943,7 @@ footer {
   max-width:720px; margin:0 auto;
 }
 .ft-logo {
-  height:clamp(72px, 11vw, 168px);
+  height:clamp(64px, 7vw, 104px);
   width:auto;
   display:block;
 }
