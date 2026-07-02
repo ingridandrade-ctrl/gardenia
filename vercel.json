@@ -8,7 +8,7 @@
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "florenca.gardeniajardins.com.br" }],
-      "destination": "/$1"
+      "destination": "/florenca-proposta/$1"
     }
   ]
 }
