@@ -647,7 +647,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .studio-title span {
-  display:block;
+  display:inline;
   font-family:'Inter',sans-serif;
   font-weight:700;
   color:#111209;
@@ -914,7 +914,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .concept-title span {
-  display:block;
+  display:inline;
   font-family:'Inter',sans-serif;
   font-weight:700;
   color:#ffffff;
@@ -1098,7 +1098,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .tl-title span {
-  display:block;
+  display:inline;
   font-family:'Inter',sans-serif;
   font-weight:700;
   color:#111209;
@@ -1233,6 +1233,17 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 
 /* SUBCARDS (Anteprojeto - 4 em grid) */
+.tl-card-foot {
+  margin-top:clamp(24px, 2.4vw, 36px);
+  padding-top:clamp(18px, 1.8vw, 24px);
+  border-top:1px dashed rgba(37,97,59,.30);
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.95rem, .15vw + .9rem, 1.05rem);
+  color:#3d3d3d;
+  position:relative; z-index:1;
+}
+.tl-card-foot strong { color:#25613B; font-weight:700; }
+
 .tl-subcards {
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -1240,23 +1251,31 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   position:relative; z-index:1;
 }
 .tl-subcard {
-  background:rgba(255,255,255,.6);
-  border:1px solid rgba(92,163,87,.16);
-  border-radius:14px;
-  padding:clamp(28px, 2.6vw, 40px) clamp(24px, 2.2vw, 32px);
+  background:#ffffff;
+  border:1px solid rgba(92,163,87,.18);
+  border-left:3px solid #5CA357;
+  border-radius:12px;
+  padding:clamp(20px, 2vw, 28px) clamp(20px, 2vw, 28px);
+  box-shadow:0 6px 18px -12px rgba(30,92,50,.18);
 }
 .tl-subcard-n {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.78rem, .1vw + .74rem, .88rem);
-  font-weight:600;
-  color:#25613B;
-  letter-spacing:.04em;
-  margin-bottom:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:30px; height:30px;
+  border-radius:50%;
+  background:#25613B;
+  color:#fff;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  margin-bottom:14px;
 }
 .tl-subcard-title {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.1rem, .25vw + 1rem, 1.3rem);
-  font-weight:600;
+  font-size:clamp(1.02rem, .2vw + .95rem, 1.18rem);
+  font-weight:700;
   color:#111209;
   line-height:1.3;
   margin-bottom:10px;
@@ -1395,7 +1414,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   text-align:center;
 }
 .invest-head-title span {
-  display:block;
+  display:inline;
   font-family:'Inter',sans-serif;
   font-weight:700;
   color:var(--ink);
@@ -1477,7 +1496,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .invest-total .inv-big {
   font-family:'Playfair Display',serif;
-  font-size:clamp(3.2rem, 4vw + 1rem, 5rem);
+  font-size:clamp(2.8rem, 2.5vw + 1rem, 4rem);
   font-weight:400;
   color:#25613B;
   line-height:.9;
@@ -1493,6 +1512,16 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:500;
   margin-bottom:clamp(32px, 3vw, 48px);
 }
+
+/* PRECO ANTIGO (de/por) */
+.invest-old {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.95rem, .2vw + .9rem, 1.1rem);
+  color:#8a8a8a;
+  font-weight:500;
+  margin-bottom:10px;
+}
+.invest-old s { text-decoration-color:rgba(0,0,0,.45); }
 
 /* DESCONTO — bloco impactante */
 .invest-discount {
@@ -1574,9 +1603,9 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-size:.7rem;
   text-transform:uppercase;
   letter-spacing:.2em;
-  color:#4a4a4a;
-  font-weight:500;
-  margin-bottom:28px;
+  color:#25613B;
+  font-weight:700;
+  margin-bottom:20px;
 }
 .invest-list {
   list-style:none;
@@ -1590,10 +1619,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   padding:14px 0;
   border-bottom:1px solid rgba(0,0,0,.08);
   font-family:'Inter',sans-serif;
-  font-size:.92rem;
+  font-size:.95rem;
   font-weight:400;
-  color:#3d3d3d;
-  line-height:1.65;
+  color:#333333;
+  line-height:1.6;
 }
 .invest-list li:first-child { padding-top:0; }
 .invest-list li:last-child { border-bottom:none; }
@@ -2315,7 +2344,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .invest-head-title,
   .hxl,
   .hero-h1 { font-size:clamp(1.9rem, 8vw, 2.4rem) !important; }
-  .invest-total .inv-big { font-size:clamp(3.5rem, 14vw, 5rem) !important; }
+  .invest-total .inv-big { font-size:clamp(2.6rem, 11vw, 3.4rem) !important; }
   .mnt-card-price { font-size:clamp(2.2rem, 10vw, 3rem) !important; }
 }
 
