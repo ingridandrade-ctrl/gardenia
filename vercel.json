@@ -4,6 +4,11 @@
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "marceloguedes.gardeniajardins.com.br" }],
       "destination": "/bosque-proposta/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "florenca.gardeniajardins.com.br" }],
+      "destination": "/$1"
     }
   ]
 }
