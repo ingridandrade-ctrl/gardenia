@@ -224,6 +224,8 @@ nav.scrolled {
   display:flex;
   flex-direction:column;
   justify-content:center;
+  align-items:center;
+  text-align:center;
   padding-block:clamp(48px, 5vw + 16px, 96px);
   padding-left:clamp(48px, 9vw, 180px);
   padding-right:clamp(28px, 3vw, 48px);
@@ -289,10 +291,12 @@ html.no-js .hero-h1 .line-inner,
 .hero-h1.on .line:nth-child(3) .line-inner { transition-delay:.32s; }
 
 .hero-deck {
-  font-size:clamp(1rem, .2vw + .95rem, 1.18rem);
+  font-size:clamp(1.05rem, .2vw + 1rem, 1.25rem);
   line-height:1.7; color:rgba(20,21,12,.72);
   font-weight:400; max-width:50ch;
   margin-top:clamp(28px, 2vw + 12px, 44px);
+  margin-inline:auto;
+  text-align:center;
 }
 html.js .hero-deck {
   opacity:0; transform:translateY(20px);
@@ -2084,7 +2088,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .hero-h1 .line { display:inline; padding:0; overflow:visible; white-space:nowrap; }
   .hero-h1 .line:nth-child(2) { display:block; }
   .hero-h1 .line-inner { display:inline; transform:none !important; }
-  .hero-deck { font-size:.95rem; margin-top:24px; max-width:none; line-height:1.6; text-align:center; }
+  .hero-deck { font-size:1.05rem; margin-top:24px; max-width:none; line-height:1.6; text-align:center; }
   .hero-bottom { margin-top:32px; gap:24px; }
   .hero-client-name { font-size:1.4rem; }
 
