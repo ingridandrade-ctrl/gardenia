@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "marceloguedes.gardeniajardins.com.br" }],
+      "destination": "/bosque-proposta/$1"
+    }
+  ]
+}
