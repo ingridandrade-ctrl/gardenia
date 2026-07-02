@@ -2051,9 +2051,9 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .n-ref { font-size:.54rem; letter-spacing:.16em; }
   .hero-left { padding:32px 24px 24px; }
   .hero-h1 { font-size:clamp(1.9rem, 8vw, 2.4rem); line-height:1.15; max-width:none; }
-  /* Titulo em 2 linhas no mobile: "Seu refugio comeca do" / "lado de fora." */
+  /* Titulo em 2 linhas no mobile: "Seu refugio comeca" / "do lado de fora." */
   .hero-h1 .line { display:inline; padding:0; overflow:visible; white-space:nowrap; }
-  .hero-h1 .line:nth-child(3) { display:block; }
+  .hero-h1 .line:nth-child(2) { display:block; }
   .hero-h1 .line-inner { display:inline; transform:none !important; }
   .hero-deck { font-size:.95rem; margin-top:24px; max-width:none; line-height:1.6; text-align:center; }
   .hero-bottom { margin-top:32px; gap:24px; }
