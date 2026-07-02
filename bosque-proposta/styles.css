@@ -82,7 +82,7 @@ em.script,
 h1 em, h2 em, h3 em {
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
+  font-weight:700;
   font-size:1em;
   letter-spacing:0;
   color:var(--g);
@@ -255,10 +255,11 @@ nav.scrolled {
 }
 
 .hero-h1 {
-  font-size:clamp(2.8rem, 4.2vw + .4rem, 4.8rem);
-  font-weight:700; line-height:1;
-  letter-spacing:-.035em;
-  word-spacing:-.05em;
+  font-family:'Inter',sans-serif;
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
+  font-weight:700; line-height:1.02;
+  letter-spacing:-.02em;
+  word-spacing:normal;
   color:var(--ink);
   max-width:none;
 }
@@ -652,9 +653,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:#111209;
 }
 .studio-title .studio-em {
+  font-weight:700;
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
+  
   color:#25613B;
 }
 
@@ -918,9 +920,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   color:#ffffff;
 }
 .concept-title .concept-em {
+  font-weight:700;
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
+  
   color:#5CA357;
 }
 
@@ -1097,13 +1100,14 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .tl-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:600;
+  font-weight:700;
   color:#111209;
 }
 .tl-title .tl-em {
+  font-weight:700;
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
+  
   color:#25613B;
 }
 .tl-lead {
@@ -1393,13 +1397,14 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .invest-head-title span {
   display:block;
   font-family:'Inter',sans-serif;
-  font-weight:600;
+  font-weight:700;
   color:var(--ink);
 }
 .invest-head-title .invest-head-em {
+  font-weight:700;
   font-family:'Playfair Display',serif;
   font-style:italic;
-  font-weight:500;
+  
   color:#25613B;
 }
 .invest-head-sub {
@@ -1860,8 +1865,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .closing-title {
   font-family:'Inter',sans-serif;
-  font-size:clamp(2rem, 3vw + .4rem, 3.2rem);
-  font-weight:600;
+  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
+  font-weight:700;
   line-height:1.04;
   letter-spacing:-.026em;
   color:var(--f);
@@ -2308,7 +2313,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mnt-title,
   .closing-title,
   .invest-head-title,
-  .hxl { font-size:clamp(2.2rem, 9vw, 3rem) !important; }
+  .hxl,
   .hero-h1 { font-size:clamp(1.9rem, 8vw, 2.4rem) !important; }
   .invest-total .inv-big { font-size:clamp(3.5rem, 14vw, 5rem) !important; }
   .mnt-card-price { font-size:clamp(2.2rem, 10vw, 3rem) !important; }
@@ -2362,7 +2367,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .mnt-sub,
   .closing-sub,
   .lede {
-    text-align:justify !important;
+    text-align:center !important;
     text-wrap:auto !important;
     max-width:none !important;
     hyphens:auto;
