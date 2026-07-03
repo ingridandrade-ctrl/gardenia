@@ -1199,7 +1199,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 .tl-card-title {
   font-family:'Inter',sans-serif;
   font-size:clamp(1.6rem, 1.6vw + .5rem, 2.2rem);
-  font-weight:300;
+  font-weight:700;
   line-height:1.05;
   letter-spacing:-.018em;
   color:#111209;
