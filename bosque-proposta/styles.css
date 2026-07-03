@@ -947,9 +947,14 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 .concept-grid {
   display:grid;
-  grid-template-columns:55% 45%;
-  gap:80px;
+  grid-template-columns:1fr;
+  gap:clamp(40px, 4vw, 64px);
   align-items:start;
+}
+.concept-text {
+  max-width:760px;
+  margin-inline:auto;
+  text-align:center;
 }
 
 /* COLUNA ESQUERDA — texto */
@@ -987,11 +992,12 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 
 /* COLUNA DIREITA — 5 cards stacked vertical */
 .concept-cards {
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  max-width:380px;
-  margin-inline:initial;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(14px, 1.4vw, 20px);
+  max-width:1040px;
+  margin-inline:auto;
+  width:100%;
 }
 .concept-card {
   display:flex;
@@ -2536,4 +2542,16 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
     hyphens:auto;
     -webkit-hyphens:auto;
   }
+}
+
+
+/* === DESKTOP: títulos quebram na troca de cor + texto do conceito centralizado === */
+@media (min-width: 901px) {
+  .studio-title span,
+  .concept-title span,
+  .tl-title span,
+  .invest-head-title span { display:block; }
+  .closing-title em { display:block; }
+  .concept-text { text-align:center; }
+  .concept-text .concept-p { text-align:center; }
 }
