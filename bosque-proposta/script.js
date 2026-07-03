@@ -22,7 +22,7 @@
   // Espera fontes carregarem (clip-reveal fica mais bonito sem FOUT)
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(fireHero);
-    setTimeout(fireHero, 800); // failsafe
+    setTimeout(fireHero, 300); // failsafe
   } else {
     setTimeout(fireHero, 120);
   }
