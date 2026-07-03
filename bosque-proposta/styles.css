@@ -450,7 +450,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-weight:400;
   transition:color .35s ease;
 }
-.mq-item:hover { color:#ffffff; }
+.mq-item:hover { color:var(--f); }
 .mq-item:hover b { color:var(--a); transform:scale(1.06); }
 @keyframes mq {
   from { transform:translateX(0); }
@@ -749,7 +749,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card {
   position:relative;
-  background:#ffffff;
+  background:var(--paper);
   border:1px solid rgba(37,97,59,.16);
   border-radius:18px;
   padding:clamp(32px, 2.8vw, 44px) clamp(24px, 2vw, 32px);
@@ -927,7 +927,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   display:inline;
   font-family:'Inter',sans-serif;
   font-weight:700;
-  color:#ffffff;
+  color:var(--f);
 }
 .concept-title .concept-em {
   font-weight:700;
@@ -1033,7 +1033,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Inter',sans-serif;
   font-size:1rem;
   font-weight:600;
-  color:#ffffff;
+  color:var(--f);
   line-height:1.3;
   margin-bottom:6px;
   text-transform:none;
@@ -1271,7 +1271,7 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   position:relative; z-index:1;
 }
 .tl-subcard {
-  background:#ffffff;
+  background:var(--paper);
   border:1px solid rgba(37,97,59,.14);
   border-radius:16px;
   padding:clamp(24px, 2.2vw, 32px) clamp(22px, 2vw, 30px);
@@ -1557,6 +1557,29 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   margin-bottom:clamp(32px, 3vw, 48px);
 }
 
+/* NOTA — materiais e plantas */
+.invest-note {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  max-width:720px;
+  margin:clamp(32px, 3vw, 48px) auto 0;
+  padding:18px 26px;
+  background:rgba(37,97,59,.06);
+  border:1px dashed rgba(37,97,59,.30);
+  border-radius:14px;
+}
+.invest-note-ico { font-size:1.15rem; line-height:1; flex-shrink:0; }
+.invest-note p {
+  font-family:'Inter',sans-serif;
+  font-size:clamp(.92rem, .15vw + .88rem, 1rem);
+  color:#3f4a3a;
+  line-height:1.6;
+  text-align:left;
+  margin:0;
+}
+
 /* PRICEBOX — valor completo dentro do card verde */
 .pricebox {
   background:transparent;
@@ -1610,19 +1633,23 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-family:'Playfair Display',serif;
   font-size:clamp(3.2rem, 3vw + 1.2rem, 4.8rem);
   font-weight:400;
-  color:#ffffff;
+  color:var(--f);
   line-height:.95;
   letter-spacing:-.02em;
   font-feature-settings:"lnum tnum";
 }
 .pricebox-meta {
+  display:inline-block;
   font-family:'Inter',sans-serif;
-  font-size:.72rem;
+  font-size:.68rem;
   text-transform:uppercase;
   letter-spacing:.18em;
-  color:rgba(255,255,255,.65);
-  font-weight:600;
-  margin-top:10px;
+  color:#DFF3D0;
+  font-weight:700;
+  margin-top:14px;
+  padding:6px 14px;
+  border:1px solid rgba(223,243,208,.35);
+  border-radius:999px;
 }
 .pricebox-div {
   height:1px;
@@ -1630,25 +1657,52 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   margin:20px 0;
 }
 .pricebox-parc {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.parc-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(.98rem, .15vw + .92rem, 1.1rem);
-  color:rgba(255,255,255,.85);
-  font-weight:400;
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:rgba(250,247,233,.6);
+  font-weight:600;
 }
-.pricebox-parc strong { color:#fff; font-weight:700; }
+.parc-value {
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:clamp(1.5rem, .8vw + 1.2rem, 1.9rem);
+  font-weight:600;
+  color:#FFAAC9;
+  line-height:1.1;
+  letter-spacing:-.01em;
+}
 
-/* PRESENTE — item destacado na lista */
+/* PRESENTE — banner de destaque */
 .invest-list li.inv-gift {
-  background:linear-gradient(135deg, rgba(92,163,87,.14), rgba(37,97,59,.10));
-  border:1px solid rgba(37,97,59,.25);
-  border-bottom:1px solid rgba(37,97,59,.25);
-  border-radius:12px;
-  padding:16px 18px;
-  margin-top:14px;
+  background:linear-gradient(135deg, #2A6B42 0%, #1A4A2C 100%);
+  border:none;
+  border-bottom:none;
+  border-radius:14px;
+  padding:18px 20px;
+  margin-top:16px;
   align-items:center;
+  color:rgba(250,247,233,.92);
+  box-shadow:0 14px 30px -14px rgba(30,92,50,.5);
 }
-.inv-gift .gift-ico { font-size:1.3rem; line-height:1; flex-shrink:0; }
-.inv-gift strong { color:#25613B; }
+.inv-gift .gift-ico {
+  font-size:1.25rem;
+  line-height:1;
+  flex-shrink:0;
+  width:44px; height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(250,247,233,.14);
+  border-radius:50%;
+}
+.inv-gift strong { color:#FFAAC9; }
 
 /* PRECO ANTIGO (de/por) */
 .invest-old {
@@ -2127,7 +2181,7 @@ footer {
   font-size:clamp(.92rem, .2vw + .8rem, 1.1rem);
   color:rgba(244,239,224,.55);
   line-height:1.6;
-  max-width:42ch;
+  max-width:none;
   font-weight:300;
 }
 /* ═══════════════════════════════════════════════════════════
@@ -2538,8 +2592,8 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
     text-align:center !important;
     text-wrap:auto !important;
     max-width:none !important;
-    hyphens:auto;
-    -webkit-hyphens:auto;
+    hyphens:none;
+    -webkit-hyphens:none;
   }
 }
 
@@ -2550,7 +2604,13 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   .concept-title span,
   .tl-title span,
   .invest-head-title span { display:block; }
-  .closing-title em { display:block; }
   .concept-text { text-align:center; }
   .concept-text .concept-p { text-align:center; }
 }
+
+
+/* Etapas: conteúdo dos cards sempre alinhado à esquerda */
+.tl-subcard,
+.tl-subcard-title,
+.tl-subcard-text,
+.tl-card-desc { text-align:left !important; }
