@@ -258,7 +258,7 @@ nav.scrolled {
 
 .hero-h1 {
   font-family:'Inter',sans-serif;
-  font-size:clamp(2.2rem, 3vw + .6rem, 3.4rem);
+  font-size:clamp(2.4rem, 3.6vw + .6rem, 4.2rem);
   font-weight:700; line-height:1.02;
   letter-spacing:-.02em;
   word-spacing:normal;
