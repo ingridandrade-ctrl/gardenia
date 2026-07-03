@@ -748,22 +748,28 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   width:100%;
 }
 .studio-card {
-  background:linear-gradient(155deg, rgba(255,255,255,.65) 0%, var(--paper) 100%);
-  backdrop-filter:blur(10px) saturate(180%);
-  -webkit-backdrop-filter:blur(10px) saturate(180%);
-  border:1px solid rgba(255,255,255,.7);
+  position:relative;
+  background:#ffffff;
+  border:1px solid rgba(37,97,59,.16);
   border-radius:18px;
-  padding:clamp(28px, 2.5vw, 40px) clamp(24px, 2vw, 32px);
+  padding:clamp(32px, 2.8vw, 44px) clamp(24px, 2vw, 32px);
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
-  gap:18px;
+  gap:16px;
+  overflow:hidden;
   box-shadow:
-    0 18px 50px -20px rgba(30,92,50,.18),
-    0 6px 16px -8px rgba(20,21,12,.10),
-    inset 0 1px 0 rgba(255,255,255,.6);
+    0 24px 56px -22px rgba(30,92,50,.30),
+    0 6px 16px -8px rgba(20,21,12,.10);
   transition:transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease, border-color .35s ease;
+}
+.studio-card::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:4px;
+  background:linear-gradient(90deg, #5CA357, #25613B);
 }
 .studio-card:hover {
   transform:translateY(-4px);
@@ -774,16 +780,17 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
     inset 0 1px 0 rgba(255,255,255,.7);
 }
 .studio-card-icon {
-  width:clamp(56px, 5vw, 68px);
-  height:clamp(56px, 5vw, 68px);
-  background:rgba(30,92,50,.10);
-  border-radius:16px;
+  width:clamp(60px, 5vw, 72px);
+  height:clamp(60px, 5vw, 72px);
+  background:linear-gradient(150deg, #2A6B42, #1A4A2C);
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:var(--g);
+  color:#DFF3D0;
   flex-shrink:0;
-  margin-bottom:4px;
+  margin-bottom:6px;
+  box-shadow:0 10px 24px -10px rgba(30,92,50,.55);
 }
 .studio-card-icon svg {
   width:52%;
@@ -791,10 +798,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .studio-card-label {
   font-family:'Inter',sans-serif;
-  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.35rem);
+  font-size:clamp(1.12rem, .25vw + 1.05rem, 1.3rem);
   text-transform:none;
   letter-spacing:-.01em;
-  font-weight:600;
+  font-weight:700;
   color:#111209;
   line-height:1.3;
 }
@@ -975,6 +982,8 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   font-style:italic;
   color:rgba(255,255,255,.8);
 }
+.concept-result { color:#9FD58C; font-weight:500; }
+.concept-result .concept-emph { color:#C9EDB6; font-weight:700; }
 
 /* COLUNA DIREITA — 5 cards stacked vertical */
 .concept-cards {
@@ -989,20 +998,22 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
   flex-direction:row;
   align-items:flex-start;
   gap:18px;
-  padding:20px 24px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.10);
+  padding:24px 26px;
+  background:linear-gradient(150deg, rgba(159,213,140,.13) 0%, rgba(255,255,255,.05) 60%);
+  border:1px solid rgba(159,213,140,.30);
+  border-left:3px solid #5CA357;
   border-radius:16px;
   text-align:left;
   overflow:hidden;
+  box-shadow:0 14px 34px -18px rgba(0,0,0,.5);
   position:relative;
 }
 .concept-card::before { display:none; }
 .concept-card-icon {
-  width:44px; height:44px;
+  width:48px; height:48px;
   border-radius:12px;
-  background:rgba(159,213,140,.14);
-  color:#9FD58C;
+  background:rgba(159,213,140,.22);
+  color:#C9EDB6;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -1026,10 +1037,10 @@ html.js .hero.on .hero-bottom { opacity:1; transform:none; }
 }
 .concept-card-text {
   font-family:'Inter',sans-serif;
-  font-size:.88rem;
-  font-weight:300;
+  font-size:.92rem;
+  font-weight:400;
   line-height:1.6;
-  color:rgba(255,255,255,.5);
+  color:rgba(255,255,255,.72);
   text-align:left;
 }
 .concept-card-text em {
