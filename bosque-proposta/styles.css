@@ -2611,6 +2611,9 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 
 @media (max-width: 720px) {
   .tl-card-title em { display:block; }
+  .closing-title em { display:block; }
+  .eb-dot { display:none; }
+  .eb-l2 { display:block; margin-top:4px; }
 }
 
 /* Etapas: conteúdo dos cards sempre alinhado à esquerda */
