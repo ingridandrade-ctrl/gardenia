@@ -2,12 +2,32 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "marceloguedes.gardeniajardins.com.br" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "conceicao.gardeniajardins.com.br"
+        }
+      ],
+      "destination": "/conceicao-proposta/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "marceloguedes.gardeniajardins.com.br"
+        }
+      ],
       "destination": "/bosque-proposta/$1"
     },
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "florenca.gardeniajardins.com.br" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "florenca.gardeniajardins.com.br"
+        }
+      ],
       "destination": "/florenca-proposta/$1"
     }
   ]
