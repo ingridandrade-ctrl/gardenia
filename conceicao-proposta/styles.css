@@ -2621,3 +2621,20 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 .tl-subcard-title,
 .tl-subcard-text,
 .tl-card-desc { text-align:left !important; }
+
+
+/* Legenda da imagem da hero */
+.hero-right { flex-direction:column; justify-content:center; align-items:center; }
+.hero-img-caption {
+  font-family:'Inter',sans-serif;
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--mid);
+  opacity:.85;
+  margin-top:14px;
+  text-align:center;
+}
+@media (max-width: 720px) {
+  .hero-img-caption { margin:10px 0 16px; font-size:.62rem; }
+}
