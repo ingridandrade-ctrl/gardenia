@@ -2753,3 +2753,11 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 @media (max-width: 720px) {
   .hero-img-caption .cap-l2 { display:block; margin-top:3px; }
 }
+
+
+/* Preço em Inter (sem serifa), redondo e forte */
+.pricebox-total .pb-big {
+  font-family:'Inter',sans-serif !important;
+  font-weight:700 !important;
+  letter-spacing:-.03em !important;
+}
