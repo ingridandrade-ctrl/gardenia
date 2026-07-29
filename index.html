@@ -2,16 +2,17 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Gardenia Jardins</title>
+<title>Gardênia Jardins</title>
 </head>
 <body>
 <script>
-var h = window.location.hostname;
-if (h === 'florenca.gardeniajardins.com.br') {
-  window.location.replace('/florenca-proposta/');
-} else if (h === 'marceloguedes.gardeniajardins.com.br') {
-  window.location.replace('/bosque-proposta/');
-}
+var mapa = {
+  'florenca.gardeniajardins.com.br': '/florenca-proposta/',
+  'marceloguedes.gardeniajardins.com.br': '/bosque-proposta/',
+  'conceicao.gardeniajardins.com.br': '/conceicao-proposta/'
+};
+var destino = mapa[window.location.hostname];
+if (destino) window.location.replace(destino);
 </script>
 </body>
 </html>
