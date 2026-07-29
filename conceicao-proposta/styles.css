@@ -2650,3 +2650,25 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   text-align:center;
   padding:clamp(20px, 2vw, 32px) 24px;
 }
+
+
+/* Separadores e microinterações da lista de escopo */
+.invest-list li.inv-sep {
+  display:block;
+  font-size:.66rem;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  color:#25613B;
+  font-weight:700;
+  border-bottom:1px solid rgba(37,97,59,.25);
+  padding:22px 0 10px;
+}
+.invest-list li.inv-sep:first-child { padding-top:0; }
+.invest-list li:not(.inv-sep):not(.inv-gift) {
+  transition:background .25s ease, padding-left .25s ease;
+  border-radius:8px;
+}
+.invest-list li:not(.inv-sep):not(.inv-gift):hover {
+  background:rgba(92,163,87,.08);
+  padding-left:10px;
+}
