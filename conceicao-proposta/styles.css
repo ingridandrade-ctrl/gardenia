@@ -2718,9 +2718,11 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
 }
 .cta-pill:hover {
+  background:linear-gradient(135deg, #2BE070 0%, #149C53 100%);
   transform:translateY(-3px);
   box-shadow:0 26px 52px -16px rgba(18,140,74,.65);
 }
+.cta-pill:hover::before { opacity:0; }
 .cta-icon {
   width:44px; height:44px;
   background:rgba(255,255,255,.18);
