@@ -2638,3 +2638,15 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 @media (max-width: 720px) {
   .hero-img-caption { margin:10px 0 16px; font-size:.62rem; }
 }
+
+
+/* Legenda acima da galeria */
+.gal-caption {
+  font-family:'Inter',sans-serif;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(250,247,233,.75);
+  text-align:center;
+  padding:clamp(20px, 2vw, 32px) 24px;
+}
