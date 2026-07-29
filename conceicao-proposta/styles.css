@@ -2748,3 +2748,8 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   line-height:1.2;
 }
 .cta-arrow { color:#ffffff; }
+
+
+@media (max-width: 720px) {
+  .hero-img-caption .cap-l2 { display:block; margin-top:3px; }
+}
