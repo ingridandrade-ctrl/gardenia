@@ -2761,3 +2761,11 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
   font-weight:700 !important;
   letter-spacing:-.03em !important;
 }
+
+
+/* Margem lateral no desktop: conteúdo mais contido */
+@media (min-width: 901px) {
+  .max { max-width:min(1080px, calc(100% - 128px)); }
+  .hero-left { padding-left:clamp(64px, 8vw, 140px); }
+  .hero-right { padding-right:clamp(40px, 4vw, 80px); }
+}
