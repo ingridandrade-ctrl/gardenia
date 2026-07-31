@@ -5,6 +5,16 @@
       "has": [
         {
           "type": "host",
+          "value": "ronaldo.gardeniajardins.com.br"
+        }
+      ],
+      "destination": "/ronaldo-proposta/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "conceicao.gardeniajardins.com.br"
         }
       ],
