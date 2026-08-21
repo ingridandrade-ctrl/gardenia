@@ -5,6 +5,16 @@
       "has": [
         {
           "type": "host",
+          "value": "livia.gardeniajardins.com.br"
+        }
+      ],
+      "destination": "/livia-proposta/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "ronaldo.gardeniajardins.com.br"
         }
       ],
