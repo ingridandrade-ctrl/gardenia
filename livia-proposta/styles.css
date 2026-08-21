@@ -2789,3 +2789,7 @@ html.js.reveal-ready .rv { opacity:1; transform:none; }
 @media (max-width: 900px) {
   .area-duo { grid-template-columns:1fr; }
 }
+
+
+/* Hero sem imagem: coluna única centralizada */
+.hero-left { width:100% !important; }
