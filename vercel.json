@@ -5,6 +5,16 @@
       "has": [
         {
           "type": "host",
+          "value": "sylvia.gardeniajardins.com.br"
+        }
+      ],
+      "destination": "/sylvia-proposta/$1"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "esquadrao.gardeniajardins.com.br"
         }
       ],
