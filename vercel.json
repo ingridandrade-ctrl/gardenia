@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "livia.gardeniajardins.com.br"
+          "value": "esquadrao.gardeniajardins.com.br"
         }
       ],
-      "destination": "/livia-proposta/$1"
+      "destination": "/esquadrao-proposta/$1"
     },
     {
       "source": "/(.*)",
